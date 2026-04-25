@@ -49,4 +49,4 @@ if st.button("Run Debate"):
             col_c.metric("Con Score", res["scores"]["con"])
             
             st.write(f"**Reason:** {res['reason']}")
-            st.caption(f"Confidence Level: {res['confidence']*100}%")
+            st.caption(f"Decision Method: {res['decision_type'].replace('_', ' ').title()} | Confidence: {res['confidence']*100}%")
