@@ -1,45 +1,24 @@
 import requests
-import json
 
-def judge_arguments(question, pro_data, con_data):
+def llm_tiebreaker(question, pro_args, con_args):
     """
-    Advanced LLM-based judge that analyzes structured data to pick a winner.
+    Lightweight LLM call to break ties between structurally equal arguments.
     """
-    # Format the structured data for the judge
-    def format_args(data):
-        formatted = ""
-        for i, item in enumerate(data):
-            formatted += f"\nArgument {i+1}:\n- Point: {item.get('point')}\n- Reason: {item.get('reason')}\n- Impact: {item.get('impact')}\n"
-        return formatted
-
-    pro_formatted = format_args(pro_data)
-    con_formatted = format_args(con_data)
-
     prompt = f"""
-You are a master debate judge. Your goal is to analyze the following debate and pick a CLEAR winner. 
-
 Question: {question}
 
-PRO ARGUMENTS:
-{pro_formatted}
+Pro Arguments:
+{pro_args}
 
-CON ARGUMENTS:
-{con_formatted}
+Con Arguments:
+{con_args}
 
-CRITERIA:
-1. Logical consistency: Does the reason support the point?
-2. Real-world impact: Which side presents more significant consequences?
-3. Depth: Which side has more nuanced reasoning?
+Both sides are structurally strong. 
 
-INSTRUCTIONS:
-- You MUST pick a winner (either PRO or CON). Do not call it a tie.
-- Provide "Smart Reasoning" that specifically mentions the points raised.
-- Be decisive.
+Which side is more logically sound?
 
-Output format:
-Winner: [PRO or CON]
-Reason: [Your smart, analytical reasoning here]
-Confidence: [0-100]
+Answer ONLY one word:
+Pro or Con
 """
 
     try:
@@ -50,12 +29,19 @@ Confidence: [0-100]
                 "prompt": prompt,
                 "stream": False,
                 "options": {
-                    "num_predict": 300
+                    "num_predict": 20
                 }
             },
-            timeout=300
+            timeout=30
         )
         response.raise_for_status()
-        return response.json()["response"]
-    except Exception as e:
-        return f"Judge Error: {str(e)}"
+        winner = response.json().get("response", "").strip().capitalize()
+        
+        # Ensure we only return Pro or Con
+        if "Pro" in winner:
+            return "Pro"
+        elif "Con" in winner:
+            return "Con"
+        return "Tie" # Fallback if model fails to be decisive
+    except Exception:
+        return "Tie"
