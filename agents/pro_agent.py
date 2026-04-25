@@ -14,7 +14,7 @@ def generate_pro_argument(question):
                     "num_predict": 150
                 }
             },
-            timeout=60
+            timeout=300  # Increased to 5 minutes
         )
         response.raise_for_status()
         data = response.json()
