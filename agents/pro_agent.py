@@ -9,6 +9,7 @@ Question: {question}
 Rules:
 * Give EXACTLY 2 arguments
 * Each argument must be 1-2 lines only
+* Use logical connectors like 'because', 'therefore', 'leads to', or 'results in' to strengthen your points.
 * Be direct and logical
 * No storytelling
 * No extra explanation
@@ -37,7 +38,6 @@ Output format:
         if "response" not in data:
             return f"Error: Ollama returned an unexpected format: {data.get('error', 'Unknown error')}"
             
-        # Clean output: strip whitespace and take only the response content
         return data["response"].strip()
     except Exception as e:
         return f"Agent Error: {str(e)}"
