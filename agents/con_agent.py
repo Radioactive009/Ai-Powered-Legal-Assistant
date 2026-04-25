@@ -1,22 +1,17 @@
 import requests
 
 def generate_con_argument(question):
-    prompt = f"""
-    You are a critical thinker.
-
-    Generate strong arguments AGAINST the following:
-
-    {question}
-
-    Give 3 points with reasoning.
-    """
+    prompt = f"Provide 2 short, concise arguments AGAINST: {question}. Keep it very brief."
 
     response = requests.post(
         "http://localhost:11434/api/generate",
         json={
-            "model": "llama3",
+            "model": "llama3:8b",
             "prompt": prompt,
-            "stream": False
+            "stream": False,
+            "options": {
+                "num_predict": 150
+            }
         }
     )
 

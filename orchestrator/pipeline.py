@@ -1,21 +1,23 @@
-from concurrent.futures import ThreadPoolExecutor
 from agents.pro_agent import generate_pro_argument
 from agents.con_agent import generate_con_argument
-from judge.llm_judge import judge_arguments
+from judge.rule_judge import rule_based_judge
 
 def run_debate(question):
-    with ThreadPoolExecutor() as executor:
-        future_pro = executor.submit(generate_pro_argument, question)
-        future_con = executor.submit(generate_con_argument, question)
-        
-        pro = future_pro.result()
-        con = future_con.result()
+    """
+    Optimized pipeline with sequential calls and rule-based judging.
+    """
+    # 1. Generate Pro
+    pro_output = generate_pro_argument(question)
 
-    result = judge_arguments(question, pro, con)
+    # 2. Generate Con
+    con_output = generate_con_argument(question)
+
+    # 3. Simple Rule-Based Judge
+    simple_judge_result = rule_based_judge(pro_output, con_output)
 
     return {
         "question": question,
-        "pro": pro,
-        "con": con,
-        "result": result
-    }
+        "pro": pro_output,
+        "con": con_output,
+        "result": simple_judge_result
+    }
