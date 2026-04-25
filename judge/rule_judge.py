@@ -1,30 +1,60 @@
 def rule_based_judge(pro_data, con_data):
     """
-    Scoring-based judge that handles structured JSON data.
+    Structured hybrid judge using deterministic scoring rules.
     """
-    keywords = ["because", "therefore", "leads to", "results in"]
-    
-    # Helper to convert list of dicts to a searchable string
-    def get_full_text(data):
-        text = ""
-        for item in data:
-            text += f" {item.get('point', '')} {item.get('reason', '')} {item.get('impact', '')}"
-        return text.lower()
+    def score_side(data):
+        total_score = 0
+        keywords = ["because", "leads to", "results in"]
+        
+        for arg in data:
+            arg_score = 0
+            
+            # 1. Keyword check
+            reason_text = arg.get('reason', '').lower()
+            impact_text = arg.get('impact', '').lower()
+            full_text = reason_text + " " + impact_text
+            
+            if any(k in full_text for k in keywords):
+                arg_score += 1
+                
+            # 2. Reason length check (> 8 words)
+            if len(reason_text.split()) > 8:
+                arg_score += 1
+                
+            # 3. Impact length check (> 8 words)
+            if len(impact_text.split()) > 8:
+                arg_score += 1
+            
+            total_score += arg_score
+            
+        return total_score
 
-    pro_text = get_full_text(pro_data)
-    con_text = get_full_text(con_data)
-    
-    pro_score = sum(pro_text.count(k) for k in keywords)
-    con_score = sum(con_text.count(k) for k in keywords)
+    pro_score_raw = score_side(pro_data)
+    con_score_raw = score_side(con_data)
 
-    if pro_score > con_score:
+    # Normalize scores between 0 and 1 (Max possible score is 6 for 2 arguments)
+    pro_norm = round(pro_score_raw / 6.0, 2)
+    con_norm = round(con_score_raw / 6.0, 2)
+
+    if pro_score_raw > con_score_raw:
         winner = "Pro"
-        reason = f"Pro arguments had stronger logical depth (Score: {pro_score} vs {con_score})."
-    elif con_score > pro_score:
+        confidence = pro_norm
+        reason = f"Pro arguments demonstrated higher structural complexity and logical depth."
+    elif con_score_raw > pro_score_raw:
         winner = "Con"
-        reason = f"Con arguments had stronger logical depth (Score: {con_score} vs {pro_score})."
+        confidence = con_norm
+        reason = f"Con arguments demonstrated higher structural complexity and logical depth."
     else:
         winner = "Tie"
-        reason = f"Both sides provided equal logical reasoning (Score: {pro_score})."
+        confidence = pro_norm
+        reason = "Both sides provided arguments of equal structural and logical quality."
 
-    return f"Winner: {winner}\nReason: {reason}"
+    return {
+        "winner": winner,
+        "scores": {
+            "pro": pro_norm,
+            "con": con_norm
+        },
+        "confidence": confidence,
+        "reason": reason
+    }

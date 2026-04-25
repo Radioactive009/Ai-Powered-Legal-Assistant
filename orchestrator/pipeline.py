@@ -1,11 +1,11 @@
 from concurrent.futures import ThreadPoolExecutor
 from agents.pro_agent import generate_pro_argument
 from agents.con_agent import generate_con_argument
-from judge.llm_judge import judge_arguments
+from judge.rule_judge import rule_based_judge
 
 def run_debate(question):
     """
-    Parallelized pipeline using LLM-based judging for smart decision making.
+    Fast, deterministic pipeline with rule-based scoring and structured results.
     """
     with ThreadPoolExecutor() as executor:
         future_pro = executor.submit(generate_pro_argument, question)
@@ -14,12 +14,12 @@ def run_debate(question):
         pro_output = future_pro.result()
         con_output = future_con.result()
 
-    # Advanced LLM Judge
-    final_decision = judge_arguments(question, pro_output, con_output)
+    # Rule-Based Judge (Deterministic and fast)
+    structured_decision = rule_based_judge(pro_output, con_output)
 
     return {
         "question": question,
         "pro": pro_output,
         "con": con_output,
-        "result": final_decision
+        "result": structured_decision
     }

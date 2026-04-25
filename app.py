@@ -40,4 +40,13 @@ if st.button("Run Debate"):
 
         st.divider()
         st.subheader("⚖️ Final Decision")
-        st.success(output["result"])
+        
+        res = output["result"]
+        with st.container(border=True):
+            col_a, col_b, col_c = st.columns(3)
+            col_a.metric("Winner", res["winner"])
+            col_b.metric("Pro Score", res["scores"]["pro"])
+            col_c.metric("Con Score", res["scores"]["con"])
+            
+            st.write(f"**Reason:** {res['reason']}")
+            st.caption(f"Confidence Level: {res['confidence']*100}%")
