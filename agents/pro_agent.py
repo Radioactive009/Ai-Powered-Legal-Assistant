@@ -1,4 +1,6 @@
 import requests
+import json
+import re
 
 def generate_pro_argument(question):
     prompt = f"""
@@ -7,16 +9,26 @@ Give arguments IN FAVOR of the statement below.
 Question: {question}
 
 Rules:
-* Give EXACTLY 2 arguments
-* Each argument must be 1-2 lines only
-* Use logical connectors like 'because', 'therefore', 'leads to', or 'results in' to strengthen your points.
-* Be direct and logical
-* No storytelling
-* No extra explanation
+* Generate EXACTLY 2 arguments
+* Each argument must include:
+  * point (main idea)
+  * reason (why it is valid)
+  * impact (real-world effect)
+* Keep each field concise (1 line)
 
-Output format:
-1. <argument>
-2. <argument>
+Output format (STRICT JSON):
+[
+  {{
+    "point": "...",
+    "reason": "...",
+    "impact": "..."
+  }},
+  {{
+    "point": "...",
+    "reason": "...",
+    "impact": "..."
+  }}
+]
 """
 
     try:
@@ -27,17 +39,22 @@ Output format:
                 "prompt": prompt,
                 "stream": False,
                 "options": {
-                    "num_predict": 120
+                    "num_predict": 300  # Increased for JSON overhead
                 }
             },
             timeout=300
         )
         response.raise_for_status()
-        data = response.json()
+        raw_output = response.json().get("response", "").strip()
         
-        if "response" not in data:
-            return f"Error: Ollama returned an unexpected format: {data.get('error', 'Unknown error')}"
+        # Clean potential markdown code blocks
+        json_str = re.sub(r'```json|```', '', raw_output).strip()
+        
+        try:
+            return json.loads(json_str)
+        except json.JSONDecodeError:
+            # Fallback if JSON is slightly malformed
+            return [{"point": "Parsing Error", "reason": "AI failed to return valid JSON", "impact": "N/A"}]
             
-        return data["response"].strip()
     except Exception as e:
-        return f"Agent Error: {str(e)}"
+        return [{"point": "Agent Error", "reason": str(e), "impact": "N/A"}]
