@@ -11,9 +11,14 @@ if st.button("Run Debate"):
         st.warning("Please enter a question first.")
     else:
         with st.status("🤖 AI Agents are debating...", expanded=True) as status:
-            st.write("Generating Pro and Con arguments in parallel...")
-            output = run_debate(question)
-            status.update(label="✅ Debate Complete!", state="complete", expanded=False)
+            st.write("Generating Pro and Con arguments...")
+            try:
+                output = run_debate(question)
+                status.update(label="✅ Debate Complete!", state="complete", expanded=False)
+            except Exception as e:
+                status.update(label="❌ Error occurred", state="error", expanded=True)
+                st.error(f"Failed to run debate: {e}")
+                st.stop()
 
         col1, col2 = st.columns(2)
         
