@@ -7,14 +7,14 @@ def generate_con_argument(question):
         response = requests.post(
             "http://localhost:11434/api/generate",
             json={
-                "model": "llama3:latest",
+                "model": "phi:latest",
                 "prompt": prompt,
                 "stream": False,
                 "options": {
                     "num_predict": 150
                 }
             },
-            timeout=30
+            timeout=60
         )
         response.raise_for_status()
         data = response.json()
