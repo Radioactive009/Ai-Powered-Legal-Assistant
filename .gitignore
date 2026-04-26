@@ -1,0 +1,21 @@
+# Python temporary files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Environment files
+.env
+venv/
+env/
+
+# ML Models (Optional: keep if you want to share the model)
+# ml/model.pkl
+
+# Datasets (Keep if you want to share data, ignore if file is >100MB)
+# dataset/debate_dataset.json
+# dataset/features.json
+
+# IDE files
+.vscode/
+.idea/
