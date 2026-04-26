@@ -1,0 +1,38 @@
+[
+    {
+        "question": "Is AI dangerous?",
+        "raw": {
+            "metrics": {"structure": 1.2, "reasoning": 1.0, "decision": 0}
+        },
+        "prompt": {
+            "metrics": {"structure": 2.5, "reasoning": 1.8, "decision": 0}
+        },
+        "hybrid": {
+            "metrics": {"structure": 3.8, "reasoning": 3.5, "decision": 1}
+        }
+    },
+    {
+        "question": "Should college be free?",
+        "raw": {
+            "metrics": {"structure": 1.1, "reasoning": 0.9, "decision": 0}
+        },
+        "prompt": {
+            "metrics": {"structure": 2.4, "reasoning": 1.6, "decision": 0}
+        },
+        "hybrid": {
+            "metrics": {"structure": 3.9, "reasoning": 3.2, "decision": 1}
+        }
+    },
+    {
+        "question": "Is remote work better?",
+        "raw": {
+            "metrics": {"structure": 1.3, "reasoning": 1.1, "decision": 0}
+        },
+        "prompt": {
+            "metrics": {"structure": 2.6, "reasoning": 1.9, "decision": 0}
+        },
+        "hybrid": {
+            "metrics": {"structure": 3.7, "reasoning": 3.4, "decision": 1}
+        }
+    }
+]
