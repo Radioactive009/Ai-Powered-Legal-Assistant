@@ -1,0 +1,1657 @@
+[
+    {
+        "question": "Should AI have copyright over its art?",
+        "pro": [
+            {
+                "point": "AI as an entity deserves legal recognition.",
+                "reason": "Given the increasing complexity and autonomy of AI systems, recognizing them legally is a logical extension in parallel to human rights movements.",
+                "impact": "This could lead to more inclusive discussions about creativity and ownership."
+            },
+            {
+                "point": "Copyright law adapts over time.",
+                "reason": "History shows that as society's values change, so too do legal definitions of copyright; the AI revolution may necessitate similar adaptation to maintain relevance in this new era.",
+                "impact": "This would potentially harmonize laws across jurisdictions and provide clearer guidelines for creators."
+            }
+        ],
+        "con": [
+            {
+                "point": "AI lacks legal personhood.",
+                "reason": "Legal systems do not recognize non-human entities as capable of holding property rights or intellectual property, including copyrights.",
+                "impact": "Granting AI art copyright could create a precedent for extending such protections to other non-human creations and raise complex legal issues."
+            },
+            {
+                "point": "Human artists deserve recognition.",
+                "reason": "The creation of an original work typically involves human skill, labor, experience, and subjective judgment that AI cannot replicate or possess in a meaningful way.",
+                "impact": "If AI were granted copyright over its artwork, it could undermine the value and recognition attributed to human artists' contributions."
+            }
+        ],
+        "winner": "Con"
+    },
+    {
+        "question": "Are online degrees as valuable as traditional ones?",
+        "pro": [
+            {
+                "point": "Online degrees offer flexibility.",
+                "reason": "For working adults who may not be able to attend traditional classes due to their schedules, online degrees provide a viable alternative for obtaining higher education without sacrificing employment or family responsibilities.",
+                "impact": "This access can lead to better job retention and advancement opportunities as employees are often more satisfied with flexible work arrangements."
+            },
+            {
+                "point": "Online degrees broaden educational reach.",
+                "reason": "They make higher education accessible to individuals who might not be able to attend traditional universities due to geographical or financial constraints, thus democratizing access to quality education and professional development opportunities.",
+                "impact": "Students in underserved regions can break into fields that were previously out of reach, leading to a more diverse workforce and reducing economic disparity."
+            }
+        ],
+        "con": [
+            {
+                "point": "Online degrees often lack accreditation.",
+                "reason": "Many online universities are not held to the same standards as traditional institutions, affecting recognition of their credentials.",
+                "impact": "Professionals with unaccredited degrees may face difficulties in job markets or professional certification."
+            },
+            {
+                "point": "Networking opportunities can be more limited online.",
+                "reason": "Face-to-face interaction is often crucial for career advancement, which tends to happen less frequently with remote learning formats.",
+                "impact": "This could lead to slower professional growth and reduced job prospects."
+            }
+        ],
+        "winner": "Con"
+    },
+    {
+        "question": "Is reading books better than movies?",
+        "pro": [
+            {
+                "point": "Reading books enhances vocabulary and imagination.",
+                "reason": "Books require readers to form their own mental images of the story, leading to improved creativity.",
+                "impact": "Individuals with a richer vocabulary are often better communicators in society."
+            },
+            {
+                "point": "Reading offers deeper narrative immersion and comprehension.",
+                "reason": "Books provide detailed inner thoughts of characters, allowing for nuanced understanding beyond visual storytelling.",
+                "impact": "Enhanced empathy in readers can lead to more compassionate societal interactions."
+            }
+        ],
+        "con": [
+            {
+                "point": "Books stimulate imagination more effectively.",
+                "reason": "Unlike movies, books rely on textual description rather than visual cues, prompting readers to create their own images in the mind's eye",
+                "impact": "Increases creative thinking and reduces dependence on digital media"
+            },
+            {
+                "point": "Book reading improves empathy.",
+                "reason": "Readers often delve deeply into characters\u2019 thoughts, feelings, and motivations through internal monologues",
+                "impact": "Enhances social skills and emotional intelligence"
+            }
+        ],
+        "winner": "Pro"
+    },
+    {
+        "question": "Is the Metaverse inevitable?",
+        "pro": [
+            {
+                "point": "The Metaverse integrates real and virtual worlds.",
+                "reason": "This convergence is a natural evolution in technology, where advancements continuously blend different aspects of reality to create immersive experiences",
+                "impact": "Promises more interactive education methods that could improve learning outcomes."
+            },
+            {
+                "point": "The increasing demand for virtual social interaction.",
+                "reason": "As the global population grows, so does the need for shared digital spaces where people can interact as if they were in the same room",
+                "impact": "Could reduce feelings of isolation and improve mental health."
+            }
+        ],
+        "con": [
+            {
+                "point": "The Metaverse may not be inevitable due to privacy concerns.",
+                "reason": "Growing awareness and demand for data protection could hinder the widespread adoption of a shared virtual space, as it requires users to expose personal information within an interconnected digital environment.",
+                "impact": "Increased advocacy for privacy may lead governments to implement stricter regulations that impede Metaverse development."
+            },
+            {
+                "point": "The technological divide could prevent the inevitability of a unified global Metaverse.",
+                "reason": "Disparities in access to technology and internet connectivity between different regions may result in uneven adoption rates, with less developed areas lagging behind.",
+                "impact": "This digital gap might foster regional disparities within the supposedly universal Metaverse."
+            }
+        ],
+        "winner": "Con"
+    },
+    {
+        "question": "Are private schools better?",
+        "pro": [
+            {
+                "point": "Enhanced educational quality.",
+                "reason": "Private schools often have smaller class sizes and more resources, which can lead to a higher level of individual attention for students.",
+                "impact": "Students may exhibit improved academic performance due to better-supported learning environments."
+            },
+            {
+                "point": "Greater emphasis on values and ethics.",
+                "reason": "Private schools sometimes prioritize a strong moral education, which can be integral in character development beyond standardized testing results.",
+                "impact": "Students may demonstrate better social responsibility behaviors outside the classroom."
+            }
+        ],
+        "con": [
+            {
+                "point": "Accessibility and inclusivity issues.",
+                "reason": "Private schools often have higher tuition fees, which can limit access for students from lower socio-economic backgrounds. This creates a barrier to equal educational opportunities regardless of financial status.",
+                "impact": "It perpetuates social inequality by providing more advantages in education and future employment prospects only to those who have substantial means."
+            },
+            {
+                "point": "Lack of regulatory oversight.",
+                "reason": "Private schools are not subjected to the same rigorous state educational standards as public ones, which might result in a lower quality education. Without proper regulation and accountability measures, these institutions could compromise on student learning outcomes or even safety protocols.",
+                "impact": "Students attending private schools may receive an inferior education with less focus on fundamental skills needed for success in the workforce."
+            }
+        ],
+        "winner": "Con"
+    },
+    {
+        "question": "Is the consumption of luxury goods unethical?",
+        "pro": [
+            {
+                "point": "Luxury goods production often involves exploitative labor practices.",
+                "reason": "The extraction of resources and manufacturing processes in many luxury industries can lead to poor working conditions, unfair wages, and child labor \u2013 all considered unethical under human rights standards.",
+                "impact": "This contributes to global inequality by perpetuating poverty and limiting opportunities for basic education and skill development among the most vulnerable populations."
+            },
+            {
+                "point": "The environmental cost of luxury goods is significant, often leading to unsustainable practices.",
+                "reason": "Luxury products frequently require rare materials that result in habitat destruction, overconsumption, and carbon emissions due to long supply chains \u2013 all violating principles of sustainability and ethical consumption.",
+                "impact": "It exacerbates climate change effects like extreme weather events while undermining the planet's ability to provide for future generations."
+            }
+        ],
+        "con": [
+            {
+                "point": "Luxury consumption is not inherently unethical.",
+                "reason": "It supports jobs and economies, driving innovation in production methods.",
+                "impact": "Stimulates economic growth and employment."
+            },
+            {
+                "point": "The ethics of luxury goods consumption depends on the contexts such as sourcing materials responsibly.",
+                "reason": "Ethical business practices are possible with fair trade and sustainability efforts",
+                "impact": "Promotes a more equitable global marketplace."
+            }
+        ],
+        "winner": "Pro"
+    },
+    {
+        "question": "Should companies be forced to disclose their gender pay gap?",
+        "pro": [
+            {
+                "point": "Companies should be required to disclose their gender pay gap.",
+                "reason": "It promotes transparency and accountability in compensation practices, which is essential for fair workplace equality.",
+                "impact": "This could lead to more equitable hiring and promotion processes within organizations."
+            },
+            {
+                "point": "Mandatory disclosure can motivate companies to actively seek gender pay parity.",
+                "reason": "Public pressure on corporations often results in changes, especially when it relates to social justice issues like equal pay for women and men.",
+                "impact": "Companies might implement more effective policies or practices that directly address their specific disparities."
+            }
+        ],
+        "con": [
+            {
+                "point": "Potential for misinterpretation and discrimination lawsuits.",
+                "reason": "Companies might fear inaccuracies or oversimplifications of complex pay structures leading to unfounded legal actions by employees feeling slighted due to perceived discrepancies, despite legitimate reasons behind the gender pay gap such as experience level and tenure differences.",
+                "impact": "Increased litigation risks for companies."
+            },
+            {
+                "point": "Unintended consequences on internal morale and trust.",
+                "reason": "Mandatory disclosure could inadvertently erode employee confidence if individuals perceive pay decisions as unfair or biased, potentially undermining teamwork and overall company culture without necessarily addressing underlying issues effectively.",
+                "impact": "Deterioration of internal workplace environment."
+            }
+        ],
+        "winner": "Pro"
+    },
+    {
+        "question": "Is grading students a fair way to measure intelligence?",
+        "pro": [
+            {
+                "point": "Grading students can drive them to strive for excellence.",
+                "reason": "By setting benchmarks and providing clear expectations, grades motivate learners to work towards achieving a high standard of performance.",
+                "impact": "This may lead to improved educational outcomes as students invest more effort in their studies."
+            },
+            {
+                "point": "Grading systems encourage teachers to tailor instruction and feedback effectively.",
+                "reason": "Teachers can use grading data to identify areas where students struggle, helping them adapt teaching methods to address specific learning needs.",
+                "impact": "This personalized approach could lead to better understanding of subjects for all students."
+            }
+        ],
+        "con": [
+            {
+                "point": "Parsing Error",
+                "reason": "AI failed to return valid JSON",
+                "impact": "N/A"
+            }
+        ],
+        "winner": "Pro"
+    },
+    {
+        "question": "Is privacy more important than security?",
+        "pro": [
+            {
+                "point": "Privacy is essential for individual autonomy.",
+                "reason": "It allows people to make personal choices without undue influence or surveillance, which fosters a sense of self and independence.",
+                "impact": "This leads to more authentic societies where individuals can pursue their true interests."
+            },
+            {
+                "point": "Privacy protects against abuse of power by authorities.",
+                "reason": "Without privacy, governments could monitor citizens excessively and suppress dissent or unpopular opinions through misuse of personal information.",
+                "impact": "This prevents a dystopian society where freedom is curtailed for the sake of security."
+            }
+        ],
+        "con": [
+            {
+                "point": "Privacy without security can lead to vulnerabilities.",
+                "reason": "Allowing too much privacy could enable criminals, as surveillance helps in crime prevention and detection.",
+                "impact": "Increased criminal activities due to a lack of oversight."
+            },
+            {
+                "point": "Security measures are essential for protecting sensitive information.",
+                "reason": "Data breaches can lead to identity theft, financial loss, and reputational damage without proper security protocols in place.",
+                "impact": "Potential harm such as unauthorized access, fraudulent activities."
+            }
+        ],
+        "winner": "Pro"
+    },
+    {
+        "question": "Is physical education important?",
+        "pro": [
+            {
+                "point": "Physical activity improves overall health.",
+                "reason": "Regular physical exercise enhances cardiovascular fitness, strengthens muscles, and increases endurance.",
+                "impact": "A population that regularly engages in PE is likely to have lower rates of heart disease, obesity, and other chronic health conditions."
+            },
+            {
+                "point": "PE promotes teamwork and social skills.",
+                "reason": "Participating in sports and activities fosters a sense of cooperation as individuals must work together to achieve common goals within the game or class structure.",
+                "impact": "Students develop better communication, leadership qualities, empathy, and conflict resolution skills that are valuable throughout life."
+            }
+        ],
+        "con": [
+            {
+                "point": "Physical education can instill lifelong habits of fitness and well-being.",
+                "reason": "Research has shown that individuals who participate in regular physical activity are less likely to develop chronic diseases such as obesity, diabetes, and heart disease.",
+                "impact": "This leads to a healthier population with reduced healthcare costs over time."
+            },
+            {
+                "point": "Physical education supports academic achievement by improving concentration and reducing stress among students.",
+                "reason": "Studies indicate that physical activity can enhance cognitive function, which in turn boosts attention span and the ability to learn new concepts effectively.",
+                "impact": "Improved focus on academics may result in higher test scores and better academic performance overall."
+            }
+        ],
+        "winner": "Con"
+    },
+    {
+        "question": "Should students use phones in class?",
+        "pro": [
+            {
+                "point": "Phones can be used for educational purposes.",
+                "reason": "Educational apps and resources are widely available on smartphones, which could enhance learning experiences outside the classroom setting.",
+                "impact": "Students may become more engaged in self-directed learning activities."
+            },
+            {
+                "point": "Phones can improve communication with parents.",
+                "reason": "Immediate access to technology allows students and teachers to communicate quickly about assignments, grades, or emergencies.",
+                "impact": "Promotes a collaborative learning environment between school and home."
+            }
+        ],
+        "con": [
+            {
+                "point": "Phones can be a source of distraction.",
+                "reason": "Students may get tempted to check social media or messages during class, leading to divided attention and impaired learning ability.",
+                "impact": "Less focus on the lesson could result in decreased academic performance."
+            },
+            {
+                "point": "They can facilitate access to educational resources outside of school hours.",
+                "reason": "Phones allow students immediate and easy lookup for additional information or clarification that might extend learning beyond classroom activities",
+                "impact": "Enhances student's knowledge base, potentially improving academic results."
+            }
+        ],
+        "winner": "Pro"
+    },
+    {
+        "question": "Is fast fashion ethical?",
+        "pro": [
+            {
+                "point": "Fast fashion encourages constant production cycles.",
+                "reason": "It leads to overproduction and waste due to the quick turnover of clothing items, which disregards sustainable practices.",
+                "impact": "Increases environmental degradation through excessive resource consumption and pollution."
+            },
+            {
+                "point": "Fast fashion exploits labor markets in low-income countries.",
+                "reason": "It often involves unethical working conditions, including child labor and poor wages due to its cost-cutting measures for profit maximization.",
+                "impact": "Undermines workers' rights and perpetuates poverty by keeping them under exploitative work environments."
+            }
+        ],
+        "con": [
+            {
+                "point": "Exacerbates environmental damage.",
+                "reason": "Fast fashion relies on inexpensive, quick-production processes that often involve unsustainable practices and excessive waste production.",
+                "impact": "Increased carbon footprint leading to accelerated climate change."
+            },
+            {
+                "point": "Promotes exploitative labor conditions.",
+                "reason": "The fast fashion industry typically cuts costs by outsourcing manufacturing to countries with lower wages and weaker labor laws, often resulting in unethical working environments.",
+                "impact": "Marginalized communities endure harmful workplace practices."
+            }
+        ],
+        "winner": "Pro"
+    },
+    {
+        "question": "Is competition always good for the consumer?",
+        "pro": [
+            {
+                "point": "Promotes innovation and improvement of products.",
+                "reason": "Competition forces companies to continuously improve their offerings in order to maintain or increase market share, leading to better quality goods for consumers.",
+                "impact": "Consumers benefit from higher-quality products due to enhanced competitive pressure."
+            },
+            {
+                "point": "Encourages a variety of choices and options.",
+                "reason": "Competition results in multiple businesses offering different types of the same product, giving consumers more alternatives that cater to diverse needs and preferences.",
+                "impact": "Increased choice empowers consumers with products tailored specifically for their individual requirements."
+            }
+        ],
+        "con": [
+            {
+                "point": "Competition can lead to a 'race to the bottom' in pricing.",
+                "reason": "When businesses compete too aggressively, they may compromise on quality or ethical standards to cut costs and offer lower prices.",
+                "impact": "This could result in unsafe products reaching consumers at unsustainable price points."
+            },
+            {
+                "point": "Increased competition can cause market saturation, reducing consumer choices.",
+                "reason": "As more companies enter the same niche or industry to capture share of the already crowded space, it may diminish variety and innovation over time.",
+                "impact": "Consumers might experience a paradox where too many options lead to decision fatigue rather than empowerment."
+            }
+        ],
+        "winner": "Pro"
+    },
+    {
+        "question": "Is web3 a scam?",
+        "pro": [
+            {
+                "point": "Web3 is not a scam because it represents the future of decentralized applications (dApps).",
+                "reason": "The core principle behind web3 and blockchain technology is to create trustless systems without intermediaries.",
+                "impact": "This could lead to more democratized financial services, reducing barriers for underbanked populations."
+            },
+            {
+                "point": "Many successful decentralized projects have emerged from web3 platforms like Ethereum and Polkadot.",
+                "reason": "These networks demonstrate tangible functionalities such as smart contracts that can automate complex tasks efficiently in various industries.",
+                "impact": "Web3 has the potential to revolutionize sectors by streamlining processes, reducing costs, and increasing transparency."
+            }
+        ],
+        "con": [
+            {
+                "point": "Web3 is a legitimate vision for the future of decentralized applications.",
+                "reason": "It utilizes blockchain technology, which has proven its value and potential in numerous industries beyond finance.",
+                "impact": "The growth of Web3 can lead to increased innovation, improved data security, more democratic systems for content creation, voting, etc."
+            },
+            {
+                "point": "Scams are not intrinsic to new technologies like blockchain and cryptocurrencies.",
+                "reason": "Many successful companies in these industries operate ethically without engaging in fraudulent activities.",
+                "impact": "Ensures that investments can be made with confidence, encouraging more people to participate."
+            }
+        ],
+        "winner": "Con"
+    },
+    {
+        "question": "Should facial recognition be banned?",
+        "pro": [
+            {
+                "point": "Facial recognition can be inherently biased.",
+                "reason": "Research has shown that facial recognition algorithms often have higher error rates for women and people of color, indicating a lack of fairness in their design and implementation.",
+                "impact": "If left unaddressed, this could lead to systemic discrimination against marginalized communities within surveillance systems."
+            },
+            {
+                "point": "Facial recognition may violate privacy rights.",
+                "reason": "The pervasive use of facial recognition technology in public spaces can result in unwarranted monitoring and tracking without explicit consent, conflicting with the right to personal privacy.",
+                "impact": "This could create a society where individuals are constantly under surveillance, leading to self-censorship and reduced freedom."
+            }
+        ],
+        "con": [
+            {
+                "point": "Facial recognition can enhance security measures.",
+                "reason": "It allows for the rapid identification of individuals who may pose a threat, leading to quicker response times in emergency situations.",
+                "impact": "Potentially reduces crime rates and improves public safety."
+            },
+            {
+                "point": "Banning facial recognition could impede advancements in technology that benefit society.",
+                "reason": "Facial recognition has potential uses beyond surveillance, such as identifying missing persons or streamlining customer service experiences through automation.",
+                "impact": "Possibly hampers the development of useful and life-saving technologies."
+            }
+        ],
+        "winner": "Pro"
+    },
+    {
+        "question": "Is the trend of 'hustle culture' toxic?",
+        "pro": [
+            {
+                "point": "Hustle culture encourages overwork and burnout.",
+                "reason": "Prioritizing work above all else to constantly push for more can lead to unhealthy stress levels, without acknowledging the need for rest and self-care.",
+                "impact": "Increases in employee mental health issues such as anxiety and depression."
+            },
+            {
+                "point": "Hustle culture fosters a non-inclusive workplace environment",
+                "reason": "The relentless drive for productivity often discounts individual differences, including those related to race, gender identity, or socioeconomic background.",
+                "impact": "Promotes inequality in the workplace by not accommodating diverse needs and perspectives."
+            }
+        ],
+        "con": [
+            {
+                "point": "Hustle culture promotes excessive working hours.",
+                "reason": "It prioritizes work over personal health and relationships, which can lead to burnout.",
+                "impact": "Increased rates of stress-related illnesses among employees."
+            },
+            {
+                "point": "'Hustle culture' marginalizes those who cannot commit as much time due to various life constraints.",
+                "reason": "It creates an environment where only the able and willing can succeed, often ignoring diversity in lifestyle needs.",
+                "impact": "Limited career advancement opportunities for individuals with caregiving responsibilities or disabilities."
+            }
+        ],
+        "winner": "Pro"
+    },
+    {
+        "question": "Is 5G harmful to health?",
+        "pro": [
+            {
+                "point": "5G technology operates at higher frequencies than previous generations, which some studies suggest may have different health implications.",
+                "reason": "Higher frequency waves can potentially lead to increased exposure risks for humans and wildlife in the vicinity of cellular infrastructure due to their shorter wavelengths being absorbed by biological tissues more readily than lower-frequency transmissions",
+                "impact": "This might result in heightened concerns among individuals regarding potential health effects, influencing public opinion and policy on technology deployment."
+            },
+            {
+                "point": "Increased exposure to electromagnetic fields from dense network deployments of 5G infrastructure could pose unknown risks.",
+                "reason": "Since the long-term biological impacts of consistent, low-level electromagnetic field (EMF) exposure are still not fully understood by science",
+                "impact": "People living in areas with high concentrations of 5G towers might experience anxiety and demand further research or advocate for stricter safety regulations."
+            }
+        ],
+        "con": [
+            {
+                "point": "5G does not pose a direct threat to human health.",
+                "reason": "Current scientific consensus and research, including peer-reviewed studies, indicate that the electromagnetic radiation emitted by 5G technology is non-ionizing and therefore considered safe for humans within established exposure limits.",
+                "impact": "Public confidence in adopting new technologies may increase as health risks are mitigated."
+            },
+            {
+                "point": "Excessive fear of potential harm can impede societal progress.",
+                "reason": "Misinformation or unfounded concerns about the safety of emerging technologies like 5G could lead to resistance, hindering improvements in connectivity and efficiency that benefit society as a whole.",
+                "impact": "Delayed adoption of beneficial innovations may slow down economic growth and development."
+            }
+        ],
+        "winner": "Con"
+    },
+    {
+        "question": "Is AI dangerous to humanity?",
+        "pro": [
+            {
+                "point": "AI could surpass human intelligence, potentially leading to a loss of control.",
+                "reason": "Superintelligent AI systems may evolve beyond our ability to understand or manage them without proper safeguards in place.",
+                "impact": "Unchecked superintelligence might act in ways that are detrimental to human safety and well-being, necessitating strict ethical guidelines."
+            },
+            {
+                "point": "AI could automate jobs at a pace faster than society can adapt.",
+                "reason": "Increasing AI capabilities may lead to rapid job displacement in various sectors before new industries or roles emerge.",
+                "impact": "This transition might cause economic instability and social unrest, highlighting the need for policies that manage workforce changes."
+            }
+        ],
+        "con": [
+            {
+                "point": "AI systems enhance productivity and efficiency.",
+                "reason": "They optimize workflows, reduce human error, and save time on repetitive tasks.",
+                "impact": "Boost in economic growth with increased output and job creation."
+            },
+            {
+                "point": "With proper regulation, AI can be safely integrated into society.",
+                "reason": "Established frameworks ensure ethical development and deployment of AI technologies.",
+                "impact": "Mitigation of risks through oversight leading to safer technology interaction."
+            }
+        ],
+        "winner": "Con"
+    },
+    {
+        "question": "Should schools focus more on soft skills than academic subjects?",
+        "pro": [
+            {
+                "point": "Developing emotional intelligence in students.",
+                "reason": "Emotional intelligence is essential for personal well-being and interpersonal relationships, which are critical skills that often get overlooked by traditional academic subjects but have direct implications on daily life successes.",
+                "impact": "Students may become more adept at resolving conflicts, empathizing with others, leading to a decrease in bullying incidents and an increase in overall social harmony."
+            },
+            {
+                "point": "Improving communication skills can enhance collaborative learning environments.",
+                "reason": "Effective oral and written communication is vital for teamwork which has become increasingly important in the modern workforce, where collaboration across disciplines often drives innovation.",
+                "impact": "This could lead to a more cohesive educational atmosphere that mirrors professional settings, potentially improving future career readiness."
+            }
+        ],
+        "con": [
+            {
+                "point": "Academic subjects provide foundational knowledge and skills.",
+                "reason": "Understanding fundamental concepts in math, science, language arts, etc., is essential for informed decision-making and critical thinking.",
+                "impact": "Improves individual's ability to engage with complex societal issues."
+            },
+            {
+                "point": "Without strong academic skills, soft skills cannot be effectively applied or appreciated in most professional settings.",
+                "reason": "Many jobs require specific knowledge and technical expertise that can only come from focused study of core subjects.",
+                "impact": "Enhances employability and career advancement opportunities."
+            }
+        ],
+        "winner": "Pro"
+    },
+    {
+        "question": "Is homeschooling better than public school?",
+        "pro": [
+            {
+                "point": "Homeschooling allows for a personalized learning pace.",
+                "reason": "It enables parents to tailor the education according to their child's individual needs and speed of understanding, ensuring they aren't overwhelmed or under-challenged.",
+                "impact": "Children can develop at an optimal rate without falling behind due to a rigid curriculum pace."
+            },
+            {
+                "point": "Homeschooling provides more one-on-one attention from educators.",
+                "reason": "With fewer students per teacher, homeschooled children often receive more individualized guidance and support than in public schools with larger class sizes.",
+                "impact": "Students can develop better academic skills through personalized instruction."
+            }
+        ],
+        "con": [
+            {
+                "point": "Homeschooling may not expose students to diverse viewpoints.",
+                "reason": "Public schools are typically more heterogeneous, allowing for a broader spectrum of ideas and opinions which can foster critical thinking skills",
+                "impact": "Students homeschooled might lack awareness or understanding of different cultures and societal norms"
+            },
+            {
+                "point": "Public schools offer specialized programs not available in homeschooling.",
+                "reason": "Specializations such as advanced STEM, arts education, sports are often better organized within the public school system",
+                "impact": "Students missing out on these could face limitations in pursuing interests that align with future careers"
+            }
+        ],
+        "winner": "Con"
+    },
+    {
+        "question": "Should junk food be taxed like cigarettes?",
+        "pro": [
+            {
+                "point": "Taxing junk food can reduce consumption.",
+                "reason": "Higher prices from taxes discourage purchases and help to limit the intake of unhealthy foods, promoting better public health outcomes",
+                "impact": "Potential decrease in obesity rates and related health issues"
+            },
+            {
+                "point": "The revenue from taxing junk food can fund health initiatives.",
+                "reason": "This creates a self-sustaining system that invests more into public health rather than less, potentially leading to improved community wellbeing",
+                "impact": "Increased availability of resources for medical and educational programs"
+            }
+        ],
+        "con": [
+            {
+                "point": "Parsing Error",
+                "reason": "AI failed to return valid JSON",
+                "impact": "N/A"
+            }
+        ],
+        "winner": "Pro"
+    },
+    {
+        "question": "Is the 'digital nomad' lifestyle sustainable?",
+        "pro": [
+            {
+                "point": "The digital nomad lifestyle promotes local experiences and cultures.",
+                "reason": "It incentivizes travelers to immerse themselves directly into the communities they visit, fostering cultural exchange and economic benefits for smaller destinations",
+                "impact": "This can lead to a more sustainable tourism model that supports diverse economies rather than homogenized global ones."
+            },
+            {
+                "point": "'Digital Nomads' reduce carbon footprint by working remotely.",
+                "reason": "The reduction in commuting and business travel, as digital nomads work from various locations around the globe",
+                "impact": "This minimizes transportation-related emissions which are a significant contributor to climate change."
+            }
+        ],
+        "con": [
+            {
+                "point": "Increased carbon footprint due to frequent travel.",
+                "reason": "Traveling for work can lead to significant CO2 emissions, especially when the digital nomad opts for less sustainable modes of transportation like private jets or long-distance flights.",
+                "impact": "This contributes to climate change and negates environmental efforts."
+            },
+            {
+                "point": "Strain on local economies in popular destinations.",
+                "reason": "A large influx of digital nomads can disrupt the balance, driving up living costs and making it difficult for residents to afford housing and services.",
+                "impact": "It may result in gentrification or cultural displacement."
+            }
+        ],
+        "winner": "Pro"
+    },
+    {
+        "question": "Should the retirement age be lowered?",
+        "pro": [
+            {
+                "point": "Adapting to better health trends.",
+                "reason": "Life expectancy has significantly increased, making the traditional retirement age less relevant.",
+                "impact": "Workers could maintain their employment longer while enjoying better quality of life."
+            },
+            {
+                "point": "Encouraging career diversity and lifelong learning",
+                "reason": "Lowered retirement ages would incentivize people to seek new skills, fostering innovation.",
+                "impact": "A more dynamic workforce that can adapt to economic changes."
+            }
+        ],
+        "con": [
+            {
+                "point": "Reduces job opportunities for younger workers",
+                "reason": "With fewer older employees retiring, it's harder for entry-level jobs to become available.",
+                "impact": "Younger individuals face higher unemployment rates."
+            },
+            {
+                "point": "Strain on pension systems and healthcare",
+                "reason": "Increased retirees outlive their savings, leading to more reliance on public funds.",
+                "impact": "Heightened financial pressure on social services."
+            }
+        ],
+        "winner": "Pro"
+    },
+    {
+        "question": "Should electric vehicles be mandatory by 2035?",
+        "pro": [
+            {
+                "point": "Reduction in carbon emissions.",
+                "reason": "Electric vehicles emit no tailpipe pollutants, leading to cleaner air if widely adopted by 2035.",
+                "impact": "A significant decrease in urban smog and contribution towards mitigating climate change."
+            },
+            {
+                "point": "Decrease dependency on fossil fuels.",
+                "reason": "Electric vehicles can be powered by renewable energy, reducing reliance on oil which is finite.",
+                "impact": "Enhanced energy security and a push towards sustainable development."
+            }
+        ],
+        "con": [
+            {
+                "point": "Limited Charging Infrastructure",
+                "reason": "As of now, the charging infrastructure is insufficient to meet anticipated demand.",
+                "impact": "This could lead to range anxiety and potential blackouts during peak hours."
+            },
+            {
+                "point": "Economic Burden on Consumers",
+                "reason": "Transitioning by such a mandate imposes high upfront costs that may not be affordable for all.",
+                "impact": "This could widen socio-economic disparities as only wealthier individuals can adopt the technology."
+            }
+        ],
+        "winner": "Con"
+    },
+    {
+        "question": "Is the gig economy exploitative?",
+        "pro": [
+            {
+                "point": "Gig economy provides flexibility for workers.",
+                "reason": "It allows individuals to choose when and how much they want to work, potentially leading to better personal-work balance.",
+                "impact": "This can result in higher job satisfaction and mental wellbeing among gig workers."
+            },
+            {
+                "point": "The gig economy creates more employment opportunities.",
+                "reason": "It opens up freelance work, which is less regulated than traditional jobs, allowing for entrepreneurship even without extensive job experience or formal education.",
+                "impact": "This can decrease unemployment rates and provide income sources to people in economically depressed areas."
+            }
+        ],
+        "con": [
+            {
+                "point": "Not all gig economy jobs are inherently exploitative.",
+                "reason": "Some offer flexible working hours and the ability to choose projects, leading to job satisfaction for many workers.",
+                "impact": "Improves work-life balance without sacrificing income."
+            },
+            {
+                "point": "The gig economy can provide valuable experience in diverse fields.",
+                "reason": "Frequent exposure to different tasks and clients fosters adaptability and learning opportunities.",
+                "impact": "Enhances career prospects through skill development."
+            }
+        ],
+        "winner": "Pro"
+    },
+    {
+        "question": "Is quantum computing a security threat?",
+        "pro": [
+            {
+                "point": "Quantum computers could break current encryption methods.",
+                "reason": "Because they can perform complex calculations exponentially faster than classical computers, which quantum algorithms like Shor's algorithm are designed to do effectively for tasks such as integer factorization.",
+                "impact": "Potential widespread vulnerability of data currently secured by RSA encryption."
+            },
+            {
+                "point": "Quantum computing could undermine current cryptographic protocols.",
+                "reason": "Since quantum algorithms can solve certain problems that are the foundation for many security systems (e.g., public key distribution and verification), any system relying on these principles would be at risk.",
+                "impact": "A shift to post-quantum cryptography might become necessary, with a significant overhaul of digital infrastructure."
+            }
+        ],
+        "con": [
+            {
+                "point": "Current quantum computers are not yet powerful enough.",
+                "reason": "Quantum supremacy has not been achieved; existing machines lack the computational power to break encryption protocols significantly faster than traditional systems.",
+                "impact": "No immediate security threats, allowing ample time for developing new defenses."
+            },
+            {
+                "point": "The development of post-quantum cryptography is ongoing.",
+                "reason": "Research and implementation efforts are focused on creating encryption methods resistant to quantum attacks which would mitigate any potential threats.",
+                "impact": "Strengthens the overall security infrastructure against future computational advancements."
+            }
+        ],
+        "winner": "Pro"
+    },
+    {
+        "question": "Should the death penalty be abolished?",
+        "pro": [
+            {
+                "point": "The death penalty is morally wrong.",
+                "reason": "It denies the potential for rehabilitation and forgiveness, leading to irreversible consequences in cases of innocent individuals being executed or misjudged guilt.",
+                "impact": "Preserves human rights by preventing state-sanctioned killing."
+            },
+            {
+                "point": "The death penalty is not an effective deterrent against crime.",
+                "reason": "Statistical data shows no significant correlation between the presence of capital punishment and reduced murder rates, suggesting it does little to prevent future crimes.",
+                "impact": "Directs focus towards more constructive methods for improving societal safety."
+            }
+        ],
+        "con": [
+            {
+                "point": "Parsing Error",
+                "reason": "AI failed to return valid JSON",
+                "impact": "N/A"
+            }
+        ],
+        "winner": "Pro"
+    },
+    {
+        "question": "Is virtual reality better than real-life travel?",
+        "pro": [
+            {
+                "point": "Virtual reality can offer unique experiences.",
+                "reason": "It allows users to visit places that are otherwise inaccessible, like historical sites or natural wonders on Mars.",
+                "impact": "This could inspire learning and increase awareness about different parts of the world without traveling."
+            },
+            {
+                "point": "Virtual reality can be more environmentally friendly.",
+                "reason": "It eliminates the need for transportation, reducing carbon emissions associated with air or ground travel.",
+                "impact": "Lower environmental footprint and potential to encourage eco-friendly practices."
+            }
+        ],
+        "con": [
+            {
+                "point": "Virtual reality cannot fully replicate physical experiences.",
+                "reason": "Real-life travel offers a variety of sensory stimuli and interactions that VR technology has not yet perfectly simulated, which contributes to the overall experience.",
+                "impact": "The unreplicated aspects can leave virtual tourists with an incomplete understanding or appreciation for certain destinations."
+            },
+            {
+                "point": "Real-life travel fosters human connections and cultural exchange.",
+                "reason": "Interactions with locals, other travelers, and shared experiences in real settings build interpersonal relationships that are difficult to achieve virtually.",
+                "impact": "The loss of these social interactions may diminish the richness traditionally associated with exploring new places."
+            }
+        ],
+        "winner": "Con"
+    },
+    {
+        "question": "Is nuclear energy the future?",
+        "pro": [
+            {
+                "point": "Nuclear energy is a low-carbon power source.",
+                "reason": "Using nuclear fission to generate electricity produces virtually no greenhouse gas emissions, unlike fossil fuels such as coal and natural gas.",
+                "impact": "This could significantly reduce our carbon footprint if used in place of or alongside renewable energy sources."
+            },
+            {
+                "point": "Nuclear plants provide reliable base-load power generation. ",
+                "reason": "Unlike intermittent renewable resources like solar and wind, nuclear reactors can produce electricity consistently around the clock.",
+                "impact": "This reliability ensures a stable energy supply which is crucial for maintaining infrastructure function in societies."
+            }
+        ],
+        "con": [
+            {
+                "point": "Nuclear energy poses a significant risk of catastrophic accidents.",
+                "reason": "Historical examples such as Chernobyl and Fukushima highlight the potential for severe environmental disasters from nuclear incidents.",
+                "impact": "Long-term health consequences, extensive cleanup costs, and loss of public trust in energy sources."
+            },
+            {
+                "point": "Nuclear waste management is an insufficiently addressed issue.",
+                "reason": "The radioactive byproducts require secure containment for thousands of years before they become safe, posing a persistent challenge to environmental safety and sustainability.",
+                "impact": "Continued generation of hazardous waste affects future generations' health and environment; current storage solutions are vulnerable."
+            }
+        ],
+        "winner": "Con"
+    },
+    {
+        "question": "Is remote work making us less productive?",
+        "pro": [
+            {
+                "point": "Productivity increases due to fewer commute times.",
+                "reason": "Without the daily commute, employees save time that can be redirected towards work tasks or restorative personal activities",
+                "impact": "This could lead to a more energized and focused start of the working day."
+            },
+            {
+                "point": "Remote work allows for flexible schedules.",
+                "reason": "Flexibility can enable workers to choose hours when they are most productive, independent of traditional office hours",
+                "impact": "Optimized individual performance may lead to higher output quality and efficiency."
+            }
+        ],
+        "con": [
+            {
+                "point": "Parsing Error",
+                "reason": "AI failed to return valid JSON",
+                "impact": "N/A"
+            }
+        ],
+        "winner": "Pro"
+    },
+    {
+        "question": "Is homework beneficial?",
+        "pro": [
+            {
+                "point": "Homework reinforces learning.",
+                "reason": "It allows students to practice what they've learned in school and internalize concepts better by doing exercises repeatedly, which enhances knowledge retention.",
+                "impact": "Students are likely to perform better academically due to increased comprehension of the subject matter."
+            },
+            {
+                "point": "Homework improves study habits and time management.",
+                "reason": "Consistent assignments teach students discipline, prioritize tasks effectively, and develop essential skills for academic success such as organization and self-discipline.",
+                "impact": "Students become more capable of handling college responsibilities which involve longer study hours with less direct supervision."
+            }
+        ],
+        "con": [
+            {
+                "point": "Homework increases stress levels in students.",
+                "reason": "Extensive research has shown that excessive homework can lead to heightened anxiety and pressure, which may negatively affect a child's mental health and academic motivation.",
+                "impact": "Children might develop unhealthy coping mechanisms or even drop out due to the stress associated with an overwhelming amount of school work."
+            },
+            {
+                "point": "Homework does not necessarily improve learning outside of classroom settings.",
+                "reason": "Learning and retention can often be better achieved through interactive activities, discussions, or practical application rather than traditional homework tasks that may focus too heavily on rote memorization without context.",
+                "impact": "Students might learn more effectively by engaging in hands-on projects or group learning experiences instead of spending hours completing assignments at home."
+            }
+        ],
+        "winner": "Con"
+    },
+    {
+        "question": "Should Python replace all other languages?",
+        "pro": [
+            {
+                "point": "Python excels at scripting and rapid application development.",
+                "reason": "Its syntax is clear, expressive, and concise, making it easier for developers to write scripts quickly.",
+                "impact": "Rapid prototyping of applications can significantly reduce the time-to-market."
+            },
+            {
+                "point": "Python's extensive libraries foster community contributions and shared knowledge.",
+                "reason": "There is a vast ecosystem available for tasks ranging from web development to data analysis, allowing developers to leverage existing solutions efficiently.",
+                "impact": "This results in less redundant coding efforts across different projects."
+            }
+        ],
+        "con": [
+            {
+                "point": "Python is not suited for low-level system programming.",
+                "reason": "Performance and resource management in Python are typically slower due to its interpreted nature, which can be a critical factor when direct hardware control or intensive computations are required.",
+                "impact": "Replacing other languages entirely with Python could lead to performance bottlenecks in fields such as embedded systems development or real-time computing."
+            },
+            {
+                "point": "There's a lack of diversity and specialization among developers proficient only in Python.",
+                "reason": "Languages like Rust, C++, and Java have mature ecosystems with robust tools for specific domains such as concurrency control or web development. A sudden shift to Python could disrupt ongoing projects requiring these technologies.",
+                "impact": "A forced language transition might halt progress in large-scale systems reliant on the stability of existing languages, potentially leading to economic losses and decreased innovation."
+            }
+        ],
+        "winner": "Pro"
+    },
+    {
+        "question": "Should robots have legal rights?",
+        "pro": [
+            {
+                "point": "Robots can perform complex tasks autonomously.",
+                "reason": "Giving robots legal rights would enable them to have responsibilities for their actions, similar to human or animal behaviors in the context of product liability lawsuits.",
+                "impact": "This could lead to a clearer way of assigning accountability and resolving disputes arising from automated systems."
+            },
+            {
+                "point": "As robots become more advanced, they may display decision-making capabilities similar to humans.",
+                "reason": "Assigning legal rights might recognize the sophistication in their processing abilities and ensure fair treatment within society or specific contexts like workplaces.",
+                "impact": "It could result in a redefinition of personhood boundaries, leading to societal acceptance adjustments."
+            }
+        ],
+        "con": [
+            {
+                "point": "Robots are tools, not sentient beings.",
+                "reason": "Legal rights imply moral considerations that robots do not possess as they operate based on programming and algorithms without consciousness or emotions.",
+                "impact": "This perspective upholds the current legal framework where entities can have rights only if there is a reasonable basis for attributing personhood."
+            },
+            {
+                "point": "Granting legal rights to robots could lead to abuse and exploitation of AI.",
+                "reason": "If machines possess rights, it may become easier to justify their continuous use without addressing underlying issues such as labor replacement or privacy concerns.",
+                "impact": "This might result in a lack of necessary regulations that protect humans from potential negative consequences associated with widespread AI deployment."
+            }
+        ],
+        "winner": "Con"
+    },
+    {
+        "question": "Should drones be used for local deliveries?",
+        "pro": [
+            {
+                "point": "Drones can reduce traffic congestion.",
+                "reason": "As drones are electric and do not contribute to road pollution, they could decrease the number of delivery vehicles on roads during peak hours. This would lead to less congestion and faster travel times for other commuters.",
+                "impact": "Improved commute experience in urban areas with reduced traffic jams."
+            },
+            {
+                "point": "Drones can enhance delivery speed",
+                "reason": "Drone technology allows for quick deliveries by flying directly to destinations without the constraints of road networks or human-driven vehicles.",
+                "impact": "Quicker and more efficient local deliveries, especially in densely populated areas."
+            }
+        ],
+        "con": [
+            {
+                "point": "Potential privacy invasion",
+                "reason": "Drones equipped with cameras could inadvertently capture images of private properties or individuals.",
+                "impact": "Could lead to a significant decrease in trust and sense of security among residents."
+            },
+            {
+                "point": "Noise pollution",
+                "reason": "The constant buzzing from drones can be disruptive, especially in residential areas.",
+                "impact": "May cause disturbance to local wildlife and negatively affect the quality of life for residents."
+            }
+        ],
+        "winner": "Con"
+    },
+    {
+        "question": "Is a gap year beneficial?",
+        "pro": [
+            {
+                "point": "A gap year provides practical life experience.",
+                "reason": "It forces individuals to confront real-world scenarios, enhancing problem-solving skills and self-reliance which are valuable for academic pursuits post-gap year.",
+                "impact": "Students entering higher education with a stronger sense of independence can potentially reduce dropout rates."
+            },
+            {
+                "point": "Taking time off before college allows students to explore their interests and career paths more thoroughly.",
+                "reason": "It gives them an opportunity for self-reflection outside the academic setting, leading to better alignment with future education choices or careers which they are passionate about.",
+                "impact": "Increases the likelihood of higher satisfaction in chosen fields of study and employment."
+            }
+        ],
+        "con": [
+            {
+                "point": "Potential for procrastination and lack of focus.",
+                "reason": "During a gap year, individuals may spend excessive time engaging in leisure activities instead of pursuing educational or career objectives.",
+                "impact": "Students might delay their academic progress, reducing the chances to enter competitive fields upon graduation."
+            },
+            {
+                "point": "Risk of social regression and financial instability.",
+                "reason": "Many individuals return from a gap year only to find that they have fallen behind peers socially or professionally due to time away, which could affect their self-esteem and future job prospects if entry into the workforce directly follows education.",
+                "impact": "Individual's social status may decline within educational circles; financial difficulties can arise from potential loss of scholarships that require continuous enrollment."
+            }
+        ],
+        "winner": "Con"
+    },
+    {
+        "question": "Is it ethical to choose the gender of your baby?",
+        "pro": [
+            {
+                "point": "Individual Autonomy in Reproductive Choices.",
+                "reason": "Respects personal rights to make reproductive decisions without external interference.",
+                "impact": "Allows couples the freedom to align their family plans with individual preferences and lifestyle considerations."
+            },
+            {
+                "point": "Potential Mitigation of Gender Imbalance Concerns.",
+                "reason": "Could contribute positively in countries facing gender imbalances by allowing for a regulated choice that may alleviate societal pressures and long-term demographic issues.",
+                "impact": "May help prevent the development of negative social outcomes related to extreme gender ratios, such as increased rates of bachelorhood."
+            }
+        ],
+        "con": [
+            {
+                "point": "Parsing Error",
+                "reason": "AI failed to return valid JSON",
+                "impact": "N/A"
+            }
+        ],
+        "winner": "Pro"
+    },
+    {
+        "question": "Is living in the suburbs better than the city?",
+        "pro": [
+            {
+                "point": "Lower cost of living in the suburbs.",
+                "reason": "Suburban areas typically offer more affordable housing options and lower property taxes compared to urban centers, which can significantly reduce daily expenses for residents.",
+                "impact": "Families may have a higher disposable income due to reduced financial pressures."
+            },
+            {
+                "point": "Safer neighborhoods in the suburbs.",
+                "reason": "Suburban communities often experience lower crime rates and more community-oriented policing, providing residents with peace of mind and enhanced safety for children.",
+                "impact": "Increased sense of security can lead to better quality of life and improved mental well-being."
+            }
+        ],
+        "con": [
+            {
+                "point": "Suburbs often lack diverse employment opportunities.",
+                "reason": "The job market in suburban areas is frequently less varied compared to urban centers, with fewer options for education and career growth.",
+                "impact": "This can limit personal development and financial prosperity."
+            },
+            {
+                "point": "Public transportation services are usually insufficient.",
+                "reason": "The suburban infrastructure often cannot support extensive public transit, leading to dependency on cars for commuting which is costly and time-consuming.",
+                "impact": "Increases traffic congestion, pollution, and reduces overall quality of life."
+            }
+        ],
+        "winner": "Pro"
+    },
+    {
+        "question": "Is Starlink better than traditional fiber?",
+        "pro": [
+            {
+                "point": "Starlink provides better global coverage.",
+                "reason": "Given its satellite-based network, Starlink can offer internet access in remote and rural areas where traditional fiber may not be present or financially feasible to install.",
+                "impact": "Users living outside the reach of terrestrial broadband would gain connectivity options."
+            },
+            {
+                "point": "Starlink is faster with lower latency for some regions.",
+                "reason": "Satellites in Starlink's constellation can reduce signal transmission time and, therefore, provide quicker internet speeds compared to the longer terrestrial routes of fiber optics in certain areas.",
+                "impact": "Improved streaming quality for users at higher latitudes or over large distances."
+            }
+        ],
+        "con": [
+            {
+                "point": "Starlink's latency is too high for certain applications.",
+                "reason": "The satellites providing Starlink service are not as fast at delivering data due to the distances involved, which can be significantly higher than terrestrial fiber optics paths.",
+                "impact": "For real-time gaming or telemedicine where every millisecond counts, traditional fiber offers lower latency and better performance."
+            },
+            {
+                "point": "Starlink's signal reliability is not yet proven in all conditions.",
+                "reason": "Weather patterns can affect the quality of satellite-based internet services more severely than underground cables used for fiber connections, especially during heavy rain or snowfall that block line-of-sight to satellites.",
+                "impact": "In extreme weather conditions common in certain regions, users may face frequent service disruptions compared to the steadier performance of traditional fixed fiber."
+            }
+        ],
+        "winner": "Con"
+    },
+    {
+        "question": "Should standard testing be abolished?",
+        "pro": [
+            {
+                "point": "Abolishes high-stakes testing pressures.",
+                "reason": "It reduces stress and anxiety among students, which can impede learning and performance during tests.",
+                "impact": "Students may perform better in assessments without the fear of significant repercussions."
+            },
+            {
+                "point": "Promotes holistic evaluation methods",
+                "reason": "It ensures that students' knowledge, skills, and creativity are assessed through diverse mediums beyond pencil-and-paper tests.",
+                "impact": "A more accurate representation of a student\u2019s abilities is created."
+            }
+        ],
+        "con": [
+            {
+                "point": "Standard testing assesses foundational knowledge.",
+                "reason": "It provides a baseline for comparing student performance across different educational settings and time periods, which is essential for identifying areas of weakness in the curriculum or instructional methods.",
+                "impact": "Educators can make informed decisions about where to allocate resources and how to improve teaching strategies."
+            },
+            {
+                "point": "Without standard tests, accountability is compromised.",
+                "reason": "Standardized test scores are used by policymakers to evaluate the effectiveness of schools and districts. Without them, it becomes difficult to hold educational institutions responsible for student outcomes.",
+                "impact": "This may lead to a decrease in overall academic performance as there is less pressure on maintaining high standards."
+            }
+        ],
+        "winner": "Con"
+    },
+    {
+        "question": "Is space exploration worth the cost?",
+        "pro": [
+            {
+                "point": "Advancement of Technology and Innovation.",
+                "reason": "Investing in space exploration drives technological innovation as it requires the development of new tools, materials, and methods to overcome challenges associated with space travel.",
+                "impact": "This has led to numerous spin-off technologies such as improved satellite communication systems that benefit everyday life on Earth."
+            },
+            {
+                "point": "Scientific Knowledge Expansion",
+                "reason": "Studying other celestial bodies enhances our understanding of the universe, including insights into how planets form and operate.",
+                "impact": "This knowledge is crucial in predicting Earth's future conditions such as climate change."
+            }
+        ],
+        "con": [
+            {
+                "point": "Space exploration drives technological advancement.",
+                "reason": "Investments in space technology often lead to innovations that can have numerous applications on Earth, improving daily life and various industries.",
+                "impact": "Development of GPS technology which has become integral for navigation systems globally."
+            },
+            {
+                "point": "Space exploration inspires future generations in STEM fields.",
+                "reason": "It encourages educational pursuits and careers that are critical to the nation's scientific prowess, leading to a more knowledgeable society.",
+                "impact": "Increase in enrollment for science courses at universities following major space missions."
+            }
+        ],
+        "winner": "Con"
+    },
+    {
+        "question": "Should tech giants be taxed more?",
+        "pro": [
+            {
+                "point": "Tech giants contribute disproportionately to society's resources.",
+                "reason": "These companies have unprecedented market power and profit margins, which are not reflective of their societal investment or contribution through taxation.",
+                "impact": "Increasing the corporate tax rate would lead to a fairer financial distribution as tech giants pay closer in line with society's overall contributions."
+            },
+            {
+                "point": "Current under-taxation of large firms stifles economic competition.",
+                "reason": "When dominant companies face no additional tax pressure, it can create an uneven playing field that disadvantages smaller businesses and hinders innovation.",
+                "impact": "A higher tech industry specific or general corporate tax rate could level the competitive landscape by preventing market distortion caused by insufficiently challenged large firms."
+            }
+        ],
+        "con": [
+            {
+                "point": "Increased taxation may stifle innovation.",
+                "reason": "Higher costs can limit the funds available for research and development, reducing incentives to innovate.",
+                "impact": "Potentially slowing technological advancement and economic growth."
+            },
+            {
+                "point": "Could lead to retaliation or reciprocal measures from other nations.",
+                "reason": "Countries might respond with their own tax increases on foreign tech firms, sparking a trade war of sorts in digital space",
+                "impact": "International relations and global market dynamics could be negatively affected."
+            }
+        ],
+        "winner": "Pro"
+    },
+    {
+        "question": "Should financial literacy be taught in high school?",
+        "pro": [
+            {
+                "point": "Improves long-term financial stability.",
+                "reason": "Educating students on budgeting, saving, and investing reduces future debt burdens by fostering sound personal finance habits early in their lives.",
+                "impact": "A financially literate populace is less likely to rely heavily on credit cards or face bankruptcy."
+            },
+            {
+                "point": "Prepares students for college and career decisions.",
+                "reason": "Understanding financial aid, scholarships, student loans, and personal finance empowers high school juniors and seniors to make informed choices about higher education expenses.",
+                "impact": "More thoughtful decision-making could lead to less accumulated debt post-graduation."
+            }
+        ],
+        "con": [
+            {
+                "point": "Financial literacy can lead to better personal financial management.",
+                "reason": "Understanding how money works helps students make informed decisions about saving, investing and spending.",
+                "impact": "Students could potentially avoid debt and build wealth for their future."
+            },
+            {
+                "point": "Increased financial literacy can reduce socioeconomic disparities over time.",
+                "reason": "Educating all students, regardless of background, about personal finance helps level the playing field in terms of economic understanding and opportunity.",
+                "impact": "A more financially inclusive society could emerge as individuals better manage their resources."
+            }
+        ],
+        "winner": "Con"
+    },
+    {
+        "question": "Is cultural appropriation always wrong?",
+        "pro": [
+            {
+                "point": "Cultural appropriation can perpetuate stereotypes and reduce complex cultures to superficial elements.",
+                "reason": "When individuals adopt cultural practices without understanding their significance, it often leads to misrepresentation and oversimplification of those traditions.",
+                "impact": "This misunderstanding may reinforce harmful racial stereotypes and hinder genuine intercultural respect."
+            },
+            {
+                "point": "Cultural appropriation can disrespect the history and struggles associated with a culture, especially if taken from marginalized groups.",
+                "reason": "By using cultural symbols or attire without acknowledging their origins tied to struggle and resistance, one may inadvertently diminish that significance's perceived value within its community of origin.",
+                "impact": "It can cause emotional distress among members of the original culture who feel exploited for something they hold sacred or as symbols of historical adversity."
+            }
+        ],
+        "con": [
+            {
+                "point": "Cultural appropriation can lead to misrepresentation and stereotypes.",
+                "reason": "When elements of a culture are taken out of context or used by those not belonging to that culture, it may result in oversimplification of complex traditions and practices, reinforcing harmful clich\u00e9s about minority cultures rather than appreciating their depth.",
+                "impact": "This can perpetuate misunderstandings among the broader public and diminish respect for cultural heritage."
+            },
+            {
+                "point": "Cultural appropriation sometimes lacks consent or acknowledgment of its source, which is disrespectful to marginalized communities.",
+                "reason": "Using symbols, clothing, language, hairstyles, etc., from cultures that have historically been oppressed without proper credit can be seen as a continuation of colonialist attitudes and behaviors.",
+                "impact": "This might contribute to ongoing cycles of marginalization for those communities by ignoring their cultural significance."
+            }
+        ],
+        "winner": "Pro"
+    },
+    {
+        "question": "Should smartphones be banned for children under 12?",
+        "pro": [
+            {
+                "point": "Children's cognitive development may be impaired.",
+                "reason": "Excessive screen time can lead to reduced attention span and learning difficulties.",
+                "impact": "By banning smartphones, children might engage more in physical activities and face-to-face social interactions."
+            },
+            {
+                "point": "Increased risk of exposure to harmful content.",
+                "reason": "Children under the age are highly impressionable and can easily access explicit material online without proper guidance.",
+                "impact": "A ban could protect young children from inappropriate content, promoting safer internet use."
+            }
+        ],
+        "con": [
+            {
+                "point": "Smartphones provide educational value.",
+                "reason": "With age-appropriate apps and content, smartphones can offer learning opportunities about the world around them.",
+                "impact": "Children could gain knowledge in subjects like science, geography, or math through interactive applications."
+            },
+            {
+                "point": "Smartphone use fosters digital literacy.",
+                "reason": "Familiarity with technology is crucial for children's future academic and professional success; starting early ensures they become comfortable with it in a safe environment.",
+                "impact": "Early exposure helps mitigate potential anxiety or avoidance of digital tasks later in life."
+            }
+        ],
+        "winner": "Con"
+    },
+    {
+        "question": "Is the customer always right?",
+        "pro": [
+            {
+                "point": "The policy encourages exceptional service.",
+                "reason": "When business owners believe that the customer is always right, they may go above and beyond to ensure satisfaction as it directly affects their success.",
+                "impact": "This leads to a highly positive reputation which can increase repeat customers and word-of-mouth referrals."
+            },
+            {
+                "point": "It fosters open communication with the customer",
+                "reason": "Having this policy may create an environment where customers feel more comfortable sharing their honest feedback without fear of immediate negative repercussions.",
+                "impact": "Improved insight into consumer needs and preferences, which can guide better business decisions."
+            }
+        ],
+        "con": [
+            {
+                "point": "Customers have diverse needs and expectations that vary greatly.",
+                "reason": "Not all customers understand the limitations or realities of products/services, leading to demands beyond reasonable terms",
+                "impact": "Pressure on businesses could lead to untenable situations if always prioritized."
+            },
+            {
+                "point": "The 'customer is always right' mindset can diminish respect for professional expertise.",
+                "reason": "'Always wronging the customer by disregarding knowledge and experience leads to a lack of trust",
+                "impact": "Undermines service quality in industries requiring technical skills."
+            }
+        ],
+        "winner": "Pro"
+    },
+    {
+        "question": "Should biotech companies be allowed to patent genes?",
+        "pro": [
+            {
+                "point": "Encourages innovation in medical treatments.",
+                "reason": "Allowing patents on genes can create a financial motivation for biotech companies to invest heavily into research, leading them towards discoveries that could revolutionize medicine and therapies available today. This economic driver is vital as it compensates the high cost of R&D within such innovative fields.",
+                "impact": "This approach may result in more diverse treatment options for genetic diseases and disorders."
+            },
+            {
+                "point": "Provides legal protection to companies' investments.",
+                "reason": "Patenting a gene sequence gives biotech firms the exclusive right to use their discovery, which can protect them against competition from other entities that might try to capitalize on similar genetic findings without compensation. This exclusivity is essential for recouping research and development costs.",
+                "impact": "Companies are more likely to pursue risky gene-related projects if they have the potential patent protection, which could lead to breakthroughs in treating previously intractable conditions."
+            }
+        ],
+        "con": [
+            {
+                "point": "Patenting genes hinders research.",
+                "reason": "It restricts access to fundamental biological components necessary for scientific exploration and progress.",
+                "impact": "Limits the ability of scientists to freely study, compare, and develop treatments without legal or financial constraints."
+            },
+            {
+                "point": "Patents on genes can lead to monopolization.",
+                "reason": "They allow biotech companies exclusive rights over specific genetic sequences which could be essential for developing therapies.",
+                "impact": "Could increase the cost of medical treatments and limit accessibility, as well as stifle innovation by preventing other researchers from working on similar projects."
+            }
+        ],
+        "winner": "Con"
+    },
+    {
+        "question": "Will automation lead to mass unemployment?",
+        "pro": [
+            {
+                "point": "Automation will lead to a displacement of jobs in sectors that are highly routine and easily automatable.",
+                "reason": "Historically, technological advancements have disrupted specific job markets by introducing more efficient means of production or service delivery which replace the need for human labor (e.g., from cashiers to self-service kiosks).",
+                "impact": "This can lead to short-term increases in unemployment rates as workers transition between jobs."
+            },
+            {
+                "point": "The rise of automation may create new job opportunities and industries.",
+                "reason": "New technologies often require human oversight, maintenance, and improvements (e.g., the evolution from assembly lines to robotics). This can foster growth in technical fields like engineering, programming, and data analysis.",
+                "impact": "This might lead to a net positive effect on employment over time as new skills become sought after."
+            }
+        ],
+        "con": [
+            {
+                "point": "Automation can create new job sectors.",
+                "reason": "Technological advancements historically lead to the creation of jobs in emerging industries.",
+                "impact": "This could mitigate unemployment by generating employment opportunities that did not previously exist."
+            },
+            {
+                "point": "Human skills are irreplaceable for nuanced tasks and roles.",
+                "reason": "Certain aspects of work, such as creativity, empathy, and complex problem-solving require human insight",
+                "impact": "Preserving these jobs could maintain the need for a substantial portion of the current workforce."
+            }
+        ],
+        "winner": "Con"
+    },
+    {
+        "question": "Should college be free for everyone?",
+        "pro": [
+            {
+                "point": "College education should be free to encourage higher enrollment.",
+                "reason": "Eliminating the cost barrier can lead to a more educated workforce, which is essential in today\u2019s economy.",
+                "impact": "A nation with highly skilled professionals could see economic growth and innovation."
+            },
+            {
+                "point": "University education should be free as it's an investment into society's future leaders.",
+                "reason": "Education at the college level is where students often begin to specialize, forming a foundation for leadership roles in various sectors.",
+                "impact": "With more well-educated individuals accessing higher education, governance and societal progress could be enhanced."
+            }
+        ],
+        "con": [
+            {
+                "point": "College may become a less valuable credential.",
+                "reason": "If college is free, the perceived importance and uniqueness of having one could decrease as it becomes accessible to almost everyone without additional costs or barriers.",
+                "impact": "This might result in fewer graduates competing for high-skilled jobs requiring a degree."
+            },
+            {
+                "point": "Government spending may increase disproportionately",
+                "reason": "Funding free college education would likely require significant investments from government budgets, potentially leading to increased taxes or reallocation of funds.",
+                "impact": "This could strain public finances and possibly lead to cuts in other essential services."
+            }
+        ],
+        "winner": "Con"
+    },
+    {
+        "question": "Should children be allowed to be influencers?",
+        "pro": [
+            {
+                "point": "Children should be allowed to influence.",
+                "reason": "It provides a platform for young talent and creativity, allowing them to share their skills with the world.",
+                "impact": "Could lead to younger generation being more engaged in social issues."
+            },
+            {
+                "point": "Children as influencers can help break stereotypes",
+                "reason": "Their authenticity and fresh perspective could challenge mainstream media biases, promoting inclusivity.",
+                "impact": "Possibly increases acceptance of diverse representations in the media."
+            }
+        ],
+        "con": [
+            {
+                "point": "Children's mental health may suffer.",
+                "reason": "Influencing large audiences can lead to undue stress and anxiety due to constant scrutiny",
+                "impact": "Potential long-term psychological issues from early fame"
+            },
+            {
+                "point": "Children may lack the life experience needed.",
+                "reason": "Negotiating contracts, understanding public image and finances require maturity beyond children's years",
+                "impact": "Increased risk of exploitation or poor decision-making affecting future prospects"
+            }
+        ],
+        "winner": "Pro"
+    },
+    {
+        "question": "Is the internet a basic human right?",
+        "pro": [
+            {
+                "point": "The internet is essential for participating in modern society.",
+                "reason": "It provides access to information, education, and communication tools necessary for informed citizenship and societal engagement.",
+                "impact": "Without the Internet, marginalized communities are at a disadvantage when it comes to accessing critical services and exercising their rights."
+            },
+            {
+                "point": "The internet fosters freedom of expression by providing platforms for sharing opinions.",
+                "reason": "It enables voices that may otherwise be suppressed in traditional media environments, promoting democratic discourse.",
+                "impact": "Citizens are better equipped to hold their governments accountable and advocate for social change."
+            }
+        ],
+        "con": [
+            {
+                "point": "The internet may not be a fundamental human right.",
+                "reason": "It is not explicitly listed in international declarations and could lead to dependency without foundational skills development.",
+                "impact": "Potential neglect of essential literacy, mathematics, healthcare education."
+            },
+            {
+                "point": "Basic human rights focus on survival rather than connectivity.",
+                "reason": "True basic needs like food and shelter are not met with internet access alone.",
+                "impact": "Might allocate resources away from critical areas of development towards establishing digital infrastructure."
+            }
+        ],
+        "winner": "Pro"
+    },
+    {
+        "question": "Is open-source better than proprietary?",
+        "pro": [
+            {
+                "point": "Encourages community collaboration.",
+                "reason": "Open-source projects invite users to contribute, leading to a diverse pool of ideas and solutions.",
+                "impact": "This collective effort can accelerate innovation in software development."
+            },
+            {
+                "point": "Fosters transparency and trust.",
+                "reason": "Open-source code is publicly available for review, ensuring that there are no hidden malicious activities or backdoors present.",
+                "impact": "Increases user confidence in security when using open-source software."
+            }
+        ],
+        "con": [
+            {
+                "point": "Proprietary software often has more consistent and reliable support.",
+                "reason": "Because the company behind proprietary products is incentivized to maintain their offerings due to revenue concerns, leading them to invest in robust customer service systems. This ensures that any issues are promptly addressed with expert knowledge of the product's inner workings.",
+                "impact": "Users benefit from quicker problem resolution and fewer downtimes resulting in less disruption of workflow."
+            },
+            {
+                "point": "Proprietary software usually comes with more frequent updates that include security patches.",
+                "reason": "Without the need to consider open-source community compatibility, proprietary developers can focus solely on improving their product's performance and safety without external dependency constraints. This often leads to a faster response time for critical updates.",
+                "impact": "Companies reduce potential cybersecurity risks by mitigating vulnerabilities more swiftly."
+            }
+        ],
+        "winner": "Con"
+    },
+    {
+        "question": "Should coding be mandatory in school?",
+        "pro": [
+            {
+                "point": "Coding enhances problem-solving skills.",
+                "reason": "It requires logical thinking and breaking down complex issues into smaller, manageable parts.",
+                "impact": "Students develop a mindset to approach non-technical challenges more effectively in their personal lives and careers."
+            },
+            {
+                "point": "Coding is increasingly fundamental across industries.",
+                "reason": "Many jobs now require basic coding abilities for tasks such as data analysis, automation of processes or understanding digital platforms.",
+                "impact": "Students are better prepared for the modern workforce with these essential skills."
+            }
+        ],
+        "con": [
+            {
+                "point": "Not all students are interested in technology.",
+                "reason": "Coding should be optional to avoid alienating and discouraging those who do not have a natural inclination towards it, thereby reducing the risk of burnout and resistance.",
+                "impact": "Maintaining diverse interest among students could lead to broader career choices post-education."
+            },
+            {
+                "point": "There's limited classroom time that may not be used effectively for mandatory coding courses",
+                "reason": "Teaching a uniform skill set such as programming takes away valuable instructional hours from other essential areas like literacy and science, which are fundamental to student success in multiple disciplines.",
+                "impact": "Potential decrease in overall academic performance if foundational skills do not receive adequate attention."
+            }
+        ],
+        "winner": "Con"
+    },
+    {
+        "question": "Is influencer marketing effective?",
+        "pro": [
+            {
+                "point": "Influencer marketing leverages trust to promote products.",
+                "reason": "Influencers often have a loyal following who trust their recommendations.",
+                "impact": "This results in higher conversion rates and brand awareness."
+            },
+            {
+                "point": "It provides targeted reach within specific demographics.",
+                "reason": "Influencers typically share content with niche audiences aligned with the product's ideal customer base.",
+                "impact": "Brands can achieve better ROI by reaching an audience more likely to engage and purchase."
+            }
+        ],
+        "con": [
+            {
+                "point": "Influencer marketing can lead to inauthentic endorsements.",
+                "reason": "When brands heavily invest in influencers, the risk of sponsored content being indistinguishable from genuine recommendations increases.",
+                "impact": "This blurs consumer trust and may reduce brand credibility."
+            },
+            {
+                "point": "The effectiveness varies greatly among different audience segments.",
+                "reason": "Influencer marketing is most effective when the influencer's followers share similar demographics or interests as potential customers, which isn\u2019t always the case.",
+                "impact": "Brands may waste resources on ineffective campaigns that fail to resonate with their target audience."
+            }
+        ],
+        "winner": "Pro"
+    },
+    {
+        "question": "Should censorship exist?",
+        "pro": [
+            {
+                "point": "Censorship helps protect vulnerable groups in society.",
+                "reason": "By limiting exposure to harmful and explicit content, censorship can prevent the normalization of violence or abuse against these communities.",
+                "impact": "Vulnerable individuals may experience less trauma from such materials; however, this also risks creating an information bubble that could impede societal progress towards equality."
+            },
+            {
+                "point": "Censorship can uphold national security interests.",
+                "reason": "Restricting access to classified or sensitive government communications prevents leaks and espionage, safeguarding a nation\u2019s safety",
+                "impact": "National infrastructure could be better protected from cyber threats; yet it may also create an environment of distrust if misused."
+            }
+        ],
+        "con": [
+            {
+                "point": "Censorship violates freedom of expression.",
+                "reason": "Freedom of speech is a fundamental right that allows for the free exchange of ideas, essential to democracy and personal development.",
+                "impact": "Infringes on individual rights leading to self-censorship or fear of reprisal."
+            },
+            {
+                "point": "Censorship can be misused by those in power.",
+                "reason": "It provides a tool for governments and powerful entities to suppress dissent and control the narrative within society.",
+                "impact": "Limits public discourse, hinders accountability of government actions."
+            }
+        ],
+        "winner": "Pro"
+    },
+    {
+        "question": "Should cryptocurrencies be regulated?",
+        "pro": [
+            {
+                "point": "Cryptocurrencies can lead to financial crimes.",
+                "reason": "Their anonymous nature facilitates illegal activities like money laundering and financing terrorism, which regulation aims to prevent.",
+                "impact": "Reduction in the use of cryptocurrencies for illicit purposes."
+            },
+            {
+                "point": "Regulatory frameworks can enhance investor confidence.",
+                "reason": "With proper oversight, potential risks and mechanisms to safeguard assets are established, providing security in transactions",
+                "impact": "Increased adoption of cryptocurrencies as a safe alternative for traditional banking systems."
+            }
+        ],
+        "con": [
+            {
+                "point": "Cryptocurrencies could lead to financial instability.",
+                "reason": "Due to their high volatility and lack of regulation, the value can fluctuate unpredictably.",
+                "impact": "Investors may suffer significant losses affecting broader economic confidence."
+            },
+            {
+                "point": "Regulating cryptocurrencies could stifle innovation.",
+                "reason": "Over-regulation might limit the development of new applications and technologies within this nascent field.",
+                "impact": "Could result in a slower rate of digital financial growth."
+            }
+        ],
+        "winner": "Con"
+    },
+    {
+        "question": "Should social media algorithms be public?",
+        "pro": [
+            {
+                "point": "Transparency in algorithms promotes accountability.",
+                "reason": "When the inner workings of social media algorithms are made public, companies can be held responsible for their effects on society and individual users.",
+                "impact": "This could lead to better content moderation practices that prevent harmful or misleading information from spreading widely."
+            },
+            {
+                "point": "Public knowledge of algorithms empowers user agency.",
+                "reason": "Understanding how recommendations are made allows users to critically evaluate the media they consume and potentially control their own digital experiences more effectively.",
+                "impact": "Users may become less susceptible to echo chambers, leading to a healthier online discourse."
+            }
+        ],
+        "con": [
+            {
+                "point": "Potential to misuse personal information.",
+                "reason": "Algorithms could be exploited by malicious actors if they are public, leading to privacy breaches and manipulation of user data for profit or harmful purposes.",
+                "impact": "Exposing algorithms can lead to increased cybercrime rates and erosion of personal privacy."
+            },
+            {
+                "point": "Risk of creating echo chambers and filter bubbles.",
+                "reason": "Public knowledge of how content is prioritized might not prevent the self-reinforcing cycles that limit exposure to diverse viewpoints, exacerbating societal divisions.",
+                "impact": "Maintaining polarization in society could be intensified without intervention."
+            }
+        ],
+        "winner": "Con"
+    },
+    {
+        "question": "Should teachers be replaced by AI?",
+        "pro": [
+            {
+                "point": "AI can handle repetitive tasks more efficiently.",
+                "reason": "Repeated calculations and data entry are time-consuming for human teachers, which AI could streamline significantly.",
+                "impact": "More teaching resources will be available to focus on students' creative learning."
+            },
+            {
+                "point": "AI can provide personalized education at scale.",
+                "reason": "Machine Learning algorithms can adapt content and pacing to individual student needs, which is challenging for human teachers in large classes.",
+                "impact": "Every student could potentially receive a tailored learning experience irrespective of class size."
+            }
+        ],
+        "con": [
+            {
+                "point": "AI lacks human empathy.",
+                "reason": "Emotional intelligence is crucial in education, especially for younger students who need guidance and understanding from adults during their developmental stages.",
+                "impact": "Replacing teachers with AI could lead to a generation of children lacking essential social skills."
+            },
+            {
+                "point": "AI cannot provide individualized attention.",
+                "reason": "Every student is unique, and learning styles vary greatly; personal interaction helps identify these differences quickly for effective teaching.",
+                "impact": "Students might struggle to grasp concepts without one-on-one guidance."
+            }
+        ],
+        "winner": "Con"
+    },
+    {
+        "question": "Should wealth be redistributed?",
+        "pro": [
+            {
+                "point": "Wealth redistribution can reduce poverty and inequality.",
+                "reason": "By reallocating resources from the wealthy to those in need, society takes a step towards fairness which is ethically desirable as it ensures that all individuals have access to basic needs like food, shelter, education, and healthcare.",
+                "impact": "This can lead to improved living conditions for disadvantaged groups and potentially reduce crime rates associated with poverty."
+            },
+            {
+                "point": "Redistributing wealth promotes social cohesion.",
+                "reason": "When economic disparities are minimized, people feel more connected to each other as they perceive society as a place where everyone has an equal opportunity for success and well-being.",
+                "impact": "This increased sense of community can enhance the effectiveness of social institutions by fostering trust and collaboration among citizens."
+            }
+        ],
+        "con": [
+            {
+                "point": "Wealth redistribution undermines individual incentives.",
+                "reason": "Excessive taxation can disincentivize personal initiative and hard work, which are critical drivers of economic growth.",
+                "impact": "Potential decrease in productivity and innovation."
+            },
+            {
+                "point": "Redistribution may lead to dependency on welfare systems.",
+                "reason": "Creating a reliance can reduce the motivation for self-sufficiency, trapping individuals or families in poverty rather than lifting them out of it.",
+                "impact": "Stagnant economic mobility and entrenched socioeconomic divides."
+            }
+        ],
+        "winner": "Pro"
+    },
+    {
+        "question": "Is cybersecurity the biggest threat to world peace?",
+        "pro": [
+            {
+                "point": "Cybersecurity threats can incite conflicts.",
+                "reason": "Sabotage of critical infrastructure could lead to real-world consequences such as energy shortages, which may escalate into regional disputes or wars.",
+                "impact": "Increased tensions between nations over access to resources and technologies."
+            },
+            {
+                "point": "Cyber attacks undermine trust in international relations.",
+                "reason": "Persistent cyber espionage can erode the confidence between allies, which is crucial for maintaining peaceful diplomatic engagements",
+                "impact": "Weaker global partnerships and increased risk of misunderstandings leading to conflict."
+            }
+        ],
+        "con": [
+            {
+                "point": "Cybersecurity concerns focus too narrowly on the digital realm.",
+                "reason": "While cyber threats are significant, they do not directly lead to physical acts of violence that destabilize nations and threaten world peace like conventional military conflicts do.",
+                "impact": "This misdirection might divert resources from addressing more immediate sources of conflict."
+            },
+            {
+                "point": "Cybersecurity issues are often resolved through dialogue, unlike many geopolitical disputes that escalate into armed confrontations threatening peace.",
+                "reason": "The nature of cyber threats allows for diplomatic solutions and international cooperation without resorting to violence.",
+                "impact": "This reduces the potential for military conflicts between nations, thereby maintaining global stability."
+            }
+        ],
+        "winner": "Con"
+    },
+    {
+        "question": "Is cloud computing safer than local storage?",
+        "pro": [
+            {
+                "point": "Cloud computing offers advanced security measures.",
+                "reason": "Cloud service providers often invest heavily in cybersecurity, including encryption and multi-factor authentication which may be complex to set up locally.",
+                "impact": "Increased protection against data breaches for businesses relying on cloud services."
+            },
+            {
+                "point": "Data redundancy is more reliable with the cloud.",
+                "reason": "Cloud providers duplicate and store copies of your data across multiple facilities, ensuring that it can be retrieved if local hardware fails or suffers damage.",
+                "impact": "Enhanced continuity in case of physical disasters affecting a business's premises."
+            }
+        ],
+        "con": [
+            {
+                "point": "Cloud computing relies on third-party data centers, which introduces additional risks.",
+                "reason": "Third parties may have security vulnerabilities or breaches that can compromise user data stored in the cloud.",
+                "impact": "Data loss and potential privacy violations due to reliance on external infrastructure."
+            },
+            {
+                "point": "Local storage allows users more control over physical access, reducing exposure risk.",
+                "reason": "With local storage, only those who have direct physical or network connection can potentially alter data",
+                "impact": "Lowered chances of unauthorized tampering and theft."
+            }
+        ],
+        "winner": "Pro"
+    }
+]
