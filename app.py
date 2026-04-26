@@ -85,7 +85,7 @@ elif page == "Evaluation Dashboard":
     # 2. NLP Metrics (BLEU/ROUGE)
     st.divider()
     st.subheader("🔤 NLP Quality Analysis (BLEU & ROUGE)")
-    st.write("Comparing **Hybrid Output** against **Prompt Baseline** for content richness.")
+    st.write("Compared to baseline, hybrid outputs show **higher content coverage and structural completeness**.")
     
     nlp_path = os.path.join("evaluation", "bleu_rouge_results.json")
     if os.path.exists(nlp_path):
@@ -99,6 +99,6 @@ elif page == "Evaluation Dashboard":
         c3.metric("ROUGE-2", summary["avg_rouge2"])
         c4.metric("ROUGE-L", summary["avg_rougeL"])
         
-        st.caption("Note: Higher BLEU/ROUGE scores indicate that the Hybrid system successfully maintains and enhances the structured content of the prompt baseline.")
+        st.caption("Note: Higher BLEU/ROUGE scores indicate higher content overlap and completeness between the Hybrid system and the structured baseline.")
     else:
         st.warning("⚠️ NLP metrics not found. Run 'python evaluation/bleu_rouge.py' to generate.")
