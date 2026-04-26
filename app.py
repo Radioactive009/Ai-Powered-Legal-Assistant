@@ -10,7 +10,12 @@ from agents.con_agent import generate_con_argument
 
 st.set_page_config(page_title="Legal Agent Analysis", page_icon="🧠", layout="wide")
 
-# --- UTILS FOR LIVE COMPARISON ---
+# --- UTILS FOR LIVE COMPARISON & METRICS ---
+def count_keywords(text):
+    keywords = ["because", "leads to", "results in", "therefore"]
+    text = str(text).lower()
+    return sum(text.count(k) for k in keywords)
+
 def get_raw_llm(question):
     try:
         response = requests.post(
@@ -23,14 +28,16 @@ def get_raw_llm(question):
             },
             timeout=60
         )
-        return response.json().get("response", "")
+        text = response.json().get("response", "")
+        return text, {"length": len(text.split()), "keywords": count_keywords(text)}
     except:
-        return "Error fetching Raw LLM response."
+        return "Error fetching Raw LLM response.", {"length": 0, "keywords": 0}
 
 def get_prompt_only(question):
     pro = generate_pro_argument(question)
     con = generate_con_argument(question)
-    return pro, con
+    full_text = str(pro) + " " + str(con)
+    return pro, con, {"length": len(full_text.split()), "keywords": count_keywords(full_text)}
 
 # --- SIDEBAR ---
 st.sidebar.title("🛠️ Project Menu")
@@ -43,46 +50,63 @@ if page == "Debate Arena":
 
     question = st.text_input("Enter your question:", placeholder="e.g., Is React the best framework?")
     
-    # NEW: Comparative Mode Toggle
-    compare_mode = st.checkbox("🔍 Run Real-Time Comparison Mode (Show Raw vs Prompt vs Hybrid)")
+    compare_mode = st.checkbox("🔍 Run Real-Time Comparison Mode (Show Live Graphs & Metrics)")
 
     if st.button("Run Debate"):
         if not question:
             st.warning("Please enter a question first.")
         else:
             if compare_mode:
-                with st.status("🔬 Running Comparative Analysis (This will take ~40s)...", expanded=True) as status:
-                    st.write("1/3: Fetching Raw LLM response...")
-                    raw_text = get_raw_llm(question)
+                with st.status("🔬 Performing Comparative Analysis & Generating Visuals...", expanded=True) as status:
+                    st.write("1/3: Analyzing Raw LLM baseline...")
+                    raw_text, raw_m = get_raw_llm(question)
                     
-                    st.write("2/3: Generating Prompt-Engineered arguments...")
-                    p_pro, p_con = get_prompt_only(question)
+                    st.write("2/3: Analyzing Prompt-Engineered baseline...")
+                    p_pro, p_con, p_m = get_prompt_only(question)
                     
-                    st.write("3/3: Executing Full Hybrid Pipeline (Rules + ML + Judge)...")
+                    st.write("3/3: Executing Hybrid Intelligent Pipeline...")
                     hybrid_out = run_debate(question)
+                    h_text = str(hybrid_out["pro"]) + " " + str(hybrid_out["con"])
+                    h_m = {"length": len(h_text.split()), "keywords": count_keywords(h_text)}
                     
-                    status.update(label="✅ Comparison Complete!", state="complete", expanded=False)
+                    status.update(label="✅ Comparison & Analytics Complete!", state="complete", expanded=False)
+
+                # --- NEW: LIVE GRAPHS SECTION ---
+                st.subheader("📊 Live Performance Comparison")
+                
+                # Prepare data for graph
+                chart_data = pd.DataFrame({
+                    "Method": ["Raw LLM", "Prompt Engineered", "Hybrid System"],
+                    "Reasoning Depth (Keywords)": [raw_m["keywords"], p_m["keywords"], h_m["keywords"]],
+                    "Structural Length (Words)": [raw_m["length"], p_m["length"], h_m["length"]]
+                })
+
+                c1, c2 = st.columns([2, 1])
+                with c1:
+                    st.write("**Reasoning Depth (Logical Connectors Used)**")
+                    st.bar_chart(chart_data.set_index("Method")["Reasoning Depth (Keywords)"])
+                with c2:
+                    st.write("**Quick Insights**")
+                    st.metric("Hybrid Advantage", f"+{h_m['keywords'] - raw_m['keywords']} Keywords")
+                    st.metric("Structure Gain", f"+{h_m['length'] - raw_m['length']} Words")
+                
+                st.divider()
 
                 # Show Results in Tabs
-                tab_h, tab_p, tab_r = st.tabs(["⭐ Hybrid System (Winner)", "📝 Prompt Only", "📄 Raw LLM"])
+                tab_h, tab_p, tab_r = st.tabs(["⭐ Hybrid System (Winner Selected)", "📝 Prompt Only", "📄 Raw LLM"])
                 
                 with tab_r:
-                    st.info("Raw LLM Output (No constraints, no structure)")
+                    st.info("Raw LLM Output (No constraints)")
                     st.write(raw_text)
-                    st.caption("Notice: No winner picked, no structured points.")
 
                 with tab_p:
-                    st.info("Prompt Engineered (Structure only, no intelligence)")
-                    c1, c2 = st.columns(2)
-                    c1.write("**Pro:**")
-                    c1.write(p_pro)
-                    c2.write("**Con:**")
-                    c2.write(p_con)
-                    st.caption("Notice: Better structure, but still no decision.")
+                    st.info("Prompt Engineered (Structure only)")
+                    col_p1, col_p2 = st.columns(2)
+                    col_p1.write(p_pro)
+                    col_p2.write(p_con)
 
                 with tab_h:
                     st.success("Hybrid Intelligent System (Winner Selected)")
-                    # Reuse existing UI logic for Hybrid
                     col1, col2 = st.columns(2)
                     with col1:
                         for i, arg in enumerate(hybrid_out["pro"]):
@@ -105,7 +129,7 @@ if page == "Debate Arena":
                     st.write(f"**Reason:** {res['reason']}")
             
             else:
-                # Normal Mode (Fast)
+                # Normal Mode
                 with st.status("🤖 AI Agents are debating...", expanded=True) as status:
                     output = run_debate(question)
                     status.update(label="✅ Debate Complete!", state="complete", expanded=False)
@@ -140,38 +164,15 @@ if page == "Debate Arena":
 # --- PAGE 2: EVALUATION DASHBOARD ---
 elif page == "Evaluation Dashboard":
     st.title("📊 System Evaluation Dashboard")
-    st.write("Comparing the **Hybrid System** against **Raw LLM** and **Prompt Engineering** baselines.")
-
     results_path = os.path.join("evaluation", "results.json")
-    if not os.path.exists(results_path):
-        st.warning("⚠️ No evaluation data found. Dashboard is showing sample metrics.")
-    else:
+    if os.path.exists(results_path):
         with open(results_path, "r", encoding="utf-8") as f:
             data = json.load(f)
-
         methods = ["raw_llm", "prompt_engineered", "hybrid"]
         metrics_data = []
         for m in methods:
-            avg_len = sum(r[m]["metrics"]["length"] for r in data) / len(data)
             avg_kw = sum(r[m]["metrics"]["keywords"] for r in data) / len(data)
-            dec_rate = (sum(1 for r in data if r[m]["metrics"]["has_decision"]) / len(data)) * 100
-            metrics_data.append({"Method": m.title(), "Avg Length": avg_len, "Reasoning (Keywords)": avg_kw, "Decision Rate (%)": dec_rate})
-
+            metrics_data.append({"Method": m.title(), "Reasoning (Keywords)": avg_kw})
         df_metrics = pd.DataFrame(metrics_data)
-        col1, col2, col3 = st.columns(3)
-        col1.metric("Hybrid Decision Rate", "100%", delta="100% over Baseline")
-        col2.metric("Avg Reasoning Depth", f"{metrics_data[2]['Reasoning (Keywords)']:.1f}", delta=f"{metrics_data[2]['Reasoning (Keywords)'] - metrics_data[0]['Reasoning (Keywords)']:.1f}")
-        col3.metric("Samples Evaluated", len(data))
-
-        st.divider()
-        st.subheader("📈 Reasoning Depth Comparison")
+        st.subheader("📈 Reasoning Depth Comparison (Historical Data)")
         st.bar_chart(df_metrics.set_index("Method")["Reasoning (Keywords)"])
-
-        st.divider()
-        st.subheader("🔍 Case-by-Case Analysis (Pre-Generated)")
-        selected_q = st.selectbox("Pick a question to compare results:", [r["question"] for r in data])
-        q_data = next(r for r in data if r["question"] == selected_q)
-        tab1, tab2, tab3 = st.tabs(["Raw LLM", "Prompt Engineered", "Hybrid System"])
-        with tab1: st.write(q_data["raw_llm"]["text"])
-        with tab2: st.write(q_data["prompt_engineered"]["pro"], q_data["prompt_engineered"]["con"])
-        with tab3: st.write(q_data["hybrid"]["full_output"]["result"])
