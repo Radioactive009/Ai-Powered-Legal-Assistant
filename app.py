@@ -10,8 +10,8 @@ if st.button("Run Debate"):
     if not question:
         st.warning("Please enter a question first.")
     else:
-        with st.status("🤖 AI Agents are debating (Structured Mode)...", expanded=True) as status:
-            st.write("Generating structured JSON arguments...")
+        with st.status("🤖 AI Agents are debating (Hybrid Intelligent Mode)...", expanded=True) as status:
+            st.write("Generating arguments and consulting ML model...")
             try:
                 output = run_debate(question)
                 status.update(label="✅ Debate Complete!", state="complete", expanded=False)
@@ -43,10 +43,11 @@ if st.button("Run Debate"):
         
         res = output["result"]
         with st.container(border=True):
-            col_a, col_b, col_c = st.columns(3)
+            col_a, col_b, col_c, col_d = st.columns(4)
             col_a.metric("Winner", res["winner"])
             col_b.metric("Pro Score", res["scores"]["pro"])
             col_c.metric("Con Score", res["scores"]["con"])
+            col_d.metric("ML Pick", res["ml_prediction"])
             
             st.write(f"**Reason:** {res['reason']}")
             st.caption(f"Decision Method: {res['decision_type'].replace('_', ' ').title()} | Confidence: {res['confidence']*100}%")

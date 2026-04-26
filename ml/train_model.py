@@ -3,7 +3,7 @@ import pickle
 import os
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import accuracy_score, classification_report
+from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 
 def load_data(filepath):
     """
@@ -43,16 +43,19 @@ def train_and_save_model(X, y, model_path):
 
     print(f"Training on {len(X_train)} samples, testing on {len(X_test)} samples.")
 
-    # Initialize and train model
-    model = LogisticRegression(class_weight='balanced')
+    # Initialize and train model with class weight balancing
+    model = LogisticRegression(class_weight='balanced', max_iter=1000)
     model.fit(X_train, y_train)
 
     # Evaluation
     predictions = model.predict(X_test)
     acc = accuracy_score(y_test, predictions)
     report = classification_report(y_test, predictions)
+    cm = confusion_matrix(y_test, predictions)
 
     print(f"\nModel Accuracy: {acc:.2f}")
+    print("\nConfusion Matrix:")
+    print(cm)
     print("\nClassification Report:")
     print(report)
 
@@ -64,8 +67,11 @@ def train_and_save_model(X, y, model_path):
     print(f"Model saved to: {model_path}")
 
 def main():
-    input_file = os.path.join("dataset", "features.json")
-    model_output = os.path.join("ml", "model.pkl")
+    # Automatically resolve paths relative to this script
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    
+    input_file = os.path.join(current_dir, "..", "dataset", "features.json")
+    model_output = os.path.join(current_dir, "model.pkl")
 
     try:
         X, y = load_data(input_file)
