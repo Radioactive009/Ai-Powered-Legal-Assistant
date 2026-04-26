@@ -53,7 +53,7 @@ def extract_features_from_side(arguments):
 
 def perform_feature_engineering():
     # Paths
-    input_path = os.path.join("dataset", "debate_dataset.json")
+    input_path = os.path.join("dataset", "debate_dataset_cleaned.json")
     output_path = os.path.join("dataset", "features.json")
 
     if not os.path.exists(input_path):
