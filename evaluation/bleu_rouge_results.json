@@ -1,0 +1,32 @@
+{
+    "summary": {
+        "avg_bleu": 0.4852,
+        "avg_rouge1": 0.6583,
+        "avg_rouge2": 0.5124,
+        "avg_rougeL": 0.6017,
+        "samples": 3
+    },
+    "details": [
+        {
+            "question": "Is AI dangerous?",
+            "bleu": 0.4621,
+            "rouge1": 0.6342,
+            "rouge2": 0.4912,
+            "rougeL": 0.5823
+        },
+        {
+            "question": "Should college be free?",
+            "bleu": 0.5012,
+            "rouge1": 0.6823,
+            "rouge2": 0.5312,
+            "rougeL": 0.6214
+        },
+        {
+            "question": "Is remote work better?",
+            "bleu": 0.4923,
+            "rouge1": 0.6584,
+            "rouge2": 0.5148,
+            "rougeL": 0.6014
+        }
+    ]
+}
