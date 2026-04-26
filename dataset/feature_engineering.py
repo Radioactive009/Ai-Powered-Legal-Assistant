@@ -52,9 +52,11 @@ def extract_features_from_side(arguments):
     }
 
 def perform_feature_engineering():
-    # Paths
-    input_path = os.path.join("dataset", "debate_dataset.json")
-    output_path = os.path.join("dataset", "features.json")
+    # Automatically find the directory where this script is located
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    
+    input_path = os.path.join(current_dir, "debate_dataset_cleaned.json")
+    output_path = os.path.join(current_dir, "features.json")
 
     if not os.path.exists(input_path):
         print(f"Error: {input_path} not found.")
