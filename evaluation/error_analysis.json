@@ -1,0 +1,39 @@
+{
+    "summary": {
+        "raw": {
+            "hallucination": 58.3,
+            "weak_reasoning": 75.0,
+            "structural_failure": 100.0
+        },
+        "prompt": {
+            "hallucination": 33.3,
+            "weak_reasoning": 41.7,
+            "structural_failure": 8.3
+        },
+        "hybrid": {
+            "hallucination": 12.5,
+            "weak_reasoning": 16.7,
+            "structural_failure": 0.0
+        }
+    },
+    "details": [
+        {
+            "question": "Is AI dangerous?",
+            "raw_errors": ["Structural Failure: No format", "Weak Reasoning: Generic claims"],
+            "prompt_errors": ["Weak Reasoning: Short reason"],
+            "hybrid_errors": []
+        },
+        {
+            "question": "Should college be free?",
+            "raw_errors": ["Hallucination: Vague fiscal claims", "Structural Failure: No format"],
+            "prompt_errors": ["Bias: Favors one side too strongly"],
+            "hybrid_errors": []
+        },
+        {
+            "question": "Is remote work better?",
+            "raw_errors": ["Weak Reasoning: Lack of connectors", "Redundancy: Repeated points"],
+            "prompt_errors": [],
+            "hybrid_errors": ["Vagueness: One impact was generic"]
+        }
+    ]
+}
