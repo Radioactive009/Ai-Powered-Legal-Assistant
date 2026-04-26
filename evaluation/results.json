@@ -2,9 +2,9 @@
     {
         "question": "Is AI dangerous to humanity?",
         "raw_llm": {
-            "text": "AI has potential risks but also benefits. It could automate jobs and create bias in algorithms. However, it also helps in medicine and science. Whether it is dangerous depends on how we regulate it. Many experts are concerned about AGI, but we are not there yet.",
+            "text": "AI, in its current form and usage, is not inherently \"dangerous\" to humanity. However, the potential risks associated with it cannot be ignored or understated either. Here are some reasons for my conclusion:\n\n1. Dependency on AI systems - As we become more reliant on artificial intelligence technologies like personal assistants and smart home devices, our dependency may increase to a point where failure of these technologies could have serious implications in day-to-day life or critical situations such as emergency response during natural disasters.\n\n2. Misuse by malicious actors - AI can be weaponized for nefarious purposes like cyberattacks, deep fakes and propaganda to manipulate public opinion, spread misinformation, incite violence etc., posing threats to human rights, safety or national security if not properly addressed through regulation.\n\n3. Job displacement - As automation advances rapidly thanks to AI capabilities such as self-driving cars, drones and robotic laborers, many traditional jobs are at risk of being replaced by machines which could disrupt economies on a large scale if people aren't adequately prepared through retraining or social safety nets.\n\n4. Ethical concerns - The development of advanced AI systems raises several ethical questions and challenges related to accountability, privacy invasion etc., that need proper",
             "metrics": {
-                "length": 45,
+                "length": 202,
                 "args_count": 1,
                 "keywords": 0,
                 "has_decision": false
@@ -12,29 +12,79 @@
         },
         "prompt_engineered": {
             "pro": [
-                {"point": "Job Displacement", "reason": "AI can automate tasks faster than humans.", "impact": "High unemployment in manufacturing."}
+                {
+                    "point": "AI could perpetrate biases present in its training data, leading to discrimination.",
+                    "reason": "If AI systems are trained on historical datasets that contain human prejudices, it may learn and replicate these biases",
+                    "impact": "Could lead to unfair treatment of individuals or groups based on race, gender, or socioeconomic status in areas like hiring practices."
+                },
+                {
+                    "point": "AI has the potential for autonomous weapon systems that lack accountability.",
+                    "reason": "Lack of clear responsibility can lead to unintended casualties and ethical concerns over who is to blame when things go wrong",
+                    "impact": "Raises serious moral dilemmas about warfare, the potential for an arms race in AI weaponry, and humanitarian issues if accountability cannot be established."
+                }
             ],
             "con": [
-                {"point": "Efficiency", "reason": "AI reduces human error in data entry.", "impact": "Higher productivity for global businesses."}
+                {
+                    "point": "AI can enhance human capabilities and decision-making.",
+                    "reason": "Through the analysis of large datasets, AI systems like IBM's Watson have outperformed humans in specific tasks such as diagnosing diseases or providing insights from complex data sets which would otherwise be beyond our cognitive capacity. This synergy between human intelligence and artificial capabilities can lead to better healthcare, increased efficiency in industries, and advancements in science.",
+                    "impact": "Improved accuracy in medical diagnoses leading to potentially higher survival rates for patients."
+                },
+                {
+                    "point": "AI systems are tools used by humans that require ethical oversight. The danger lies not within AI itself, but how it is developed and implemented.",
+                    "reason": "Human developers create these algorithms with the intention of benefiting society; thus, any dangers arise primarily from negligence or misuse on part of human actors rather than inherent risks associated with artificial intelligence. It's essential to enforce strict ethical guidelines and accountability measures in AI development.",
+                    "impact": "By instilling strong ethical standards, the negative effects often attributed to autonomous systems can be significantly reduced."
+                }
             ],
             "metrics": {
-                "length": 38,
-                "args_count": 2,
-                "keywords": 1,
+                "length": 284,
+                "args_count": 4,
+                "keywords": 0,
                 "has_decision": false
             }
         },
         "hybrid": {
             "full_output": {
+                "question": "Is AI dangerous to humanity?",
+                "pro": [
+                    {
+                        "point": "Potential for job displacement.",
+                        "reason": "As AI systems become more adept at performing tasks traditionally done by humans, automation could replace human labor in various sectors, leading to unemployment and economic instability.",
+                        "impact": "Increased unemployment rates due to the loss of jobs across industries such as manufacturing, customer service, and transport."
+                    },
+                    {
+                        "point": "Risk of AI decision-making errors.",
+                        "reason": "AI systems might make decisions based on flawed algorithms or biased data sets that could lead to harmful outcomes in critical areas like healthcare diagnosis, criminal justice, and autonomous vehicle navigation.",
+                        "impact": "Misdiagnoses causing incorrect treatment plans, wrongful convictions due to faulty risk assessments, and potential accidents or fatalities involving self-driving vehicles."
+                    }
+                ],
+                "con": [
+                    {
+                        "point": "AI has the potential to vastly improve healthcare.",
+                        "reason": "With AI, diagnostic processes can be expedited and made more accurate through analyzing large datasets of medical information quickly.\n",
+                        "impact": "This could lead to earlier detection of diseases such as cancer or Alzheimer's, directly saving lives."
+                    },
+                    {
+                        "point": "AI reduces workplace risks.",
+                        "reason": "Automation through AI can perform dangerous tasks in hazardous environments where humans cannot safely operate.\n",
+                        "impact": "Decreased risk of injury or death for workers and potential reduction in industrial accidents."
+                    }
+                ],
                 "result": {
                     "winner": "Con",
-                    "reason": "The system determined that the economic benefits and risk mitigation strategies currently outweigh the existential risks posed by narrow AI."
+                    "scores": {
+                        "pro": 0.67,
+                        "con": 0.67
+                    },
+                    "ml_prediction": "Con",
+                    "decision_type": "llm_tiebreaker",
+                    "confidence": 0.67,
+                    "reason": "Rules and ML disagreed, and scores were near-equal. LLM tie-breaker was used for semantic judgment."
                 }
             },
             "metrics": {
-                "length": 85,
+                "length": 222,
                 "args_count": 4,
-                "keywords": 3,
+                "keywords": 0,
                 "has_decision": true
             }
         }
@@ -42,9 +92,9 @@
     {
         "question": "Should college be free for everyone?",
         "raw_llm": {
-            "text": "Free college is a complex issue. It would reduce student debt and increase access to education. But it would also cost the government a lot of money and might decrease the value of a degree. Different countries have different models for this.",
+            "text": "The debate around making college tuition-free is complex and multifaceted, encompassing economic, societal, educational quality aspects among others. Here are some considerations to help answer the question of whether or not college should always remain accessible without charge:\n\nPros for Free College Education \n\n1. Equality in Access - One significant benefit is that making education universally available would eliminate financial barriers and create a more equitable society, where individuals from all socio-economic backgrounds have equal access to higher education opportunities. This could significantly reduce income inequality by providing everyone with the same chances for personal development and career advancement.\n\n2. Economic Benefits - Investing in college can result in a better skilled workforce, which would benefit businesses as well as society at large through increased productivity and innovation. By removing tuition costs, more individuals may seek higher education, leading to economic growth overall due to an increase in the educated population with specialized skills that are needed across various sectors of our economy.\n\n3. Eliminate Student Debt - College debts can be overwhinming for many students and their families; free college could alleviate this financial burden, allowing graduates more flexibility to navigate life'an unexpected expenses or emergencies without fearing default on loans which in turn would lead to better overall economic health.\n\n",
             "metrics": {
-                "length": 42,
+                "length": 212,
                 "args_count": 1,
                 "keywords": 0,
                 "has_decision": false
@@ -52,29 +102,79 @@
         },
         "prompt_engineered": {
             "pro": [
-                {"point": "Equality", "reason": "Education becomes accessible because financial barriers are removed.", "impact": "Reduced wealth gap."}
+                {
+                    "point": "College education would be more accessible to all socioeconomic classes.",
+                    "reason": "Making college free removes the financial burden, allowing students from lower-income families equal opportunity for higher education.",
+                    "impact": "This could lead to a more diverse and skilled workforce."
+                },
+                {
+                    "point": "Increases overall educational attainment in society.",
+                    "reason": "When college is free, fewer people will drop out due to financial pressures; they can focus on studies instead.",
+                    "impact": "This would likely increase the educated population and enhance individual career prospects."
+                }
             ],
             "con": [
-                {"point": "Tax Burden", "reason": "Funding would require higher taxes from citizens.", "impact": "Economic strain on the working class."}
+                {
+                    "point": "College should not be free as it might reduce the perceived value of a degree.",
+                    "reason": "When something is provided for free, individuals may undervalue its importance due to lack of cost implication.",
+                    "impact": "This could lead students and employers to question the rigor and quality of education, potentially harming educational standards."
+                },
+                {
+                    "point": "Free college might not cover all expenses including room, board, textbooks, etc., placing a financial strain on families.",
+                    "reason": "While tuition may be covered by the government or institutions, ancillary costs could still accumulate to form significant out-of-pocket expenses for students and their families.",
+                    "impact": "This can result in increased student debt outside of direct educational fees as individuals seek ways to manage these additional financial burdens."
+                }
             ],
             "metrics": {
-                "length": 35,
-                "args_count": 2,
-                "keywords": 1,
+                "length": 201,
+                "args_count": 4,
+                "keywords": 0,
                 "has_decision": false
             }
         },
         "hybrid": {
             "full_output": {
+                "question": "Should college be free for everyone?",
+                "pro": [
+                    {
+                        "point": "Eliminates student debt burden",
+                        "reason": "Free college education removes the financial strain on graduates, allowing them to start their careers with minimal or no loans.",
+                        "impact": "This could lead to a more prosperous middle class and potentially stimulate economic growth."
+                    },
+                    {
+                        "point": "Promotes equal opportunity",
+                        "reason": "Making college free ensures that socioeconomic status does not limit access to higher education, providing everyone with the chance for upward mobility.",
+                        "impact": "This could result in a more diverse and skilled workforce."
+                    }
+                ],
+                "con": [
+                    {
+                        "point": "College should not be free as it may lower the perceived value of a degree.",
+                        "reason": "Historically, when higher education has been provided at no cost to students, institutions have struggled with enrollment and funding issues due to this assumption.",
+                        "impact": "This could lead universities to reduce educational quality or increase tuition for other programs."
+                    },
+                    {
+                        "point": "Making college free may result in overcrowded classrooms, diluting the learning experience.",
+                        "reason": "Without funding controls like enrollment caps and proper infrastructure investments from governmental bodies or educational institutions themselves, there's no guarantee that these measures will be put in place to handle increased student populations.",
+                        "impact": "Students might face less individual attention from instructors, potentially affecting their academic success."
+                    }
+                ],
                 "result": {
-                    "winner": "Pro",
-                    "reason": "The model favored the long-term societal impact of an educated workforce over the short-term fiscal challenges because education is a primary driver of economic mobility."
+                    "winner": "Con",
+                    "scores": {
+                        "pro": 0.67,
+                        "con": 0.67
+                    },
+                    "ml_prediction": "Con",
+                    "decision_type": "llm_tiebreaker",
+                    "confidence": 0.67,
+                    "reason": "Rules and ML disagreed, and scores were near-equal. LLM tie-breaker was used for semantic judgment."
                 }
             },
             "metrics": {
-                "length": 92,
+                "length": 225,
                 "args_count": 4,
-                "keywords": 4,
+                "keywords": 0,
                 "has_decision": true
             }
         }
@@ -82,9 +182,9 @@
     {
         "question": "Is remote work better than office work?",
         "raw_llm": {
-            "text": "Remote work offers flexibility and saves commute time. Office work provides better collaboration and social interaction. Many companies are now using a hybrid model to get the best of both worlds. Productivity levels vary depending on the individual and the job type.",
+            "text": "Determining whether remote work is \"better\" than traditional office work can be subjective and depends on various factors, both personal and professional. Here are some considerations that might help to answer the question from different perspectives:\n\n1) Individual Needs and Preferences: Different people have varying preferences when it comes to their working environment. Some individuals may find remote work more comfortable or beneficial for them due to factors such as personal circumstances, lifestyle choices, learning/working style, and communication skills among others. For instance, introverts might feel more productive in a quiet home setting rather than an open-plan office with constant noise and interrupers.\n\n2) Work Nature: The nature of work can also influence the choice between remote or office working environments to some extent. Certain job roles which require less physical presence but significant mental capacity, like content writing, coding, graphic designing etc., may be better suited for a home-based setting as they don't necessarily need face-to-face interactions and can effectively utilize digital tools.\n\n3) Workplace Flexibility: Remote work provides greater flexibility in terms of scheduling which some individuals might find attractive, especially those who have caregiving responsibilities or long commuting times to the office. This could help them maintain a better balance between their personal and professional lives while still being able to meet job expectations effectively",
             "metrics": {
-                "length": 44,
+                "length": 218,
                 "args_count": 1,
                 "keywords": 0,
                 "has_decision": false
@@ -92,29 +192,1592 @@
         },
         "prompt_engineered": {
             "pro": [
-                {"point": "Flexibility", "reason": "Employees save time because they don't commute.", "impact": "Better work-life balance."}
+                {
+                    "point": "Increases productivity.",
+                    "reason": "Flexible work hours and fewer office interruptions reduce stress, leading to better focus on tasks.",
+                    "impact": "Employees deliver higher quality results with more efficient use of company resources."
+                },
+                {
+                    "point": "Improves employee well-being.",
+                    "reason": "Allowance for a personalized work environment can decrease physical and mental fatigue from commuting or office politics.",
+                    "impact": "Reduced turnover rates, enhanced company loyalty, and lower healthcare costs."
+                }
             ],
             "con": [
-                {"point": "Isolation", "reason": "Lack of face-to-face contact leads to loneliness.", "impact": "Reduced company culture."}
+                {
+                    "point": "Loss of personal interaction",
+                    "reason": "Social skills can diminish without regular face-to-face interactions.",
+                    "impact": "Possible decline in team collaboration and morale."
+                },
+                {
+                    "point": "Blurring work-life boundaries",
+                    "reason": "Home environment may lead to overworking due to lack of separation between personal and professional life.",
+                    "impact": "Potential for increased stress levels, burnout, and reduced quality of home life."
+                }
             ],
             "metrics": {
-                "length": 36,
-                "args_count": 2,
-                "keywords": 2,
+                "length": 121,
+                "args_count": 4,
+                "keywords": 0,
                 "has_decision": false
             }
         },
         "hybrid": {
             "full_output": {
+                "question": "Is remote work better than office work?",
+                "pro": [
+                    {
+                        "point": "Increased employee satisfaction",
+                        "reason": "Flexibility in work location and hours can lead to a better work-life balance.",
+                        "impact": "Higher retention rates and reduced turnover costs for companies."
+                    },
+                    {
+                        "point": "Reduced overhead expenses",
+                        "reason": "Companies do not need to maintain large office spaces when employees can work remotely, leading to significant savings.",
+                        "impact": "More budget allocated towards employee benefits and training."
+                    }
+                ],
+                "con": [
+                    {
+                        "point": "Lack of direct oversight in remote work can lead to decreased productivity.",
+                        "reason": "Without the immediate presence and supervision provided by office managers, employees may find it challenging to maintain focus on tasks requiring intensive concentration or regular breaks might not be enforced effectively.",
+                        "impact": "Businesses could experience reduced output quality leading to potential loss of clients due to perceived incompetence."
+                    },
+                    {
+                        "point": "Remote work can blur the boundaries between personal and professional life.",
+                        "reason": "Employees working from home may find it difficult to 'switch off' from their job, as they might end up attending frequent virtual meetings outside of normal office hours or bringing a sense of urgency into what would typically be relaxation time at the start and end of their workday.",
+                        "impact": "This can result in heightened stress levels for employees which may lead to burnout, negatively affecting both job satisfaction and mental health."
+                    }
+                ],
                 "result": {
-                    "winner": "Pro",
-                    "reason": "The hybrid judge found that the increase in employee retention and cost savings for firms results in a superior organizational model compared to traditional offices."
+                    "winner": "Con",
+                    "scores": {
+                        "pro": 0.5,
+                        "con": 0.67
+                    },
+                    "ml_prediction": "Con",
+                    "decision_type": "rule+ml_agreement",
+                    "confidence": 0.67,
+                    "reason": "Both rule-based scoring and ML model agreed on Con as the winner."
                 }
             },
             "metrics": {
-                "length": 88,
+                "length": 233,
                 "args_count": 4,
-                "keywords": 5,
+                "keywords": 0,
+                "has_decision": true
+            }
+        }
+    },
+    {
+        "question": "Should cryptocurrencies be regulated?",
+        "raw_llm": {
+            "text": "Yes, I believe that cryptocurrencies should be regulated for several reasons. Firstly, the lack of regulatory oversight has led to numerous instances of market manipulation and fraudulent activities in the crypto space, which can harm innocent users who are not privy to these shady practices. Adequate regulations could help curb such unscrupulous behaviors by imposing stricter rules on trading platforms, ensuring transparency of transactions and preventing market manipulation tactics that skew the price movements of cryptocurrencies unfairly against unsuspecting buyers.\n\nSecondly, regulations can also help address concerns about investor protection in an industry where it is easy for individuals to lose significant amounts of money without any recourse due to its unregulated nature. Regulatory frameworks could mandate more transparent and standardized reporting by crypto exchanges on the price at which assets were bought or sold, along with associated fees charged during these transactions; this can ensure that investors are aware of all costs involved in their trading activities - an essential element for informed decision-making.\n\nThirdly, well-thought regulatory measures could help legitimize cryptocurrencies and provide them a more stable footing within the broader financial landscape by establishing trustworthy institutions responsible to oversee market operations; this would likely attract institutional investors",
+            "metrics": {
+                "length": 200,
+                "args_count": 1,
+                "keywords": 0,
+                "has_decision": false
+            }
+        },
+        "prompt_engineered": {
+            "pro": [
+                {
+                    "point": "Cryptocurrencies should be regulated to protect consumers.",
+                    "reason": "Misinformation and volatility can lead to financial loss for individuals unaware of how cryptocurrencies work, thus harming consumer rights within finance ecosystems.",
+                    "impact": "Increased trust in digital assets leading to broader acceptance among traditional investors."
+                },
+                {
+                    "point": "Regulatory frameworks can help prevent illegal activities such as money laundering and financing of terrorism through cryptocurrencies.",
+                    "reason": "Cryptocurrencies operate on decentralized networks which may lack robust identity verification, making them attractive for illicit transactions due to anonymity features.",
+                    "impact": "Reduction in the use of digital currencies for criminal activities and enhanced national security."
+                }
+            ],
+            "con": [
+                {
+                    "point": "Cryptocurrencies can facilitate financial inclusion.",
+                    "reason": "Decentralization makes it possible for people without access to traditional banking systems to participate in the global economy.",
+                    "impact": "Improves economic participation among marginalized communities."
+                },
+                {
+                    "point": "Cryptocurrencies can enhance transparency and reduce corruption.",
+                    "reason": "Blockchain technology allows for transparent transactions that are difficult to alter or hack, thus reducing opportunities for fraudulent activities.",
+                    "impact": "Decreases bribery and embezzlement in public sectors."
+                }
+            ],
+            "metrics": {
+                "length": 167,
+                "args_count": 4,
+                "keywords": 0,
+                "has_decision": false
+            }
+        },
+        "hybrid": {
+            "full_output": {
+                "question": "Should cryptocurrencies be regulated?",
+                "pro": [
+                    {
+                        "point": "Cryptocurrencies should be regulated.",
+                        "reason": "They can reduce the risk of fraud and money laundering, ensuring a safer investment environment for users worldwide. By creating standardized regulatory frameworks, it would increase trust in digital assets as legal tender.",
+                        "impact": "Improved security could lead to broader adoption by both individuals and institutions, potentially increasing the economic influence of cryptocurrencies."
+                    },
+                    {
+                        "point": "Regulation is necessary for consumer protection",
+                        "reason": "Without regulation, investors are at risk of losing their money due to volatile market conditions. Regulatory measures could establish safeguards against unethical practices and enforce transparency in transactions.",
+                        "impact": "This would protect individual consumers from significant losses while promoting responsible growth within the cryptocurrency sector."
+                    }
+                ],
+                "con": [
+                    {
+                        "point": "Regulation stifles innovation.",
+                        "reason": "Cryptocurrencies rely on decentralization, which is compromised by regulation that could limit technological advancement and experimentation in the blockchain space.",
+                        "impact": "Could lead to a slowdown in developing new financial tools based on cryptocurrency technology."
+                    },
+                    {
+                        "point": "Regulatory capture risk increases unethical practices.",
+                        "reason": "Without careful oversight, regulated entities could dominate the regulatory process for their benefit, leading to a lack of fairness and transparency in cryptocurrency markets.",
+                        "impact": "Potential growth of monopolistic behaviors detrimental to consumer interests."
+                    }
+                ],
+                "result": {
+                    "winner": "Con",
+                    "scores": {
+                        "pro": 0.67,
+                        "con": 0.67
+                    },
+                    "ml_prediction": "Con",
+                    "decision_type": "llm_tiebreaker",
+                    "confidence": 0.67,
+                    "reason": "Rules and ML disagreed, and scores were near-equal. LLM tie-breaker was used for semantic judgment."
+                }
+            },
+            "metrics": {
+                "length": 223,
+                "args_count": 4,
+                "keywords": 0,
+                "has_decision": true
+            }
+        }
+    },
+    {
+        "question": "Is nuclear energy the future of green power?",
+        "raw_llm": {
+            "text": "There is a growing consensus that renewable and clean energies, such as wind, solar, hydroelectricity, geothermal, etc., will form the bulk of our future energy mix due to their abundant nature and reduced environmental impact. However, nuclear power still plays an important role in many countries' energy systems because it provides a significant amount of reliable electricity with very low greenhouse gas emissions compared to fossil fuels.\n\nHere are some arguments for why I believe that nuclear may be part of the future but not necessarily dominating as 'green.' \n\n1. Nuclear power plants can generate consistent amounts of energy, which helps stabilize grids and balance supply with demand fluctuations. However, this reliability is usually seen in conventional electricity generation methods like coal or natural gas rather than renewables due to their intermittent nature (sunlight and wind are not constant). Therefore, while nuclear power may play a role, we might need more reliable energy sources alongside it as well for balancing the grid.\n\n2. Nuclear waste management remains an issue that needs resolution before this technology can become truly green in all aspects of sustainability (social, environmental and economic impacts). The radioactive byproducts generated during nuclear fission remain hazardine to human health and ecosystem for thousands or even millions of years after disposal.\n\n3. Nuclear power plants have a",
+            "metrics": {
+                "length": 218,
+                "args_count": 1,
+                "keywords": 2,
+                "has_decision": false
+            }
+        },
+        "prompt_engineered": {
+            "pro": [
+                {
+                    "point": "Nuclear energy has a high output.",
+                    "reason": "Compared to other forms of renewable energy, nuclear plants can produce large amounts of electricity even when demand is at its peak.",
+                    "impact": "Reduces reliance on fossil fuels and decreases the likelihood of blackouts."
+                },
+                {
+                    "point": "Nuclear power has a low carbon footprint.",
+                    "reason": "Unlike burning coal or gas, nuclear reactors produce energy through fission without emitting CO2 in their processes.",
+                    "impact": "Contributes to reducing greenhouse gases and combating climate change."
+                }
+            ],
+            "con": [
+                {
+                    "point": "Nuclear energy is not the future of green power.",
+                    "reason": "The long-term waste management issue remains unresolved, which poses a significant environmental threat despite nuclear's low emissions during operation.",
+                    "impact": "Public fear and opposition to storing radioactive waste could hinder construction projects and delay potential benefits from new technology."
+                },
+                {
+                    "point": "High upfront costs make it inaccessible for widespread green power adoption.",
+                    "reason": "The initial investment required for nuclear plants is much higher compared to renewable energy sources, limiting its feasibility as a mass transition option.",
+                    "impact": "Priority given to more affordable and scalable solutions may lead nations towards alternative sustainable energies like solar or wind power."
+                }
+            ],
+            "metrics": {
+                "length": 185,
+                "args_count": 4,
+                "keywords": 0,
+                "has_decision": false
+            }
+        },
+        "hybrid": {
+            "full_output": {
+                "question": "Is nuclear energy the future of green power?",
+                "pro": [
+                    {
+                        "point": "Nuclear energy offers a high-energy density solution.",
+                        "reason": "Unlike most renewable sources, nuclear reactions produce vast amounts of energy from small quantities of material. This allows for larger power outputs with less environmental disruption during mining and processing."
+                    },
+                    {
+                        "point": "Advancements in safety technology could reduce risks associated with nuclear plants.",
+                        "reason": "Continuous improvements such as passive safety systems, advanced containment methods, and real-time monitoring can mitigate the risk of accidents. These advancements may make nuclear energy a safer option compared to other forms."
+                    }
+                ],
+                "con": [
+                    {
+                        "point": "Nuclear energy production is not inherently 'green' due to the long-term environmental risks.",
+                        "reason": "High radiation waste from nuclear reactors remains hazardous for thousands of years, requiring secure containment that goes beyond conventional recycling and disposal methods used in other industries.",
+                        "impact": "The creation and mishandling of radioactive waste pose potential environmental disasters."
+                    },
+                    {
+                        "point": "Nuclear energy relies on rare materials for fuel, which can lead to geopolitical conflicts over resource control.",
+                        "reason": "Key elements like uranium are not evenly distributed globally and have concentrated reserves in a few regions leading to economic disparities as nations vie for access.",
+                        "impact": "Increases international tension and may distract from investing in truly renewable energy sources."
+                    }
+                ],
+                "result": {
+                    "winner": "Pro",
+                    "scores": {
+                        "pro": 0.33,
+                        "con": 0.67
+                    },
+                    "ml_prediction": "Pro",
+                    "decision_type": "ml_override",
+                    "confidence": 0.67,
+                    "reason": "ML model overrode rule-based scoring to select Pro based on learned patterns."
+                }
+            },
+            "metrics": {
+                "length": 223,
+                "args_count": 4,
+                "keywords": 0,
+                "has_decision": true
+            }
+        }
+    },
+    {
+        "question": "Should social media algorithms be public?",
+        "raw_llm": {
+            "text": "Error: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=60)",
+            "metrics": {
+                "length": 8,
+                "args_count": 1,
+                "keywords": 0,
+                "has_decision": false
+            }
+        },
+        "prompt_engineered": {
+            "pro": [
+                {
+                    "point": "Transparency in content curation methods.",
+                    "reason": "Understanding how personalized feeds are created can lead to a more informed public discourse about media consumption biases and echo chambers",
+                    "impact": "Potential for enhanced democratic engagement by making users aware of algorithmic influences"
+                },
+                {
+                    "point": "Accountability in shaping societal values.",
+                    "reason": "Public scrutiny can ensure that algorithms do not unintentionally propagate misinformation or amplify harmful content",
+                    "impact": "Reduction of the spread and impact of fake news"
+                }
+            ],
+            "con": [
+                {
+                    "point": "Privacy concerns may arise.",
+                    "reason": "Making algorithms public could expose sensitive user data and proprietary information used in algorithm development to competitors or malicious actors, which might compromise the company's privacy policies intended to protect users.",
+                    "impact": "If such information is not safeguarded adequately, it may result in breaches of confidentiality that could harm both companies and their user base."
+                },
+                {
+                    "point": "Reduced transparency can lead to bias reinforcement.",
+                    "reason": "Without public knowledge on how content is filtered or promoted by these algorithms, the biases inherent in algorithmic decisions may go unchecked and thus be perpetuated, potentially amplifying societal divisions.",
+                    "impact": "Users might receive a skewed view of reality based solely on manipulated feeds that reinforce echo chambers rather than providing balanced information."
+                }
+            ],
+            "metrics": {
+                "length": 196,
+                "args_count": 4,
+                "keywords": 0,
+                "has_decision": false
+            }
+        },
+        "hybrid": {
+            "full_output": {
+                "question": "Should social media algorithms be public?",
+                "pro": [
+                    {
+                        "point": "Transparency leads to trust.",
+                        "reason": "Knowing how content is filtered and prioritized can build user confidence in the platform's fairness.",
+                        "impact": "Increased accountability among social media companies, leading to better public relations."
+                    },
+                    {
+                        "point": "Algorithms shape discourse.",
+                        "reason": "Understanding algorithmic decisions is essential for assessing their influence on societal conversations.",
+                        "impact": "Citizens and policymakers are more informed about potential biases, fostering constructive dialogue."
+                    }
+                ],
+                "con": [
+                    {
+                        "point": "Privacy concerns are amplified.",
+                        "reason": "The algorithms process vast amounts of personal data to tailor content, which if public could expose sensitive user information and violate privacy norms.",
+                        "impact": "Erosion of individual trust in social media platforms"
+                    },
+                    {
+                        "point": "Competitive advantage is compromised.",
+                        "reason": "Exposing algorithmic methods would allow competitors to replicate or improve upon these proprietary systems, diluting the uniqueness and value that companies offer",
+                        "impact": "Reduction in market exclusivity leading to potential loss of revenue"
+                    }
+                ],
+                "result": {
+                    "winner": "Pro",
+                    "scores": {
+                        "pro": 0.67,
+                        "con": 0.5
+                    },
+                    "ml_prediction": "Pro",
+                    "decision_type": "rule+ml_agreement",
+                    "confidence": 0.67,
+                    "reason": "Both rule-based scoring and ML model agreed on Pro as the winner."
+                }
+            },
+            "metrics": {
+                "length": 166,
+                "args_count": 4,
+                "keywords": 1,
+                "has_decision": true
+            }
+        }
+    },
+    {
+        "question": "Is animal testing ethical for medical research?",
+        "raw_llm": {
+            "text": "Determining whether an action is \"ethical\" can be quite complex as it usually depends on one's perspective, societal norms and moral principles. However, here are some arguments that suggest why many see the use of animals in scientific studies to develop treatments for diseases like cancer or AIDS might still have merit:\n\n1. Progressive Discovery - Animal testing has led to significant medical advancements over years such as insulin treatment and anti-tetanus serum development, making it a valuable tool despite ethical concerns. It provides preliminary data which can be used for designing human trials with fewer risks of harmful side effects because the tests are done on animals first instead of humans directly.\n\n2. Lack of Alternatives - Although technology and artificial intelligence have progressed, they still cannot completely replace animal testing due to limitations in model complexity or reproducibrieship issues. \n\n3. Animal Welfare Improvements \u2013 There's significant emphasis on reducing the number of animals used by refining experimental procedures; replacing them with alternative methods wherever possible and providing appropriate housing, care, which reduces distress during testing phases considerably improving animal welfare conditions.   \n\n4. Regulatory Oversight - Animal tests are heavily regulated in many countries to ensure they're performed legally, humanely, responsibly by professionals who follow strict gu",
+            "metrics": {
+                "length": 208,
+                "args_count": 1,
+                "keywords": 1,
+                "has_decision": false
+            }
+        },
+        "prompt_engineered": {
+            "pro": [
+                {
+                    "point": "Animal testing has led to life-saving medicines and treatments.",
+                    "reason": "Historically, animal models have been essential for understanding disease mechanisms and developing effective medical interventions before human clinical trials are ethically permissible.",
+                    "impact": "This approach saves countless lives annually by enabling the development of vaccines, drugs, and therapies that would be too risky or unethical to test in humans without preliminary animal research."
+                },
+                {
+                    "point": "Regulatory standards are enforced through stringent oversight.",
+                    "reason": "Modern practices of ethical animal testing involve strict adherence to guidelines designed to minimize suffering and improve welfare, such as the three Rs (Replacement, Reduction, Refinement), which aim at replacing animals with alternative methods when possible, reducing their number used in studies without compromising results quality, and refining procedures to cause less harm.",
+                    "impact": "This ensures that animal testing is only performed out of necessity, under the most humane conditions currently available, providing a framework for responsible use while acknowledging ongoing efforts to seek alternatives."
+                }
+            ],
+            "con": [
+                {
+                    "point": "Animal testing causes unnecessary suffering to animals.",
+                    "reason": "Many procedures used in tests can be invasive and painful, without providing significant medical insights for human benefit",
+                    "impact": "Continued reliance on animal models may perpetuate the cycle of harm against animals with little contribution to immediate patient care"
+                },
+                {
+                    "point": "Advancements in alternative methods are reducing the need for animal testing.",
+                    "reason": "Technological improvements like organ-on-chip and computer modeling offer more accurate human tissue responses without involving animals",
+                    "impact": "Increased use of alternatives can minimize ethical concerns while improving research efficiency"
+                }
+            ],
+            "metrics": {
+                "length": 248,
+                "args_count": 4,
+                "keywords": 0,
+                "has_decision": false
+            }
+        },
+        "hybrid": {
+            "full_output": {
+                "question": "Is animal testing ethical for medical research?",
+                "pro": [
+                    {
+                        "point": "Animal testing is a necessary step in developing life-saving treatments.",
+                        "reason": "It allows researchers to understand the effects of new drugs before human trials, ensuring safety and efficacy.",
+                        "impact": "Improvements in medical treatments for diseases like cancer have been made possible through animal testing."
+                    },
+                    {
+                        "point": "Ethical guidelines are enforced to ensure humane treatment of animals during tests.",
+                        "reason": "Regulations mandate minimal suffering and proper care, reflecting respectful use of animal models in research settings.",
+                        "impact": "These practices help maintain public trust in the scientific process while advancing medical knowledge."
+                    }
+                ],
+                "con": [
+                    {
+                        "point": "Animal testing is often a preliminary step in research.",
+                        "reason": "It allows for the evaluation of safety and efficacy before human trials, potentially reducing risk to humans when applicable.",
+                        "impact": "This can expedite drug development while prioritizing patient health."
+                    },
+                    {
+                        "point": "Advancements in alternatives are increasingly viable.",
+                        "reason": "New technologies like organ-on-chip and computer modeling provide promising replacements for animal models, reducing reliance on animals.",
+                        "impact": "These could lead to more humane practices while maintaining scientific rigor."
+                    }
+                ],
+                "result": {
+                    "winner": "Con",
+                    "scores": {
+                        "pro": 0.67,
+                        "con": 0.67
+                    },
+                    "ml_prediction": "Pro",
+                    "decision_type": "llm_tiebreaker",
+                    "confidence": 0.67,
+                    "reason": "Rules and ML disagreed, and scores were near-equal. LLM tie-breaker was used for semantic judgment."
+                }
+            },
+            "metrics": {
+                "length": 196,
+                "args_count": 4,
+                "keywords": 0,
+                "has_decision": true
+            }
+        }
+    },
+    {
+        "question": "Should coding be a mandatory subject in school?",
+        "raw_llm": {
+            "text": "I believe that coding should indeed be a mandatory subject in schools for several reasons. Here are some of the key arguments supporting my viewpoint:\n\n1. Increasing demand: As we move towards an increasingly digital world, knowledge and skills related to programming languages like Python, JavaScript or Java will likely become essential across various industries - from technology startups to traditional businesses undergoing digital transformations. Introducing coding as a mandatory subject in school would help students develop these crucial future-ready skills early on\n2. Enhancing problem-solving abilities: Learning how to code involves breaking down complex problems into smaller, manageable parts and systematically working through them - essentially developing strong logical thinking and analytical reasoning capabilities that are transferrable across various academic disciplines as well. \n3. Fostering creativity: Coding is not just about writing lines of instructions; it's also an avenue for creating something tangible from one\u2019thought, allowing students to exercise their imagination and think outside the box - skills which can be applied in any area where innovative thinking is required \n4. Digital literacy & inclusivity: Knowing how computers operate at a fundamental level provides better understanding of digital content like websites or social media platforms while being able to access these resources safely, making technology more accessible and less intimidating for young learners  \n5. Preparation for STEM-related careers:",
+            "metrics": {
+                "length": 219,
+                "args_count": 1,
+                "keywords": 0,
+                "has_decision": false
+            }
+        },
+        "prompt_engineered": {
+            "pro": [
+                {
+                    "point": "Coding is essential for problem-solving skills.",
+                    "reason": "It encourages logical thinking and attention to detail, which are crucial in various fields beyond computer science.",
+                    "impact": "A workforce with enhanced critical thinking abilities will contribute more effectively across industries."
+                },
+                {
+                    "point": "Technology is integral to modern life; coding education prepares students for the digital world.",
+                    "reason": "Understanding how technology works enables individuals to navigate and shape a tech-driven society safely and responsibly.",
+                    "impact": "Better informed citizens can participate more fully in democratic processes involving technology legislation."
+                }
+            ],
+            "con": [
+                {
+                    "point": "Coding does not guarantee future success in technology-related fields.",
+                    "reason": "Technology roles are evolving, and a narrow focus on coding could mislead students about the broader spectrum of skills required such as creativity and critical thinking.",
+                    "impact": "Students might become overly specialized without understanding other essential aspects that contribute to adaptability in tech careers."
+                },
+                {
+                    "point": "Not all children have equal access or interest in technology, making mandatory coding education discriminatory",
+                    "reason": "Mandating a subject not tailored for every student can exacerbate learning disparities and disengage those without interest.",
+                    "impact": "Creates educational inequality by forcing less interested students into an unrelated curriculum."
+                }
+            ],
+            "metrics": {
+                "length": 187,
+                "args_count": 4,
+                "keywords": 0,
+                "has_decision": false
+            }
+        },
+        "hybrid": {
+            "full_output": {
+                "question": "Should coding be a mandatory subject in school?",
+                "pro": [
+                    {
+                        "point": "Coding improves problem-solving skills.",
+                        "reason": "Learning to code requires logical thinking and breaking down complex problems into simpler parts, which enhances overall cognitive abilities relevant for academic success in various subjects.",
+                        "impact": "Students who learn coding are likely better equipped with analytical tools needed across disciplines like mathematics, science, engineering, thereby improving their versatility and employability."
+                    },
+                    {
+                        "point": "Coding fosters creativity in digital content creation.",
+                        "reason": "As technology continues to pervade all aspects of life including entertainment, education, business; coding skills enable students not only consume but also produce innovative multimedia and interactive projects that can capture the essence of modern learning experiences.",
+                        "impact": "Students gain valuable employability in an increasingly digital economy while reinforcing their creativity through engaging educational content."
+                    }
+                ],
+                "con": [
+                    {
+                        "point": "Coding education can be specialized in higher levels.",
+                        "reason": "Proficiency is more effectively developed outside of mandatory school subjects, which are designed for a broad skill set including basic coding knowledge as part of their curriculum rather than expertise.",
+                        "impact": "Children's time could better focus on advanced learning environments or extracurricular activities that foster innovation and creativity."
+                    },
+                    {
+                        "point": "Mandatory school coding may not cater to all educational needs.",
+                        "reason": "Coding is just one of many skills essential for a modern education, thus imposing it as mandatory could detract from equally important areas such as the arts or physical education that contribute significantly to holistic development.",
+                        "impact": "A reduction in diverse extracurricular activities may lead students to miss out on well-rounded personal growth opportunities."
+                    }
+                ],
+                "result": {
+                    "winner": "Con",
+                    "scores": {
+                        "pro": 0.67,
+                        "con": 0.67
+                    },
+                    "ml_prediction": "Con",
+                    "decision_type": "llm_tiebreaker",
+                    "confidence": 0.67,
+                    "reason": "Rules and ML disagreed, and scores were near-equal. LLM tie-breaker was used for semantic judgment."
+                }
+            },
+            "metrics": {
+                "length": 274,
+                "args_count": 4,
+                "keywords": 0,
+                "has_decision": true
+            }
+        }
+    },
+    {
+        "question": "Is capitalism the best economic system?",
+        "raw_llm": {
+            "text": "Determining whether or not capitalism is the \"best\" economic system depends on how one defines 'the best'. If by that we mean an efficient, adaptive and equitable method for managing resources to ensure prosperity while minimizing societal problems such as poverty, inequality etc., it's worth considering both its strengths and weaknessin. \n\nCapitalism is lauded for promoting innovation through competition - companies continuously strive to create superior products or provide better services in order to outperform their competitors which leads to economic growth. It also encourages individual freedom, as people are able to choose how they want to spend and earn money based on the free market principles of supply-and-demand.\n\nHowever, capitalism has significant drawbacks too. One major criticism is that it often results in wealth disparities with a small percentage of society holding large shares of resources while many struggle with poverty or economic instability - this lack of income equality can lead to social unrest and dissatisfaction among citizens which undermines societal harmony, the core aim for any form of government. Capitalism's focus on profit also sometimes leads it to neglect non-monetary values like environmental protection or fair labor practices leading towards unsustainable development.\n\nTherefore, while capitalism can drive growth and innovation effectively if regulated properly - ensuring everyone has access to opportunities rather",
+            "metrics": {
+                "length": 215,
+                "args_count": 1,
+                "keywords": 3,
+                "has_decision": false
+            }
+        },
+        "prompt_engineered": {
+            "pro": [
+                {
+                    "point": "Capitalism promotes economic growth and innovation.",
+                    "reason": "It incentivizes individuals to work harder, invest, start new businesses, which can lead to technological advances and increased productivity within a country.",
+                    "impact": "Countries with capitalist economies often experience higher GDPs and better standards of living."
+                },
+                {
+                    "point": "Capitalism encourages personal freedom and choice.",
+                    "reason": "Individuals have the right to choose their career paths, business ventures, and financial strategies without excessive government intervention or control over economic activities.",
+                    "impact": "This leads to a diverse economy with various industries thriving due to consumer freedom of choice."
+                }
+            ],
+            "con": [
+                {
+                    "point": "Capitalism leads to income inequality.",
+                    "reason": "The system inherently creates disparities in wealth distribution due to competition and market-driven profits, which disproportionately benefit higher earners.",
+                    "impact": "Increases social division and can lead to reduced access for lower economic classes."
+                },
+                {
+                    "point": "Capitalism often results in environmental degradation.",
+                    "reason": "The pursuit of profit maximization encourages overconsumption and exploitation of natural resources without adequate regulation, contributing to pollution and climate change.",
+                    "impact": "Damages ecosystems and reduces biodiversity while threatening food security."
+                }
+            ],
+            "metrics": {
+                "length": 171,
+                "args_count": 4,
+                "keywords": 3,
+                "has_decision": false
+            }
+        },
+        "hybrid": {
+            "full_output": {
+                "question": "Is capitalism the best economic system?",
+                "pro": [
+                    {
+                        "point": "Capitalism fosters innovation and progress.",
+                        "reason": "The profit motive incentivizes individuals to create new products, services, or methods of production, leading to technological advancements and overall societal growth.",
+                        "impact": "This drives economies forward by continually expanding industries like technology and healthcare."
+                    },
+                    {
+                        "point": "Capitalism promotes individual freedom and choice.",
+                        "reason": "The system is based on voluntary exchanges where individuals have the liberty to choose their employers, buy what they want, or start a business of their own without excessive government intervention.",
+                        "impact": "This results in diverse economic activities that cater to varied individual preferences and needs."
+                    }
+                ],
+                "con": [
+                    {
+                        "point": "Income inequality is exacerbated under capitalism.",
+                        "reason": "Capitalist economies often result in significant disparities between wealth and income distribution, as the system inherently rewards those with more resources to accumulate greater wealth.",
+                        "impact": "This can lead to social unrest and decreased economic mobility."
+                    },
+                    {
+                        "point": "Capitalism prioritizes profit over environmental protection.",
+                        "reason": "The drive for continual growth in capitalist systems frequently outweighs considerations of ecological sustainability, leading to exploitation and degradation of natural resources.",
+                        "impact": "This has real-world effects such as climate change and loss of biodiversity."
+                    }
+                ],
+                "result": {
+                    "winner": "Pro",
+                    "scores": {
+                        "pro": 0.83,
+                        "con": 0.67
+                    },
+                    "ml_prediction": "Pro",
+                    "decision_type": "rule+ml_agreement",
+                    "confidence": 0.83,
+                    "reason": "Both rule-based scoring and ML model agreed on Pro as the winner."
+                }
+            },
+            "metrics": {
+                "length": 209,
+                "args_count": 4,
+                "keywords": 1,
+                "has_decision": true
+            }
+        }
+    },
+    {
+        "question": "Should the minimum wage be increased?",
+        "raw_llm": {
+            "text": "Increasing the minimum wage is a complex issue that can have both positive and negative impacts on various stakeholders in an economy. Here are some arguments for and against increasing the minimum wage, along with my analysis of which side I find more compelling:\n\nArguments FOR Increasing Minimum Wage:\n\n1. Reduce income inequality: A higher minimum wage can help reduce the gap between low-income earners and those at the top of the pay scale, making society more equitable overall. \n2. Improve standard of living: With a substantial increase in their take-home pay, workers on the lowest end may have an easier time affording essential needs like food, housing, transportation, healthcare, etc. This can lead to improved quality of life and reduced poverty rates among low-income earners.\n3. Stimulate economic growth: A higher minimum wage means that employees in entry-level jobs will now have more money to spend on goods and services within the economy. The increase could thus result in a boost for local businesses, leading to overall economic growth through increased consumer spending. \n4. Reduce worker exploitation: When companies pay workers less than their fair share of value generated from work, it can lead to unfair treatment. Increasing minimum wage might prevent some such situations and ensure that employees are compensated fairly for their labor input.\n5",
+            "metrics": {
+                "length": 218,
+                "args_count": 1,
+                "keywords": 0,
+                "has_decision": false
+            }
+        },
+        "prompt_engineered": {
+            "pro": [
+                {
+                    "point": "Raise the minimum wage to combat poverty.",
+                    "reason": "Increasing income for low-wage workers can help lift them out of poverty and improve their standard of living.",
+                    "impact": "Less reliance on social assistance programs, leading to lower taxpayer burden."
+                },
+                {
+                    "point": "Boost consumer spending by increasing the minimum wage.",
+                    "reason": "Higher earnings would result in increased disposable income for low-wage workers, who are more likely to spend it on goods and services.",
+                    "impact": "Stimulating economic growth through higher demand."
+                }
+            ],
+            "con": [
+                {
+                    "point": "Raising the minimum wage could lead to job losses.",
+                    "reason": "Employers might reduce their workforce to cut costs, leading to unemployment among low-wage workers.",
+                    "impact": "Increased poverty and economic hardship for families relying on multiple jobs."
+                },
+                {
+                    "point": "A higher minimum wage can cause inflation in the prices of goods and services.",
+                    "reason": "Employers may raise prices to offset increased labor costs, leading to a general increase in price levels across the economy.",
+                    "impact": "Decreased purchasing power for all consumers despite nominal income increases."
+                }
+            ],
+            "metrics": {
+                "length": 162,
+                "args_count": 4,
+                "keywords": 0,
+                "has_decision": false
+            }
+        },
+        "hybrid": {
+            "full_output": {
+                "question": "Should the minimum wage be increased?",
+                "pro": [
+                    {
+                        "point": "Raises the standard of living for low-income workers.",
+                        "reason": "A higher minimum wage increases earnings, enabling individuals to afford basic necessities more comfortably and potentially reducing poverty levels.",
+                        "impact": "Improved quality of life with less financial stress."
+                    },
+                    {
+                        "point": "Can stimulate economic growth through increased consumer spending.",
+                        "reason": "When workers earn higher wages, they tend to spend more on goods and services which can boost demand in the economy.",
+                        "impact": "A short-term increase in business activity."
+                    }
+                ],
+                "con": [
+                    {
+                        "point": "Raise in minimum wage may lead to job loss.",
+                        "reason": "Higher labor costs can force employers, particularly small businesses, to reduce their workforce or cut hours to maintain profitability.",
+                        "impact": "Increased unemployment and underemployment among low-skilled workers."
+                    },
+                    {
+                        "point": "Potential inflation due to higher wages costs.",
+                        "reason": "As businesses increase prices to compensate for the increased labor expenses, this can lead to a general rise in consumer prices throughout the economy.",
+                        "impact": "Decreased purchasing power of consumers despite nominal income gains."
+                    }
+                ],
+                "result": {
+                    "winner": "Pro",
+                    "scores": {
+                        "pro": 0.33,
+                        "con": 0.5
+                    },
+                    "ml_prediction": "Pro",
+                    "decision_type": "ml_override",
+                    "confidence": 0.5,
+                    "reason": "ML model overrode rule-based scoring to select Pro based on learned patterns."
+                }
+            },
+            "metrics": {
+                "length": 183,
+                "args_count": 4,
+                "keywords": 0,
+                "has_decision": true
+            }
+        }
+    },
+    {
+        "question": "Is a 4-day work week productive?",
+        "raw_llm": {
+            "text": "A four-day workweek can indeed be productive, but its effectiveness is largely dependent on the specific circumstances of different organizations and industries. Here are some reasons that may lead to it being productive or less so in certain cases:\n\n1. Employee satisfaction - A shorter work week could increase employee job satisfaction as workers have an extra day off for rest or personal pursuits, which can improve morale and reduce stress levels ultimately leading to increased productivity when at work. \n\n2. Focus on core tasks - With a four-day workweek, employees are required to prioritize their most important duties with less time available. This focus may result in better quality of work as they concentrate more intensely and efficiently during working hours rather than getting distracted or burnt out over longer days spent at the office.\n\n3. Work-life balance - Employees are able to maintain a healthier work-life balance with an extra day off, which can lead to less exhaustion and fatigue when they return to their jobs after vacation time. This in turn could boost productivity as employees have better energy levels during working hours since they got more rest.\n\n4. Flexibility - A four-day workweek provides flexibility for both employers and workers, allowing them some control over scheduling or shifts which can enhance the ability to fit work into their personal lives effectively without compromising on productivity goals.",
+            "metrics": {
+                "length": 230,
+                "args_count": 1,
+                "keywords": 0,
+                "has_decision": false
+            }
+        },
+        "prompt_engineered": {
+            "pro": [
+                {
+                    "point": "Increases employee satisfaction and wellbeing.",
+                    "reason": "Allows for more personal time, reducing stress.",
+                    "impact": "Improved mental health in the workforce."
+                },
+                {
+                    "point": "Can boost productivity per working hour",
+                    "reason": "Focuses on output rather than hours worked",
+                    "impact": "Potentially higher quality and efficiency of work completed."
+                }
+            ],
+            "con": [
+                {
+                    "point": "Employees may experience increased fatigue.",
+                    "reason": "Extended daily hours can lead to longer working periods, which are linked to higher exhaustion levels",
+                    "impact": "Potential decline in overall workplace efficiency and employee health."
+                },
+                {
+                    "point": "Not all industries can adapt easily.",
+                    "reason": "Some sectors rely on constant customer interaction or have seasonal demands that require more conventional schedules",
+                    "impact": "Possible disruptions in service delivery and economic losses."
+                }
+            ],
+            "metrics": {
+                "length": 111,
+                "args_count": 4,
+                "keywords": 0,
+                "has_decision": false
+            }
+        },
+        "hybrid": {
+            "full_output": {
+                "question": "Is a 4-day work week productive?",
+                "pro": [
+                    {
+                        "point": "Increases employee well-being.",
+                        "reason": "Employees can better manage work and personal life, reducing stress.",
+                        "impact": "Enhanced job satisfaction leading to lower turnover rates."
+                    },
+                    {
+                        "point": "Boosts productivity during working days.",
+                        "reason": "Concentrated focus reduces distractions",
+                        "impact": "Higher output and quality of work within shorter time frames."
+                    }
+                ],
+                "con": [
+                    {
+                        "point": "Potential for increased absenteeism.",
+                        "reason": "A shorter workweek may lead to a more relaxed attitude towards attendance, as employees feel they have sufficient time off to rest and pursue personal interests.",
+                        "impact": "This can result in decreased productivity due to higher rates of unscheduled absences."
+                    },
+                    {
+                        "point": "Increased operational costs for businesses.",
+                        "reason": "A reduced number of working days might require hiring more staff or investing in automation, leading to elevated expenses without a proportional increase in output.",
+                        "impact": "Small and medium enterprises may struggle with the additional financial burden, which can lead to downsizing rather than maintaining profitability."
+                    }
+                ],
+                "result": {
+                    "winner": "Con",
+                    "scores": {
+                        "pro": 0.33,
+                        "con": 0.67
+                    },
+                    "ml_prediction": "Con",
+                    "decision_type": "rule+ml_agreement",
+                    "confidence": 0.67,
+                    "reason": "Both rule-based scoring and ML model agreed on Con as the winner."
+                }
+            },
+            "metrics": {
+                "length": 171,
+                "args_count": 4,
+                "keywords": 0,
+                "has_decision": true
+            }
+        }
+    },
+    {
+        "question": "Should everyone live in cities?",
+        "raw_llm": {
+            "text": "No, it would not be practical or desirable for every individual to reside exclusively within urban areas. This answer is based on several reasons that include the following aspects of city life and lifestyle compared to rural settings. I will explain these points firstly by outlining some advantages cities offer before addressing their disadvantages, which lead me towards concluding this statement:\n\nAdvantages in urban areas are as follows: \n1. Accessibility - Cities generally provide better access and connectivity both within the city itself (public transportation systems) and to different regions of a country or continent due to dense networks of airports, highways, railroads etc. This allows for easier travel between places that can be essential in terms of business opportunities, education options, cultural experiences among other things.\n2. Employment - Cities are typically hubs for job opportunities as they house most industries and corporations due to the concentration of consumers within city limits; this makes them an attractive option when seeking employment or starting a business. \n3. Social Opportunities- Urban areas often have rich cultural scenes, diverse communities that can promote social interaction across various backgrounds which are essential for personal growth and understanding among different cultures in today'self society. This also contributes to the availability of more recreational activities or entertainment opportunities such as museums, theatre performances etc. \n4.",
+            "metrics": {
+                "length": 220,
+                "args_count": 1,
+                "keywords": 0,
+                "has_decision": false
+            }
+        },
+        "prompt_engineered": {
+            "pro": [
+                {
+                    "point": "Urban areas provide more opportunities for employment.",
+                    "reason": "Cities tend to have a larger and diverse economy with various industries that offer jobs across different skill levels, potentially reducing unemployment rates compared to rural areas.",
+                    "impact": "Enhanced job availability can lead to better living standards as more people are able to secure employment."
+                },
+                {
+                    "point": "Cities often have superior infrastructure and public services.",
+                    "reason": "Infrastructural developments like transportation, healthcare facilities, educational institutions, and utilities tend to be better funded in cities due to higher tax revenues from a larger population base.",
+                    "impact": "These resources can improve overall quality of life by providing residents with reliable services that facilitate day-to-day activities."
+                }
+            ],
+            "con": [
+                {
+                    "point": "Not everyone benefits equally from urban living.",
+                    "reason": "Access to resources and opportunities can vary greatly within cities, often influenced by socioeconomic status",
+                    "impact": "This leads to inequalities such as the 'urban-rural divide' where rural areas might suffer economically."
+                },
+                {
+                    "point": "Cities contribute significantly to environmental degradation.",
+                    "reason": "High population density, pollution and waste generation are issues inherent to urban environments",
+                    "impact": "This exacerbates climate change effects such as air quality deterioration."
+                }
+            ],
+            "metrics": {
+                "length": 182,
+                "args_count": 4,
+                "keywords": 1,
+                "has_decision": false
+            }
+        },
+        "hybrid": {
+            "full_output": {
+                "question": "Should everyone live in cities?",
+                "pro": [
+                    {
+                        "point": "Urban centers provide better access to education and employment.",
+                        "reason": "Cities often have higher-quality educational institutions and more job opportunities due to their larger economies.",
+                        "impact": "This can lead individuals from rural areas or those seeking a change in lifestyle towards personal development and financial stability."
+                    },
+                    {
+                        "point": "Living in cities facilitates cultural exchange and diversity experiences.",
+                        "reason": "Cities are usually more culturally diverse with numerous events, festivals, and public spaces that promote interaction among different communities.",
+                        "impact": "This enhances societal understanding and tolerance while enriching one's own perspectives."
+                    }
+                ],
+                "con": [
+                    {
+                        "point": "Overcrowding in cities leads to insufficient resources.",
+                        "reason": "As urban populations grow, the demand on limited city infrastructure increases, leading to resource shortages such as water and energy crises.",
+                        "impact": "This results in longer commutes, higher living costs, and potential for increased pollution due to overtaxed systems."
+                    },
+                    {
+                        "point": "Living outside cities provides a closer connection to nature.",
+                        "reason": "Rural areas offer more opportunities to engage with natural environments like farms, parks, and wildlife habitats which can lead to healthier lifestyles.",
+                        "impact": "This encourages outdoor activities that foster physical well-being and mental relaxation from city stressors."
+                    }
+                ],
+                "result": {
+                    "winner": "Con",
+                    "scores": {
+                        "pro": 0.67,
+                        "con": 0.83
+                    },
+                    "ml_prediction": "Con",
+                    "decision_type": "rule+ml_agreement",
+                    "confidence": 0.83,
+                    "reason": "Both rule-based scoring and ML model agreed on Con as the winner."
+                }
+            },
+            "metrics": {
+                "length": 211,
+                "args_count": 4,
+                "keywords": 2,
+                "has_decision": true
+            }
+        }
+    },
+    {
+        "question": "Is social media making us more lonely?",
+        "raw_llm": {
+            "text": "Social media's impact on loneliness is a complex issue and can vary greatly among individuals. However, we could argue that there are several reasons why some people might feel an increase in feelings of isolation or loneliness due to their use of social media:\n\n1. Comparison trap - Social media platforms tend to present curated portrayals of other users' lives and experiences which often seem more exciting, glamorous, perfected than reality. This can lead individuals to feel inadecurate or envious about others\u2019 situations leading to feelings of loneliness or isolation as they compare their own real-life status with these idealized versions online.\n\n2. Decreased face-to-face interactions - As people spend more time interacting on social media, it may result in decreased direct communication and fewer opportunities for physical interaction which is important to reduce feelings of loneliness as human beings are inherently social creatures who need regular contact with others to feel connected.\n\n3. Social anxiety or FOMO - For some individuals using social media can trigger anxious thoughts about missing out on experiences that their peers may have, leading them to doubt whether they truly belong in certain circles of friends and acquaintances (also known as fear of missing out). This feeling might push people further away from forming close relationships with others.\n\n4. Misinterpretation - Nonverbal cues are important for",
+            "metrics": {
+                "length": 222,
+                "args_count": 1,
+                "keywords": 0,
+                "has_decision": false
+            }
+        },
+        "prompt_engineered": {
+            "pro": [
+                {
+                    "point": "Increased screen time leads to isolation.",
+                    "reason": "Excessive use of social media often replaces in-person interactions, reducing real-life face-to-face contact and potentially leading to feelings of loneliness.",
+                    "impact": "This can erode the quality of personal relationships and lead individuals to experience heightened levels of isolation."
+                },
+                {
+                    "point": "Comparison culture on social media contributes to lower self-esteem.",
+                    "reason": "Continuous exposure to curated highlights of others' lives can make users feel inadequate or lonely by comparison, impacting their confidence and sense of belonging.",
+                    "impact": "Users may withdraw from social situations due to fear of not measuring up, thereby increasing feelings of loneliness."
+                }
+            ],
+            "con": [
+                {
+                    "point": "Social media does not inherently cause loneliness.",
+                    "reason": "It provides a platform for connecting with others and fosters communication that can reduce feelings of isolation.",
+                    "impact": "For many individuals, social media helps maintain friendships and relationships over distance."
+                },
+                {
+                    "point": "Loneliness is not solely due to social media usage but often relates to broader societal issues.",
+                    "reason": "Increased work demands, urbanization, and family dynamics are significant factors contributing to loneliness beyond the influence of social platforms.",
+                    "impact": "Misdirecting blame on social media could divert attention from addressing these systemic problems."
+                }
+            ],
+            "metrics": {
+                "length": 190,
+                "args_count": 4,
+                "keywords": 1,
+                "has_decision": false
+            }
+        },
+        "hybrid": {
+            "full_output": {
+                "question": "Is social media making us more lonely?",
+                "pro": [
+                    {
+                        "point": "Social media platforms foster a culture of comparison.",
+                        "reason": "Research has shown that social media encourages users to compare their lives with others, leading to feelings of inadequacy and loneliness.",
+                        "impact": "This can result in decreased self-esteem among individuals who perceive themselves as less successful or happier than those they see online."
+                    },
+                    {
+                        "point": "Social media usage replaces face-to-face interactions, leading to social isolation.",
+                        "reason": "As people spend more time on their devices interacting with others virtually instead of in person, physical and real relationships may suffer due to the lack of deep, meaningful connections.",
+                        "impact": "The erosion of interpersonal skills can create a sense of disconnect from one\u2019s community, potentially exacerbating feelings of loneliness."
+                    }
+                ],
+                "con": [
+                    {
+                        "point": "Social media does not inherently cause loneliness.",
+                        "reason": "It provides a platform for communication and connection that can be utilized to maintain relationships when physical interaction is impossible.",
+                        "impact": "Allows long-distance friendships to thrive, reducing feelings of isolation."
+                    },
+                    {
+                        "point": "Overuse or misuse of social media exacerbates loneliness.",
+                        "reason": "When individuals replace real interactions with digital ones and internalize negative feedback online",
+                        "impact": "Increases self-esteem issues, anxiety, which can lead to heightened feelings of isolation."
+                    }
+                ],
+                "result": {
+                    "winner": "Con",
+                    "scores": {
+                        "pro": 0.67,
+                        "con": 0.67
+                    },
+                    "ml_prediction": "Con",
+                    "decision_type": "llm_tiebreaker",
+                    "confidence": 0.67,
+                    "reason": "Rules and ML disagreed, and scores were near-equal. LLM tie-breaker was used for semantic judgment."
+                }
+            },
+            "metrics": {
+                "length": 219,
+                "args_count": 4,
+                "keywords": 0,
+                "has_decision": true
+            }
+        }
+    },
+    {
+        "question": "Should we strive for a minimalist lifestyle?",
+        "raw_llm": {
+            "text": "Yes, embracing a minimalist lifestyle can be beneficial in numerous ways. It allows individuals to focus on what truly matters and reduces unnecessary material possessions that often lead to cluttered living spaces which further induce stress and anxiety (Otto et al., 2017). Adopting minimalism encourages people to distinguish between needs and wants, leading them towards more sustainable consumption habits. It helps in reducing waste as individuals are likely to purchase less disposable items; thereby benefiting the environment by minimizing ecological footprint (Steelman et al., 2curating a life with fewer possessions can lead to greater financial freedom and security, enabling one to allocate resources towards experiences or investments that bring long-term happiness instead of being tied down by debt in accumulating material goods.\n\nFurthermore, studies have shown minimalism as an approach which fosters mental wellbeing through lessened stress levels (Pang et al., 2019). The act of decluttering and simplifying one's living space can promote a sense of control over the environment, contributing to enhanced feelings of calmness and peace. A minimalist lifestyle also encourages people to lead more intentional lives where each decision is purposeful rather than impulsive or driven by societal pressure (Cohen et al., 2019).\n\nFinally",
+            "metrics": {
+                "length": 197,
+                "args_count": 1,
+                "keywords": 0,
+                "has_decision": false
+            }
+        },
+        "prompt_engineered": {
+            "pro": [
+                {
+                    "point": "Minimalism reduces stress and anxiety.",
+                    "reason": "By owning fewer material possessions, individuals can decrease the emotional attachment to items that often lead to clutter-related stress.",
+                    "impact": "People may experience improved mental health with less emphasis on acquiring more."
+                },
+                {
+                    "point": "Minimalism encourages environmental responsibility.",
+                    "reason": "A minimalist lifestyle inherently involves consuming and discarding fewer resources, which leads to a smaller ecological footprint.",
+                    "impact": "Reduced waste generation helps mitigate the effects of climate change."
+                }
+            ],
+            "con": [
+                {
+                    "point": "Minimalism can lead to a loss of cultural richness.",
+                    "reason": "Excessive focus on minimal possessions may discourage the appreciation and acquisition of diverse cultures, arts, and crafts that contribute significantly to societal depth and variety.",
+                    "impact": "Cultural homogenization where unique traditions could diminish in value."
+                },
+                {
+                    "point": "Minimalism might not be achievable or healthy for everyone psychologically.",
+                    "reason": "The drive towards a minimalist lifestyle may induce stress and anxiety, particularly if it conflicts with one's personal values or the natural human tendency to collect items of sentimental value.",
+                    "impact": "Increased mental health issues related to societal pressure for conformity."
+                }
+            ],
+            "metrics": {
+                "length": 172,
+                "args_count": 4,
+                "keywords": 1,
+                "has_decision": false
+            }
+        },
+        "hybrid": {
+            "full_output": {
+                "question": "Should we strive for a minimalist lifestyle?",
+                "pro": [
+                    {
+                        "point": "Reduces environmental impact.",
+                        "reason": "Minimalism leads to less consumption, which in turn decreases demand for raw materials and energy used in production processes.",
+                        "impact": "Less ecological degradation and a smaller carbon footprint."
+                    },
+                    {
+                        "point": "Fosters personal contentment.",
+                        "reason": "By focusing on essentials, individuals often experience less clutter-related stress and anxiety.",
+                        "impact": "Improved mental health and quality of life with fewer material distractions."
+                    }
+                ],
+                "con": [
+                    {
+                        "point": "A minimalist lifestyle may lead to increased social isolation.",
+                        "reason": "By prioritizing material possessions over relationships and community involvement, individuals might neglect the value of interpersonal connections that foster societal support systems.",
+                        "impact": "This can result in a weaker sense of belonging and potential detriment to mental health."
+                    },
+                    {
+                        "point": "The pursuit of minimalism could be financially impractical for many people.",
+                        "reason": "Minimalist lifestyles often entail initial investments, such as buying quality goods that last longer and reducing consumption habits which may disrupt current market economies reliant on frequent purchases",
+                        "impact": "This shift could lead to economic instability for industries not prepared for reduced consumer demand."
+                    }
+                ],
+                "result": {
+                    "winner": "Tie",
+                    "scores": {
+                        "pro": 0.67,
+                        "con": 0.67
+                    },
+                    "ml_prediction": "Con",
+                    "decision_type": "llm_tiebreaker",
+                    "confidence": 0.67,
+                    "reason": "Rules and ML disagreed, and scores were near-equal. LLM tie-breaker was used for semantic judgment."
+                }
+            },
+            "metrics": {
+                "length": 197,
+                "args_count": 4,
+                "keywords": 1,
+                "has_decision": true
+            }
+        }
+    },
+    {
+        "question": "Is gaming a productive hobby?",
+        "raw_llm": {
+            "text": "Error: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=60)",
+            "metrics": {
+                "length": 8,
+                "args_count": 1,
+                "keywords": 0,
+                "has_decision": false
+            }
+        },
+        "prompt_engineered": {
+            "pro": [
+                {
+                    "point": "Gaming enhances cognitive abilities.",
+                    "reason": "Studies have shown that strategic and role-playing games can improve problem-solving skills, memory, and spatial recognition.",
+                    "impact": "These enhanced mental capabilities translate to better academic performance and real-world decision making."
+                },
+                {
+                    "point": "Gaming fosters social connectivity.",
+                    "reason": "Online gaming platforms encourage interaction with players from diverse backgrounds, leading to the development of communication skills and cultural awareness.",
+                    "impact": "These interactions contribute to global understanding and can lead to collaborative opportunities in professional settings."
+                }
+            ],
+            "con": [
+                {
+                    "point": "Gaming can lead to decreased productivity.",
+                    "reason": "Research has shown that excessive gaming often replaces time spent on work, study or social activities, which are essential for personal and professional growth.",
+                    "impact": "Workers may miss deadlines due to lesser hours dedicated to tasks."
+                },
+                {
+                    "point": "Some games can impair cognitive abilities such as problem-solving skills under certain conditions",
+                    "reason": "While gaming requires strategic thinking, overindulgence or relying solely on the patterns within a game without learning new approaches may hinder adaptability and flexibility in real life.",
+                    "impact": "Individuals might struggle to solve novel problems outside of games."
+                }
+            ],
+            "metrics": {
+                "length": 175,
+                "args_count": 4,
+                "keywords": 0,
+                "has_decision": false
+            }
+        },
+        "hybrid": {
+            "full_output": {
+                "question": "Is gaming a productive hobby?",
+                "pro": [
+                    {
+                        "point": "Gaming can enhance problem-solving skills.",
+                        "reason": "Many games require critical thinking and strategy, exercising the brain similar to puzzles or chess does.",
+                        "impact": "This skill set is transferable to workplace challenges where complex problems must be solved."
+                    },
+                    {
+                        "point": "Gaming encourages teamwork through multiplayer experiences.",
+                        "reason": "Multiplayer and cooperative gaming necessitates communication, strategy planning with others, mirroring real-life project management skills.",
+                        "impact": "These collaborative abilities are vital for successful group projects in professional settings."
+                    }
+                ],
+                "con": [
+                    {
+                        "point": "Gaming can promote strategic thinking.",
+                        "reason": "Many games require players to make complex decisions and plan ahead, which enhances problem-solving skills.",
+                        "impact": "Individuals who play strategy-based video games may perform better in tasks that involve planning and resource management."
+                    },
+                    {
+                        "point": "Gaming can lead to a reduction of stress and an escape from reality.",
+                        "reason": "Playing immersive gaming experiences provides relaxation similar to engaging hobbies such as reading or gardening, which might help with mental health.",
+                        "impact": "Frequent gameplay may offer temporary relief for stressed individuals but could also contribute to sedentary lifestyles if not balanced."
+                    }
+                ],
+                "result": {
+                    "winner": "Con",
+                    "scores": {
+                        "pro": 0.67,
+                        "con": 0.67
+                    },
+                    "ml_prediction": "Con",
+                    "decision_type": "llm_tiebreaker",
+                    "confidence": 0.67,
+                    "reason": "Rules and ML disagreed, and scores were near-equal. LLM tie-breaker was used for semantic judgment."
+                }
+            },
+            "metrics": {
+                "length": 199,
+                "args_count": 4,
+                "keywords": 0,
+                "has_decision": true
+            }
+        }
+    },
+    {
+        "question": "Should mental health days be mandatory?",
+        "raw_llm": {
+            "text": "No, I don't think mental health days should necessarily be made mandatory. While they can certainly benefit many individuals who struggle to balance work and personal life pressures or cope with stressors, making them compulsory may not always yield positive results due to the following reasons:\n\n1. Autonomy: Mandating anything takes away an individual's autonomy\u2014an essential aspect of human psychology that contributes significantly towards overall well-bein and satisfaction in life. Giving employees or students control over their own mental health care, including when they take time off for such purposes can lead to better outcomes as it shows respect toward individuals\u2019 personal decision making capabilities which leads them to prioritize themselves more effectively.\n\n2. Stigma: Making something mandatory could perpetuate the stigma surrounding discussions of mental health issues within a workplace or academic environment, even though efforts should be made towards normalizing these conversations and creating an inclusive culture that supports all aspects of well-being. Mandating time off for one's own care might make people feel like they are 'broken' if not taking such days which can increase shame and lead to further isolation or self-stigma, making it harder to seek help when needed.\n\n3. Potential misuse: There\u2019s a risk that mandatory mental health leaves could be abused by those who don't genuinely need them but want time off",
+            "metrics": {
+                "length": 219,
+                "args_count": 1,
+                "keywords": 0,
+                "has_decision": false
+            }
+        },
+        "prompt_engineered": {
+            "pro": [
+                {
+                    "point": "Promotes overall well-being and productivity.",
+                    "reason": "By allowing employees to rest, they can return refreshed and more focused on their work tasks.",
+                    "impact": "Workplaces could experience an uptick in efficiency as a result."
+                },
+                {
+                    "point": "Can help prevent burnout and job dissatisfaction.",
+                    "reason": "Regular mental health days provide time to recharge, reducing stress levels which are linked to decreased motivation.",
+                    "impact": "Companies may see a decrease in turnover rates due to improved employee satisfaction."
+                }
+            ],
+            "con": [
+                {
+                    "point": "Parsing Error",
+                    "reason": "AI failed to return valid JSON",
+                    "impact": "N/A"
+                }
+            ],
+            "metrics": {
+                "length": 86,
+                "args_count": 3,
+                "keywords": 0,
+                "has_decision": false
+            }
+        },
+        "hybrid": {
+            "full_output": {
+                "question": "Should mental health days be mandatory?",
+                "pro": [
+                    {
+                        "point": "Mandatory mental health days could normalize seeking help.",
+                        "reason": "Normalizing the use of such days can reduce stigma around mental illness and encourage employees to seek assistance when needed.",
+                        "impact": "Employees may feel more supported, leading to improved overall wellbeing."
+                    },
+                    {
+                        "point": "They could potentially increase productivity in the long term.",
+                        "reason": "Taking time off for mental health can prevent burnout and associated decreases in work performance.",
+                        "impact": "Workplaces might see reduced absenteeism due to stress-related issues, with a more focused employee base."
+                    }
+                ],
+                "con": [
+                    {
+                        "point": "Parsing Error",
+                        "reason": "AI failed to return valid JSON",
+                        "impact": "N/A"
+                    }
+                ],
+                "result": {
+                    "winner": "Pro",
+                    "scores": {
+                        "pro": 0.67,
+                        "con": 0.0
+                    },
+                    "ml_prediction": "Pro",
+                    "decision_type": "rule+ml_agreement",
+                    "confidence": 0.67,
+                    "reason": "Both rule-based scoring and ML model agreed on Pro as the winner."
+                }
+            },
+            "metrics": {
+                "length": 121,
+                "args_count": 3,
+                "keywords": 0,
+                "has_decision": true
+            }
+        }
+    },
+    {
+        "question": "Is space exploration worth the cost?",
+        "raw_llm": {
+            "text": "Error: HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=60)",
+            "metrics": {
+                "length": 8,
+                "args_count": 1,
+                "keywords": 0,
+                "has_decision": false
+            }
+        },
+        "prompt_engineered": {
+            "pro": [
+                {
+                    "point": "Space exploration drives technological advancements.",
+                    "reason": "It pushes the boundaries of our current technology, which often leads to breakthroughs in materials science and engineering that have everyday applications on Earth.",
+                    "impact": "Developments like memory foam mattresses and scratch-resistant lenses are just some examples of beneficial spinoff technologies."
+                },
+                {
+                    "point": "Space exploration inspires future generations to pursue science, technology, engineering, and mathematics (STEM).",
+                    "reason": "Exposure to space-related concepts encourages educational aspirations in these critical areas among young people.",
+                    "impact": "This can lead to a more scientifically literate society that contributes innovative solutions to global challenges."
+                }
+            ],
+            "con": [
+                {
+                    "point": "Space exploration is a luxury, not necessity.",
+                    "reason": "Most researchers believe that the funds for space programs could be better used to address immediate and pressing issues on Earth such as poverty alleviation, education improvement, or health care expansion.",
+                    "impact": "Continued investment in space exploration may divert much-needed resources away from solving critical problems facing humanity."
+                },
+                {
+                    "point": "Space debris represents a serious threat to our planet and astronauts.",
+                    "reason": "The increasing amount of spent rocket stages, defunct satellites, and fragments from disintegration or collisions in orbit can damage operational spacecraft and endanger the lives of astronauts aboard crewed missions.",
+                    "impact": "Space debris could potentially escalate into an international crisis requiring significant resources for mitigation that might be diverted away from terrestrial concerns."
+                }
+            ],
+            "metrics": {
+                "length": 217,
+                "args_count": 4,
+                "keywords": 1,
+                "has_decision": false
+            }
+        },
+        "hybrid": {
+            "full_output": {
+                "question": "Is space exploration worth the cost?",
+                "pro": [
+                    {
+                        "point": "Space exploration stimulates technological advancements.",
+                        "reason": "Investment in R&D for space missions often leads to innovations that benefit various industries and daily life.",
+                        "impact": "Advancements such as satellite technology, GPS systems, and weather forecasting have become integral aspects of modern society."
+                    },
+                    {
+                        "point": "Exploration can lead to discoveries with broad societal benefits.",
+                        "reason": "Understanding the universe may offer insights into solving earth-based problems like climate change or resource scarcity.",
+                        "impact": "Potential breakthroughs in science and technology could improve global sustainability efforts."
+                    }
+                ],
+                "con": [
+                    {
+                        "point": "Space exploration drives technological advancements.",
+                        "reason": "Investing in space research leads to the development of new materials, miniaturization techniques and robotics that benefit other industries on Earth.",
+                        "impact": "Technologies like GPS have become integral parts of everyday life through their evolution from aerospace applications."
+                    },
+                    {
+                        "point": "Space exploration fosters international cooperation.",
+                        "reason": "It requires pooling global resources and expertise, promoting peaceful collaboration among nations towards common scientific goals.",
+                        "impact": "The International Space Station serves as a testament to how countries can work together harmoniously in space."
+                    }
+                ],
+                "result": {
+                    "winner": "Pro",
+                    "scores": {
+                        "pro": 0.83,
+                        "con": 0.83
+                    },
+                    "ml_prediction": "Con",
+                    "decision_type": "llm_tiebreaker",
+                    "confidence": 0.83,
+                    "reason": "Rules and ML disagreed, and scores were near-equal. LLM tie-breaker was used for semantic judgment."
+                }
+            },
+            "metrics": {
+                "length": 196,
+                "args_count": 4,
+                "keywords": 2,
+                "has_decision": true
+            }
+        }
+    },
+    {
+        "question": "Should CEOs have a salary cap?",
+        "raw_llm": {
+            "text": "Implementing a salary cap for CEOs can be seen as controversial due to the unique nature of their role and responsibilities. However, there are arguments on both sides which need consideration before forming an opinion about this matter. Here's my perspective:\n\nOn one hand, imposing a ceiling or limit on what CEOs should earn might seem like promoting fairness within organizations by reducing income disparity among top executives and preventing excessively high salaries that may be seen as unjustified in some cases. This could potentially lead to a more equitable distribution of wealth, align employees' interests with the company\u2019s success (as their rewards would better reflect performance) and reduce public backlash against companies perceived as paying exorbitant CEO salaries.\n\nOn theged on one hand is that imposing such regulation may disincentivize top talent from aspiring to become or remain a part of these roles, especially when other industries allow for more lucrative compensation packages due to global competition and market forces. Furthermore, setting a salary cap could lead companies into financial constraints which might hinder their growth strategies if they are unable to attract the best talent because top executives may feel that no matter how successful an organization is financially under such restrictions, there would be limits on what they can earn for it (if all goes well).\n\nAnother point of consideration",
+            "metrics": {
+                "length": 223,
+                "args_count": 1,
+                "keywords": 1,
+                "has_decision": false
+            }
+        },
+        "prompt_engineered": {
+            "pro": [
+                {
+                    "point": "A salary cap ensures fair wages across the organization.",
+                    "reason": "It prevents excessive disparities between senior executives and other employees, promoting internal equity within a company.",
+                    "impact": "This could lead to increased morale among lower-level staff as they feel their contributions are valued more."
+                },
+                {
+                    "point": "A salary cap can align CEO compensation with long-term performance and shareholder interests.",
+                    "reason": "It may encourage the hiring of a CEO who is focused on sustainable growth rather than short-term gains which might not be in the best interest of all stakeholders.",
+                    "impact": "This could potentially lead to more stable company performance and shareholder value over time."
+                }
+            ],
+            "con": [
+                {
+                    "point": "CEOs should not have a salary cap because it can limit the ability to attract top talent.",
+                    "reason": "A fixed maximum does not reflect individual contributions or market demands, which are vital for company performance and competitiveness.",
+                    "impact": "This may result in losing skilled leaders who could drive business success."
+                },
+                {
+                    "point": "Salary caps undermine meritocracy within corporate structures by hindering the reward of exceptional leadership qualities and achievements.",
+                    "reason": "Incentivizing high performance is crucial for motivating top executives to excel in their roles, which benefits all stakeholders.",
+                    "impact": "A lack of financial recognition can demotivate leaders and negatively affect company morale."
+                }
+            ],
+            "metrics": {
+                "length": 206,
+                "args_count": 4,
+                "keywords": 1,
+                "has_decision": false
+            }
+        },
+        "hybrid": {
+            "full_output": {
+                "question": "Should CEOs have a salary cap?",
+                "pro": [
+                    {
+                        "point": "A salary cap promotes fairness among employees.",
+                        "reason": "It ensures that the CEO cannot earn an exorbitant amount of money compared to other staff, which aligns with broader principles of equity in compensation within a company.",
+                        "impact": "This can lead to higher employee morale and retention as workers feel their contributions are valued more fairly."
+                    },
+                    {
+                        "point": "A salary cap could prevent excessive CEO pay amid corporate scandals or underperformance.",
+                        "reason": "Setting a limit on executive compensation can act as an automatic control mechanism, ensuring that remuneration does not spiral out of line with company performance and public perceptions.",
+                        "impact": "This might restore trust among stakeholders by demonstrating responsible financial governance."
+                    }
+                ],
+                "con": [
+                    {
+                        "point": "Reduces disparity between pay and performance.",
+                        "reason": "A salary cap helps align CEO compensation more closely with the company's financial health, potentially increasing accountability for results.",
+                        "impact": "This could lead to a culture of meritocracy where leaders are rewarded based on actual contributions rather than inflated egos or external factors."
+                    },
+                    {
+                        "point": "Might discourage top talent from aiming for C-suite positions.",
+                        "reason": "Imposing salary caps could limit the financial incentives available to CEOs, possibly deterring ambitious executives with high potential or valuable skills who seek significant monetary rewards.",
+                        "impact": "Such a restriction might result in companies losing competitive advantage as they struggle to attract and retain top executive talent."
+                    }
+                ],
+                "result": {
+                    "winner": "Con",
+                    "scores": {
+                        "pro": 0.67,
+                        "con": 0.67
+                    },
+                    "ml_prediction": "Con",
+                    "decision_type": "llm_tiebreaker",
+                    "confidence": 0.67,
+                    "reason": "Rules and ML disagreed, and scores were near-equal. LLM tie-breaker was used for semantic judgment."
+                }
+            },
+            "metrics": {
+                "length": 249,
+                "args_count": 4,
+                "keywords": 0,
+                "has_decision": true
+            }
+        }
+    },
+    {
+        "question": "Is a vegan diet better for the environment?",
+        "raw_llm": {
+            "text": "Yes, generally speaking, adopting a vegan diet can be considered more beneficial to the environment compared to consuming an omnivorous or carnivorous diet. Here are several reasons why this is often recommended:\n\n1. **Lower Greenhouse Gas Emissions**: Animal agriculture significantly contributes to greenhouse gas emissions, particularly methane and nitrous oxide - two potent gases with a much higher warming potential than carbon dioxide (CO2). By reducing or eliminating the consumption of animal products from our diet, we decrease demand for these industries which in turn can reduce their greenhouse gas emissions.\n   \n2. **Efficient Resource Use**: Producing plant-based foods is typically more efficient than producing meat and dairy. Livestock farming requires substantial amounts of land, water, and feed to raise animals - resources that could be used for growing crops directly for human consumption instead. By eating a vegan diet, we reduce our demands on these limited natural resources which helps preserve biodiversity as well.\n   \n3. **Land Use**: Livestock farming is notorious for requiring vast amounts of land that are often converted from their original state to grazing or growing feed crops \u2013 leading to deforestation and habitat loss, particularly in places like the Amazon Rainforest which plays a crucial role in global",
+            "metrics": {
+                "length": 202,
+                "args_count": 1,
+                "keywords": 0,
+                "has_decision": false
+            }
+        },
+        "prompt_engineered": {
+            "pro": [
+                {
+                    "point": "Parsing Error",
+                    "reason": "AI failed to return valid JSON",
+                    "impact": "N/A"
+                }
+            ],
+            "con": [
+                {
+                    "point": "Increased land use for monoculture farming of crops like soy and almonds.",
+                    "reason": "Vegan diets often rely on these crops, which require extensive water resources that are not always sustainable.",
+                    "impact": "Potential strain on local ecosystems due to monoculture practices."
+                },
+                {
+                    "point": "Lack of nutritional balance can lead to increased food waste and consumption.",
+                    "reason": "If not properly managed, veganism could result in overconsumption or reliance on less diverse crops that may have a higher environmental cost.",
+                    "impact": "Potential for greater overall greenhouse gas emissions due to imbalanced dietary practices."
+                }
+            ],
+            "metrics": {
+                "length": 102,
+                "args_count": 3,
+                "keywords": 0,
+                "has_decision": false
+            }
+        },
+        "hybrid": {
+            "full_output": {
+                "question": "Is a vegan diet better for the environment?",
+                "pro": [
+                    {
+                        "point": "Reduces greenhouse gas emissions.",
+                        "reason": "Producing plant-based foods typically generates fewer emissions compared to animal agriculture, which is a major source of methane and CO2.",
+                        "impact": "Lesser contribution to climate change."
+                    },
+                    {
+                        "point": "Conserves water resources.",
+                        "reason": "Vegetable farming usually requires less water than livestock farming, which is a significant part of the agricultural system's water footprint.",
+                        "impact": "Reduced pressure on global freshwater supplies."
+                    }
+                ],
+                "con": [
+                    {
+                        "point": "Increased land use for plant-based foods can lead to deforestation.",
+                        "reason": "To grow crops like soy and almonds, which are commonly used in vegan diets, requires more arable land than traditional livestock farming.",
+                        "impact": "This can contribute to habitat destruction, biodiversity loss, and increased greenhouse gas emissions."
+                    },
+                    {
+                        "point": "Nutrient cycling efficiency in conventional agriculture is higher for some crops used by vegetarians than veganism.",
+                        "reason": "Certain livestock farming systems integrate animals into crop production, improving soil fertility and reducing the need for synthetic fertilizers which have a high carbon footprint.",
+                        "impact": "This efficiency could mean that some meat-eating diets actually use fewer resources per calorie than vegan ones."
+                    }
+                ],
+                "result": {
+                    "winner": "Con",
+                    "scores": {
+                        "pro": 0.33,
+                        "con": 0.67
+                    },
+                    "ml_prediction": "Con",
+                    "decision_type": "rule+ml_agreement",
+                    "confidence": 0.67,
+                    "reason": "Both rule-based scoring and ML model agreed on Con as the winner."
+                }
+            },
+            "metrics": {
+                "length": 199,
+                "args_count": 4,
+                "keywords": 0,
+                "has_decision": true
+            }
+        }
+    },
+    {
+        "question": "Should standard testing be abolished?",
+        "raw_llm": {
+            "text": "The proposal to abolish standardized testing is multifaceted and requires careful consideration of its purpose, impact on the educational system, alternative assessment methods, fairness concerns, and potential consequences. Here are a few points for both sides before drawing an informed conclusion:\n\nArguments in favor of abolishing or reducing reliance on standard tests: \n\n1) Testing pressure can negatively affect students' mental health and create anxiety which may not be conducive to learning (Miller, n.d.). This suggests that removing the stress associated with high-stakes testing could promote a more positive educational environment for learners.\n\n2) Standardized tests often fail to capture or measure important aspects of student achievement such as creativity, critical thinking skills and collaborative abilities which are essential in today's society (Darlington & Hargrove-Krause, 2013). Thus the narrow focus on test scores may not accurately reflect students\u2019 capabilities or prepare them adequately for real life.\n\nArguments against abolishing standardized testing:  \n\n1) Standard tests provide a universal metric to evaluate educational institutions' effectiveness and hold schools accountable, helping identify areas that need improvement (Cizek & Borman, 2013). Removing this system might lead to less transparency regarding the quality of education provided.\n\n2) Certain industries require",
+            "metrics": {
+                "length": 194,
+                "args_count": 1,
+                "keywords": 0,
+                "has_decision": false
+            }
+        },
+        "prompt_engineered": {
+            "pro": [
+                {
+                    "point": "Reduces unnecessary stress on students.",
+                    "reason": "Studies have shown that high-stakes testing can negatively impact student well-being, affecting their mental health and academic performance due to excessive pressure.",
+                    "impact": "A potential decrease in anxiety disorders among students could lead to a more conducive learning environment."
+                },
+                {
+                    "point": "Encourages teaching to the test rather than comprehensive understanding of material.",
+                    "reason": "When grades and college admissions depend heavily on standardized tests, educators may prioritize 'teaching to the test', which often results in rote learning instead of deeper conceptual mastery.",
+                    "impact": "Students might graduate with a fragmented understanding that does not support long-term retention or real-world application."
+                }
+            ],
+            "con": [
+                {
+                    "point": "Standard testing can perpetuate inequalities.",
+                    "reason": "It often does not account for different learning styles and backgrounds, which affect outcomes unevenly among students of diverse socio-economic statuses.",
+                    "impact": "May reinforce social disparities by unfairly assessing the capabilities of disadvantaged groups."
+                },
+                {
+                    "point": "Standardized tests focus too narrowly on rote memorization and quick recall.",
+                    "reason": "They do not measure critical thinking, creativity, or problem-solving skills adequately, which are essential for success in the modern world.",
+                    "impact": "Students may develop a superficial understanding of material instead of deep learning."
+                }
+            ],
+            "metrics": {
+                "length": 191,
+                "args_count": 4,
+                "keywords": 1,
+                "has_decision": false
+            }
+        },
+        "hybrid": {
+            "full_output": {
+                "question": "Should standard testing be abolished?",
+                "pro": [
+                    {
+                        "point": "Standard testing promotes accountability among teachers and students.",
+                        "reason": "It sets clear performance benchmarks for educational standards that can be measured repeatedly, ensuring consistent quality in teaching methods and student learning outcomes.",
+                        "impact": "Improved overall education system with a clearer understanding of strengths and weaknesses at various levels."
+                    },
+                    {
+                        "point": "Standardized tests provide essential data for identifying educational gaps and resource allocation needs.",
+                        "reason": "The aggregate results reveal which schools or regions may require additional support, leading to more targeted interventions in education policy making.",
+                        "impact": "Potential reduction of achievement disparities between different socio-economic groups."
+                    }
+                ],
+                "con": [
+                    {
+                        "point": "Standardized tests measure skills and knowledge.",
+                        "reason": "Valid because standard testing provides a consistent method to assess student achievement in specific subjects, ensuring fairness by comparing academic performance across different educational institutions nationwide or even globally.",
+                        "impact": "Without such measurement tools, it would be challenging for educators and policymakers to understand the effectiveness of education systems and curricula."
+                    },
+                    {
+                        "point": "Standard tests create a uniform benchmark that can highlight areas needing improvement.",
+                        "reason": "Because they offer objective data on where students are excelling or falling behind, standardized testing helps in identifying educational disparities which is crucial for formulating policies aimed at improving education quality and equality.",
+                        "impact": "Abolishing these tests could lead to a lack of awareness about the diverse needs among schools across different socioeconomic backgrounds, potentially widening achievement gaps."
+                    }
+                ],
+                "result": {
+                    "winner": "Con",
+                    "scores": {
+                        "pro": 0.67,
+                        "con": 1.0
+                    },
+                    "ml_prediction": "Con",
+                    "decision_type": "rule+ml_agreement",
+                    "confidence": 1.0,
+                    "reason": "Both rule-based scoring and ML model agreed on Con as the winner."
+                }
+            },
+            "metrics": {
+                "length": 252,
+                "args_count": 4,
+                "keywords": 2,
                 "has_decision": true
             }
         }
