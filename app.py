@@ -9,27 +9,39 @@ from evaluation.baseline_comparison import raw_llm_baseline, prompt_engineered_b
 st.set_page_config(page_title="Legal Agent Analysis", page_icon="🧠", layout="wide")
 
 # --- UTILS ---
-def get_metrics_for_text(pro_args, con_args, res):
-    """Calculates academic scores for a set of arguments."""
-    all_args = pro_args + con_args
-    # 1. Structure
-    struct = 0
-    for a in all_args:
-        if a.get("point") and a.get("reason") and a.get("impact"): struct += 1
-    avg_struct = (struct / len(all_args) * 4) if all_args else 0
+def get_metrics_from_result(result_obj, method):
+    """Safely extracts metrics from different baseline outputs."""
+    if method == "hybrid":
+        # Calculate live for hybrid to be reactive
+        pro_args = result_obj.get("pro", [])
+        con_args = result_obj.get("con", [])
+        res = result_obj.get("result", {})
+        all_args = pro_args + con_args
+        
+        struct = 0
+        for a in all_args:
+            if a.get("point") and a.get("reason") and a.get("impact"): struct += 1
+        avg_struct = (struct / len(all_args) * 4) if all_args else 0
+        
+        reasoning = 0
+        keywords = ["because", "therefore", "leads to", "results in", "since", "due to", "indicating", "essential", "risks"]
+        for a in all_args:
+            text = f"{a.get('reason','')} {a.get('impact','')}".lower()
+            reasoning += sum(1 for k in keywords if k in text)
+        avg_reason = (reasoning / len(all_args) * 4) if all_args else 0
+        
+        dec = 100 if res.get("winner") != "Draw" else 0
+        return {"Structure": avg_struct, "Reasoning": avg_reason, "Decision": dec}
     
-    # 2. Reasoning
-    reasoning = 0
-    keywords = ["because", "therefore", "leads to", "results in", "since", "due to", "indicating", "essential", "risks"]
-    for a in all_args:
-        text = f"{a.get('reason','')} {a.get('impact','')}".lower()
-        reasoning += sum(1 for k in keywords if k in text)
-    avg_reason = (reasoning / len(all_args) * 4) if all_args else 0
-    
-    # 3. Decision
-    dec = 100 if res.get("winner") != "Draw" else 0
-    
-    return {"Structure": avg_struct, "Reasoning": avg_reason, "Decision": dec}
+    else:
+        # For Raw and Prompt, use their built-in metrics
+        m = result_obj.get("metrics", {})
+        # Map baseline 0-3/6 scales to 0-4 for consistent UI display
+        return {
+            "Structure": m.get("structure", 0) * 1.2, 
+            "Reasoning": m.get("reasoning", 0) * 1.5,
+            "Decision": m.get("decision", 0) * 100
+        }
 
 # --- SIDEBAR ---
 st.sidebar.title("🛠️ Project Menu")
@@ -59,20 +71,19 @@ if page == "Debate Arena":
                         raw_out = f_raw.result()
                         prompt_out = f_prompt.result()
                     
-                    # Calculate metrics for all 3
-                    m_h = get_metrics_for_text(hybrid_out["pro"], hybrid_out["con"], hybrid_out["result"])
-                    m_r = get_metrics_for_text(raw_out["pro"], raw_out["con"], raw_out["result"])
-                    m_p = get_metrics_for_text(prompt_out["pro"], prompt_out["con"], prompt_out["result"])
+                    m_h = get_metrics_from_result(hybrid_out, "hybrid")
+                    m_r = get_metrics_from_result(raw_out, "raw")
+                    m_p = get_metrics_from_result(prompt_out, "prompt")
                     
                     comparison_df = pd.DataFrame([
                         {"Method": "RAW", "Structure": m_r["Structure"], "Reasoning": m_r["Reasoning"], "Decision": m_r["Decision"]},
                         {"Method": "PROMPT", "Structure": m_p["Structure"], "Reasoning": m_p["Reasoning"], "Decision": m_p["Decision"]},
                         {"Method": "HYBRID", "Structure": m_h["Structure"], "Reasoning": m_h["Reasoning"], "Decision": m_h["Decision"]},
                     ])
-                    output = hybrid_out # Main display is still Hybrid
+                    output = hybrid_out
                 else:
                     output = run_debate(question)
-                    m_h = get_metrics_for_text(output["pro"], output["con"], output["result"])
+                    m_h = get_metrics_from_result(output, "hybrid")
                     comparison_df = pd.DataFrame([{"Method": "HYBRID", "Structure": m_h["Structure"], "Reasoning": m_h["Reasoning"], "Decision": m_h["Decision"]}])
                 
                 status.update(label="✅ Analysis Complete!", state="complete", expanded=False)
@@ -91,7 +102,6 @@ if page == "Debate Arena":
                 st.bar_chart(comparison_df.set_index("Method")["Decision"])
 
             st.divider()
-            # ... Rest of the display (Pro/Con args) ...
             col1, col2 = st.columns(2)
             with col1:
                 st.subheader("📌 Pro Arguments")
@@ -120,7 +130,6 @@ if page == "Debate Arena":
 # --- PAGE 2: EVALUATION DASHBOARD ---
 elif page == "Evaluation Dashboard":
     st.title("📊 Academic Evaluation Dashboard")
-    # (Same as before, showing the 20-sample aggregates)
     results_path = os.path.join("evaluation", "results_v2.json")
     if os.path.exists(results_path):
         with open(results_path, "r", encoding="utf-8") as f:
@@ -144,7 +153,6 @@ elif page == "Evaluation Dashboard":
             st.subheader("🎯 Decision Rate")
             st.bar_chart(df.set_index("Method")["Decision (%)"])
     
-    # NLP and Error Analysis sections...
     st.divider()
     st.subheader("🔤 NLP Quality Analysis (BLEU & ROUGE)")
     st.write("Compared to baseline, hybrid outputs show **higher content coverage and structural completeness**.")
