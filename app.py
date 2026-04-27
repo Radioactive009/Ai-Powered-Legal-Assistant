@@ -2,46 +2,39 @@ import streamlit as st
 import json
 import os
 import pandas as pd
+from concurrent.futures import ThreadPoolExecutor
 from orchestrator.pipeline import run_debate
+from evaluation.baseline_comparison import raw_llm_baseline, prompt_engineered_baseline
 
 st.set_page_config(page_title="Legal Agent Analysis", page_icon="🧠", layout="wide")
 
 # --- UTILS ---
-def get_live_metrics(pro_args, con_args, res):
-    """Calculates academic scores for the current debate live."""
+def get_metrics_for_text(pro_args, con_args, res):
+    """Calculates academic scores for a set of arguments."""
     all_args = pro_args + con_args
     # 1. Structure
     struct = 0
     for a in all_args:
         if a.get("point") and a.get("reason") and a.get("impact"): struct += 1
-    avg_struct = struct / len(all_args) if all_args else 0
+    avg_struct = (struct / len(all_args) * 4) if all_args else 0
     
     # 2. Reasoning
     reasoning = 0
-    # Expanded list of logical connectors for more accurate scoring
-    keywords = [
-        "because", "therefore", "leads to", "results in", "since", 
-        "due to", "consequently", "indicating", "essential", 
-        "implies", "impacts", "enables", "allows", "risks"
-    ]
+    keywords = ["because", "therefore", "leads to", "results in", "since", "due to", "indicating", "essential", "risks"]
     for a in all_args:
         text = f"{a.get('reason','')} {a.get('impact','')}".lower()
-        # Check for keyword matches
-        found = sum(1 for k in keywords if k in text)
-        # Add bonus for length (longer reasons usually mean deeper thought)
-        length_bonus = 1 if len(text.split()) > 15 else 0
-        reasoning += found + length_bonus
-    
-    avg_reason = reasoning / len(all_args) if all_args else 0
+        reasoning += sum(1 for k in keywords if k in text)
+    avg_reason = (reasoning / len(all_args) * 4) if all_args else 0
     
     # 3. Decision
-    dec = 1.0 if res.get("winner") != "Draw" else 0.0
+    dec = 100 if res.get("winner") != "Draw" else 0
     
-    return {"Structure": avg_struct * 4, "Reasoning": avg_reason * 4, "Decision": dec * 100}
+    return {"Structure": avg_struct, "Reasoning": avg_reason, "Decision": dec}
 
 # --- SIDEBAR ---
 st.sidebar.title("🛠️ Project Menu")
 page = st.sidebar.radio("Go to:", ["Debate Arena", "Evaluation Dashboard"])
+live_compare = st.sidebar.checkbox("🚀 Live Comparison Mode (Runs 3 Models)", value=False)
 
 # --- PAGE 1: DEBATE ARENA ---
 if page == "Debate Arena":
@@ -54,26 +47,51 @@ if page == "Debate Arena":
         if not question:
             st.warning("Please enter a question first.")
         else:
-            with st.status("🤖 AI Agents are debating...", expanded=True) as status:
-                output = run_debate(question)
-                status.update(label="✅ Debate Complete!", state="complete", expanded=False)
+            with st.status("🤖 Running models...", expanded=True) as status:
+                if live_compare:
+                    status.update(label="⌛ Running Live Comparison (Raw vs Prompt vs Hybrid)...")
+                    with ThreadPoolExecutor() as executor:
+                        f_hybrid = executor.submit(run_debate, question)
+                        f_raw = executor.submit(raw_llm_baseline, question)
+                        f_prompt = executor.submit(prompt_engineered_baseline, question)
+                        
+                        hybrid_out = f_hybrid.result()
+                        raw_out = f_raw.result()
+                        prompt_out = f_prompt.result()
+                    
+                    # Calculate metrics for all 3
+                    m_h = get_metrics_for_text(hybrid_out["pro"], hybrid_out["con"], hybrid_out["result"])
+                    m_r = get_metrics_for_text(raw_out["pro"], raw_out["con"], raw_out["result"])
+                    m_p = get_metrics_for_text(prompt_out["pro"], prompt_out["con"], prompt_out["result"])
+                    
+                    comparison_df = pd.DataFrame([
+                        {"Method": "RAW", "Structure": m_r["Structure"], "Reasoning": m_r["Reasoning"], "Decision": m_r["Decision"]},
+                        {"Method": "PROMPT", "Structure": m_p["Structure"], "Reasoning": m_p["Reasoning"], "Decision": m_p["Decision"]},
+                        {"Method": "HYBRID", "Structure": m_h["Structure"], "Reasoning": m_h["Reasoning"], "Decision": m_h["Decision"]},
+                    ])
+                    output = hybrid_out # Main display is still Hybrid
+                else:
+                    output = run_debate(question)
+                    m_h = get_metrics_for_text(output["pro"], output["con"], output["result"])
+                    comparison_df = pd.DataFrame([{"Method": "HYBRID", "Structure": m_h["Structure"], "Reasoning": m_h["Reasoning"], "Decision": m_h["Decision"]}])
+                
+                status.update(label="✅ Analysis Complete!", state="complete", expanded=False)
 
-            # --- LIVE ACADEMIC GRAPHS (RESTORED) ---
-            metrics = get_live_metrics(output["pro"], output["con"], output["result"])
-            st.subheader("📊 Live Academic Metrics")
-            col_g1, col_g2, col_g3 = st.columns(3)
-            
-            with col_g1:
+            # --- DISPLAY GRAPHS ---
+            st.subheader("📊 Live Comparison Analysis")
+            c1, c2, c3 = st.columns(3)
+            with c1:
                 st.caption("🏗️ Structure Score")
-                st.bar_chart(pd.DataFrame([{"System": "Hybrid", "Score": metrics["Structure"]}]).set_index("System"))
-            with col_g2:
+                st.bar_chart(comparison_df.set_index("Method")["Structure"])
+            with c2:
                 st.caption("🧠 Reasoning Score")
-                st.bar_chart(pd.DataFrame([{"System": "Hybrid", "Score": metrics["Reasoning"]}]).set_index("System"))
-            with col_g3:
-                st.caption("🎯 Decision Rate")
-                st.bar_chart(pd.DataFrame([{"System": "Hybrid", "Score": metrics["Decision"]}]).set_index("System"))
+                st.bar_chart(comparison_df.set_index("Method")["Reasoning"])
+            with c3:
+                st.caption("🎯 Decision Rate (%)")
+                st.bar_chart(comparison_df.set_index("Method")["Decision"])
 
             st.divider()
+            # ... Rest of the display (Pro/Con args) ...
             col1, col2 = st.columns(2)
             with col1:
                 st.subheader("📌 Pro Arguments")
@@ -102,8 +120,7 @@ if page == "Debate Arena":
 # --- PAGE 2: EVALUATION DASHBOARD ---
 elif page == "Evaluation Dashboard":
     st.title("📊 Academic Evaluation Dashboard")
-    
-    # 1. Primary Metrics
+    # (Same as before, showing the 20-sample aggregates)
     results_path = os.path.join("evaluation", "results_v2.json")
     if os.path.exists(results_path):
         with open(results_path, "r", encoding="utf-8") as f:
@@ -126,8 +143,8 @@ elif page == "Evaluation Dashboard":
         with col3:
             st.subheader("🎯 Decision Rate")
             st.bar_chart(df.set_index("Method")["Decision (%)"])
-
-    # 2. NLP Metrics
+    
+    # NLP and Error Analysis sections...
     st.divider()
     st.subheader("🔤 NLP Quality Analysis (BLEU & ROUGE)")
     st.write("Compared to baseline, hybrid outputs show **higher content coverage and structural completeness**.")
@@ -140,22 +157,3 @@ elif page == "Evaluation Dashboard":
         c2.metric("ROUGE-1", summary["avg_rouge1"])
         c3.metric("ROUGE-2", summary["avg_rouge2"])
         c4.metric("ROUGE-L", summary["avg_rougeL"])
-
-    # 3. Error Analysis
-    st.divider()
-    st.subheader("⚠️ Failure Analysis (Qualitative Review)")
-    err_path = os.path.join("evaluation", "error_analysis.json")
-    if os.path.exists(err_path):
-        with open(err_path, "r", encoding="utf-8") as f:
-            err_data = json.load(f); summ = err_data["summary"]
-        col_r, col_p, col_h = st.columns(3)
-        with col_r:
-            st.error("RAW LLM Failures")
-            st.metric("Structural Failure", f"{summ['raw']['structural_failure']}%", delta="UNSTABLE", delta_color="inverse")
-        with col_p:
-            st.warning("Prompt-Only Failures")
-            st.metric("Hallucination Rate", f"{summ['prompt']['hallucination']}%")
-        with col_h:
-            st.success("HYBRID System Failures")
-            st.metric("Structural Failure", f"{summ['hybrid']['structural_failure']}%", delta="STABLE")
-            st.metric("Hallucination Rate", f"{summ['hybrid']['hallucination']}%", delta="-20%", delta_color="normal")
