@@ -18,10 +18,20 @@ def get_live_metrics(pro_args, con_args, res):
     
     # 2. Reasoning
     reasoning = 0
-    keywords = ["because", "therefore", "leads to", "results in"]
+    # Expanded list of logical connectors for more accurate scoring
+    keywords = [
+        "because", "therefore", "leads to", "results in", "since", 
+        "due to", "consequently", "indicating", "essential", 
+        "implies", "impacts", "enables", "allows", "risks"
+    ]
     for a in all_args:
         text = f"{a.get('reason','')} {a.get('impact','')}".lower()
-        reasoning += sum(1 for k in keywords if k in text)
+        # Check for keyword matches
+        found = sum(1 for k in keywords if k in text)
+        # Add bonus for length (longer reasons usually mean deeper thought)
+        length_bonus = 1 if len(text.split()) > 15 else 0
+        reasoning += found + length_bonus
+    
     avg_reason = reasoning / len(all_args) if all_args else 0
     
     # 3. Decision
