@@ -2,11 +2,32 @@ import streamlit as st
 import json
 import os
 import pandas as pd
-import requests
-import time
 from orchestrator.pipeline import run_debate
 
 st.set_page_config(page_title="Legal Agent Analysis", page_icon="🧠", layout="wide")
+
+# --- UTILS ---
+def get_live_metrics(pro_args, con_args, res):
+    """Calculates academic scores for the current debate live."""
+    all_args = pro_args + con_args
+    # 1. Structure
+    struct = 0
+    for a in all_args:
+        if a.get("point") and a.get("reason") and a.get("impact"): struct += 1
+    avg_struct = struct / len(all_args) if all_args else 0
+    
+    # 2. Reasoning
+    reasoning = 0
+    keywords = ["because", "therefore", "leads to", "results in"]
+    for a in all_args:
+        text = f"{a.get('reason','')} {a.get('impact','')}".lower()
+        reasoning += sum(1 for k in keywords if k in text)
+    avg_reason = reasoning / len(all_args) if all_args else 0
+    
+    # 3. Decision
+    dec = 1.0 if res.get("winner") != "Draw" else 0.0
+    
+    return {"Structure": avg_struct * 4, "Reasoning": avg_reason * 4, "Decision": dec * 100}
 
 # --- SIDEBAR ---
 st.sidebar.title("🛠️ Project Menu")
@@ -17,7 +38,7 @@ if page == "Debate Arena":
     st.title("🧠 Multi-Agent Debate System")
     st.caption("Hybrid Intelligent Mode: Rules + Machine Learning + LLM Tie-Breaker")
 
-    question = st.text_input("Enter your question:", placeholder="e.g., Is React the best framework?")
+    question = st.text_input("Enter your question:", placeholder="e.g., Is AI better than humans?")
     
     if st.button("Run Debate"):
         if not question:
@@ -27,6 +48,22 @@ if page == "Debate Arena":
                 output = run_debate(question)
                 status.update(label="✅ Debate Complete!", state="complete", expanded=False)
 
+            # --- LIVE ACADEMIC GRAPHS (RESTORED) ---
+            metrics = get_live_metrics(output["pro"], output["con"], output["result"])
+            st.subheader("📊 Live Academic Metrics")
+            col_g1, col_g2, col_g3 = st.columns(3)
+            
+            with col_g1:
+                st.caption("🏗️ Structure Score")
+                st.bar_chart(pd.DataFrame([{"System": "Hybrid", "Score": metrics["Structure"]}]).set_index("System"))
+            with col_g2:
+                st.caption("🧠 Reasoning Score")
+                st.bar_chart(pd.DataFrame([{"System": "Hybrid", "Score": metrics["Reasoning"]}]).set_index("System"))
+            with col_g3:
+                st.caption("🎯 Decision Rate")
+                st.bar_chart(pd.DataFrame([{"System": "Hybrid", "Score": metrics["Decision"]}]).set_index("System"))
+
+            st.divider()
             col1, col2 = st.columns(2)
             with col1:
                 st.subheader("📌 Pro Arguments")
@@ -94,32 +131,21 @@ elif page == "Evaluation Dashboard":
         c3.metric("ROUGE-2", summary["avg_rouge2"])
         c4.metric("ROUGE-L", summary["avg_rougeL"])
 
-    # 3. Error Analysis (FAILURE CASE TRACKING)
+    # 3. Error Analysis
     st.divider()
     st.subheader("⚠️ Failure Analysis (Qualitative Review)")
-    st.write("Tracking common LLM weaknesses across systems.")
-    
     err_path = os.path.join("evaluation", "error_analysis.json")
     if os.path.exists(err_path):
         with open(err_path, "r", encoding="utf-8") as f:
-            err_data = json.load(f)
-        
-        summ = err_data["summary"]
+            err_data = json.load(f); summ = err_data["summary"]
         col_r, col_p, col_h = st.columns(3)
-        
         with col_r:
             st.error("RAW LLM Failures")
             st.metric("Structural Failure", f"{summ['raw']['structural_failure']}%", delta="UNSTABLE", delta_color="inverse")
-            st.metric("Weak Reasoning", f"{summ['raw']['weak_reasoning']}%")
-
         with col_p:
             st.warning("Prompt-Only Failures")
             st.metric("Hallucination Rate", f"{summ['prompt']['hallucination']}%")
-            st.metric("Structural Failure", f"{summ['prompt']['structural_failure']}%")
-
         with col_h:
             st.success("HYBRID System Failures")
             st.metric("Structural Failure", f"{summ['hybrid']['structural_failure']}%", delta="STABLE")
             st.metric("Hallucination Rate", f"{summ['hybrid']['hallucination']}%", delta="-20%", delta_color="normal")
-            
-        st.caption("Failure rates are calculated based on manual review of 12 test cases. Hybrid system shows 0% structural failure due to the multi-agent guardrails.")
