@@ -47,6 +47,7 @@ def get_metrics_from_result(result_obj, method):
 st.sidebar.title("🛠️ Project Menu")
 page = st.sidebar.radio("Go to:", ["Debate Arena", "Evaluation Dashboard"])
 live_compare = st.sidebar.checkbox("🚀 Live Comparison Mode (Runs 3 Models)", value=False)
+enable_live_memory = st.sidebar.checkbox("💾 Enable Live FAISS Memory", value=True)
 
 # --- PAGE 1: DEBATE ARENA ---
 if page == "Debate Arena":
@@ -63,7 +64,7 @@ if page == "Debate Arena":
                 if live_compare:
                     status.update(label="⌛ Running Live Comparison (Raw vs Prompt vs Hybrid)...")
                     with ThreadPoolExecutor() as executor:
-                        f_hybrid = executor.submit(run_debate, question)
+                        f_hybrid = executor.submit(run_debate, question, enable_live_memory)
                         f_raw = executor.submit(raw_llm_baseline, question)
                         f_prompt = executor.submit(prompt_engineered_baseline, question)
                         
@@ -82,7 +83,7 @@ if page == "Debate Arena":
                     ])
                     output = hybrid_out
                 else:
-                    output = run_debate(question)
+                    output = run_debate(question, enable_live_memory)
                     m_h = get_metrics_from_result(output, "hybrid")
                     comparison_df = pd.DataFrame([{"Method": "HYBRID", "Structure": m_h["Structure"], "Reasoning": m_h["Reasoning"], "Decision": m_h["Decision"]}])
                 

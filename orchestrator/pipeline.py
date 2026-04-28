@@ -34,7 +34,7 @@ def extract_features(pro_args, con_args):
         pro_feats["keywords"], con_feats["keywords"]
     ]
 
-def run_debate(question):
+def run_debate(question, enable_live_memory=None):
     """
     Hybrid intelligent pipeline combining Rule-based, ML-based, and LLM-based judging.
     """
@@ -86,7 +86,10 @@ def run_debate(question):
             decision_type = "ml_override"
             reason = f"ML model overrode rule-based scoring to select {final_winner} based on learned patterns."
 
-    if ENABLE_LIVE_MEMORY:
+    if enable_live_memory is None:
+        enable_live_memory = ENABLE_LIVE_MEMORY
+
+    if enable_live_memory:
         added = add_to_memory(question, pro_output, con_output)
         if added:
             print("Saved to memory")
