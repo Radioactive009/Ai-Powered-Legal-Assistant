@@ -107,6 +107,58 @@ def search_similar(query, top_k=3):
             
     return results
 
+def add_to_memory(question, pro_args, con_args, similarity_threshold=0.2):
+    """
+    Dynamically adds a new debate to the FAISS index if it is not a duplicate.
+    Uses L2 distance for similarity checking.
+    """
+    if not os.path.exists(INDEX_PATH) or not os.path.exists(METADATA_PATH):
+        print("FAISS index or metadata not found. Cannot add to memory.")
+        return False
+
+    if model is None:
+        return False
+
+    # Check if arguments are in dictionary format and construct strings
+    if isinstance(pro_args, list) and len(pro_args) > 0 and isinstance(pro_args[0], dict):
+        pro_text = " ".join([f"{arg.get('point', '')} {arg.get('reason', '')} {arg.get('impact', '')}" for arg in pro_args])
+    else:
+        pro_text = str(pro_args)
+        
+    if isinstance(con_args, list) and len(con_args) > 0 and isinstance(con_args[0], dict):
+        con_text = " ".join([f"{arg.get('point', '')} {arg.get('reason', '')} {arg.get('impact', '')}" for arg in con_args])
+    else:
+        con_text = str(con_args)
+        
+    combined_text = f"Question: {question} Pro: {pro_text} Con: {con_text}"
+    
+    new_embedding = model.encode([combined_text]).astype('float32')
+    
+    index = faiss.read_index(INDEX_PATH)
+    
+    # Check for duplicates
+    distances, indices = index.search(new_embedding, 1)
+    if len(distances[0]) > 0 and distances[0][0] < similarity_threshold:
+        return False # duplicate found
+
+    with open(METADATA_PATH, "r", encoding="utf-8") as f:
+        metadata = json.load(f)
+
+    next_id = str(len(metadata))
+    metadata[next_id] = {
+        "question": question,
+        "pro_text": pro_text,
+        "con_text": con_text
+    }
+    
+    index.add(new_embedding)
+    faiss.write_index(index, INDEX_PATH)
+    
+    with open(METADATA_PATH, "w", encoding="utf-8") as f:
+        json.dump(metadata, f, indent=4)
+        
+    return True
+
 if __name__ == "__main__":
     # Ensure the directory exists
     os.makedirs(VECTOR_DB_DIR, exist_ok=True)

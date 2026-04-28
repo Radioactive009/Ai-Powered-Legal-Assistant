@@ -6,7 +6,9 @@ from agents.con_agent import generate_con_argument
 from judge.rule_judge import rule_based_judge
 from judge.llm_judge import llm_tiebreaker
 from dataset.feature_engineering import extract_features_from_side
-from vector_db.faiss_store import search_similar
+from vector_db.faiss_store import search_similar, add_to_memory
+
+ENABLE_LIVE_MEMORY = True
 
 # Load the ML model once at module level
 MODEL_PATH = os.path.join(os.path.dirname(__file__), "..", "ml", "model.pkl")
@@ -83,6 +85,11 @@ def run_debate(question):
             final_winner = ml_prediction_label
             decision_type = "ml_override"
             reason = f"ML model overrode rule-based scoring to select {final_winner} based on learned patterns."
+
+    if ENABLE_LIVE_MEMORY:
+        added = add_to_memory(question, pro_output, con_output)
+        if added:
+            print("Saved to memory")
 
     return {
         "question": question,
