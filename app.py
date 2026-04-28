@@ -216,3 +216,17 @@ elif page == "Evaluation Dashboard":
             st.bar_chart(ft_df.set_index("Model")["Format Consistency (%)"])
             
         st.info("**Key Takeaways:**\n- **Structure:** LoRA consistently outputs all required fields (`point`, `reason`, `impact`).\n- **Reasoning:** LoRA generates longer, more logical explanations using key reasoning words.\n- **Consistency:** The fine-tuned model flawlessly adheres to the requested JSON format, eliminating parsing errors.\n- **Limitation:** Improvements are task-specific and depend on dataset quality.")
+
+# --- PAGE 3: SYSTEM LIMITATIONS ---
+elif page == "System Limitations":
+    st.title("⚠️ System Limitations")
+    st.caption("Academic and Technical Constraints of the Framework")
+    st.divider()
+    
+    limitations_path = "limitations.md"
+    if os.path.exists(limitations_path):
+        with open(limitations_path, "r", encoding="utf-8") as f:
+            limitations_text = f.read()
+        st.markdown(limitations_text)
+    else:
+        st.error("limitations.md file not found.")
