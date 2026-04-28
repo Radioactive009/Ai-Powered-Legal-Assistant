@@ -1,5 +1,6 @@
 import pickle
 import os
+import numpy as np
 import json
 import pandas as pd
 import shap
@@ -89,7 +90,7 @@ def run_debate(question, enable_live_memory=None):
         
         if explainer:
             try:
-                shap_values = explainer([features])
+                shap_values = explainer(np.array([features]))
                 shap_values_out = shap_values[0]
             except Exception as e:
                 print(f"SHAP error: {e}")
