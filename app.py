@@ -45,7 +45,7 @@ def get_metrics_from_result(result_obj, method):
 
 # --- SIDEBAR ---
 st.sidebar.title("🛠️ Project Menu")
-page = st.sidebar.radio("Go to:", ["Debate Arena", "Evaluation Dashboard"])
+page = st.sidebar.radio("Go to:", ["Debate Arena", "Evaluation Dashboard", "System Limitations"])
 live_compare = st.sidebar.checkbox("🚀 Live Comparison Mode (Runs 3 Models)", value=False)
 enable_live_memory = st.sidebar.checkbox("💾 Enable Live FAISS Memory", value=True)
 
