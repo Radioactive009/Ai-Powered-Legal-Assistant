@@ -5,6 +5,7 @@ import pandas as pd
 from concurrent.futures import ThreadPoolExecutor
 from orchestrator.pipeline import run_debate
 from evaluation.baseline_comparison import raw_llm_baseline, prompt_engineered_baseline
+from vector_db.faiss_store import search_similar
 
 st.set_page_config(page_title="Legal Agent Analysis", page_icon="🧠", layout="wide")
 
@@ -45,7 +46,7 @@ def get_metrics_from_result(result_obj, method):
 
 # --- SIDEBAR ---
 st.sidebar.title("🛠️ Project Menu")
-page = st.sidebar.radio("Go to:", ["Debate Arena", "Evaluation Dashboard", "System Limitations", "Real-World Application"])
+page = st.sidebar.radio("Go to:", ["Debate Arena", "Past Debates (RAG Search)", "Evaluation Dashboard", "System Limitations", "Real-World Application"])
 live_compare = st.sidebar.checkbox("🚀 Live Comparison Mode (Runs 3 Models)", value=False)
 enable_live_memory = st.sidebar.checkbox("💾 Enable Live FAISS Memory", value=True)
 
@@ -290,12 +291,12 @@ elif page == "Evaluation Dashboard":
         import matplotlib.pyplot as plt
         cm = confusion_matrix(y_true, y_pred)
         
-        fig, ax = plt.subplots(figsize=(4, 3))
-        sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', xticklabels=['Predicted Con', 'Predicted Pro'], yticklabels=['Actual Con', 'Actual Pro'], annot_kws={"size": 10})
-        plt.title('ML Model Confusion Matrix', fontsize=10)
+        fig, ax = plt.subplots(figsize=(5, 4))
+        sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', xticklabels=['Predicted Con', 'Predicted Pro'], yticklabels=['Actual Con', 'Actual Pro'], annot_kws={"size": 11})
+        plt.title('ML Model Confusion Matrix', fontsize=11)
         
-        # Use columns to force the matrix to be physically smaller on the screen
-        col_cm, col_empty1, col_empty2 = st.columns([1, 1, 2])
+        # Use columns to find the perfect "Goldilocks" size
+        col_cm, col_empty = st.columns([2, 3])
         with col_cm:
             st.pyplot(fig, use_container_width=True)
             accuracy = (cm[0][0] + cm[1][1]) / sum(sum(cm))
