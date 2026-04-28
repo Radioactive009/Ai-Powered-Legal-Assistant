@@ -45,7 +45,7 @@ def get_metrics_from_result(result_obj, method):
 
 # --- SIDEBAR ---
 st.sidebar.title("🛠️ Project Menu")
-page = st.sidebar.radio("Go to:", ["Debate Arena", "Evaluation Dashboard", "System Limitations"])
+page = st.sidebar.radio("Go to:", ["Debate Arena", "Evaluation Dashboard", "System Limitations", "Real-World Application"])
 live_compare = st.sidebar.checkbox("🚀 Live Comparison Mode (Runs 3 Models)", value=False)
 enable_live_memory = st.sidebar.checkbox("💾 Enable Live FAISS Memory", value=True)
 
@@ -230,3 +230,17 @@ elif page == "System Limitations":
         st.markdown(limitations_text)
     else:
         st.error("limitations.md file not found.")
+
+# --- PAGE 4: REAL-WORLD APPLICATION ---
+elif page == "Real-World Application":
+    st.title("🌍 Real-World Application")
+    st.caption("Policy Decision Support & Strategic Analysis")
+    st.divider()
+    
+    app_path = "real_world_application.md"
+    if os.path.exists(app_path):
+        with open(app_path, "r", encoding="utf-8") as f:
+            app_text = f.read()
+        st.markdown(app_text)
+    else:
+        st.error("real_world_application.md file not found.")
