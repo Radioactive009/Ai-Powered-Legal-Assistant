@@ -291,13 +291,17 @@ elif page == "Evaluation Dashboard":
         cm = confusion_matrix(y_true, y_pred)
         
         fig, ax = plt.subplots(figsize=(4, 3))
-        sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', xticklabels=['Predicted Con', 'Predicted Pro'], yticklabels=['Actual Con', 'Actual Pro'])
-        plt.title('ML Model Confusion Matrix')
-        st.pyplot(fig)
-        plt.close(fig)
+        sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', xticklabels=['Predicted Con', 'Predicted Pro'], yticklabels=['Actual Con', 'Actual Pro'], annot_kws={"size": 10})
+        plt.title('ML Model Confusion Matrix', fontsize=10)
         
-        accuracy = (cm[0][0] + cm[1][1]) / sum(sum(cm))
-        st.caption(f"**Model Accuracy:** {accuracy*100:.1f}%")
+        # Use columns to force the matrix to be physically smaller on the screen
+        col_cm, col_empty1, col_empty2 = st.columns([1, 1, 2])
+        with col_cm:
+            st.pyplot(fig, use_container_width=True)
+            accuracy = (cm[0][0] + cm[1][1]) / sum(sum(cm))
+            st.caption(f"**Model Accuracy:** {accuracy*100:.1f}%")
+            
+        plt.close(fig)
 
 # --- PAGE 3: SYSTEM LIMITATIONS ---
 elif page == "System Limitations":
