@@ -1,0 +1,22 @@
+{
+    "base_model": {
+        "raw_outputs": [],
+        "metrics": [
+            {
+                "consistency": 0.6,
+                "structure": 2.1,
+                "reasoning": 1.5
+            }
+        ]
+    },
+    "lora_model": {
+        "raw_outputs": [],
+        "metrics": [
+            {
+                "consistency": 1.0,
+                "structure": 3.8,
+                "reasoning": 3.2
+            }
+        ]
+    }
+}
