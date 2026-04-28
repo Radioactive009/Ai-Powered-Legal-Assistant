@@ -141,10 +141,17 @@ if page == "Debate Arena":
                 st.write(f"**Reason:** {res['reason']}")
                 st.caption(f"Decision Method: {res['decision_type'].replace('_', ' ').title()} | Confidence: {res['confidence']*100}%")
                 
-            if res.get("shap_fig"):
+            if res.get("shap_values") is not None:
                 with st.expander("📈 Explainable AI: Why did the ML model make this decision?", expanded=False):
                     st.write("This **SHAP Waterfall Chart** breaks down the exact logic of the Machine Learning Model. It shows how each feature (like word counts or keywords) pushed the model's prediction toward Pro (red/positive) or Con (blue/negative).")
-                    st.pyplot(res["shap_fig"])
+                    
+                    import matplotlib.pyplot as plt
+                    import shap
+                    
+                    fig, ax = plt.subplots(figsize=(8, 4))
+                    shap.plots.waterfall(res["shap_values"], show=False)
+                    st.pyplot(fig)
+                    plt.close(fig)
 
 # --- PAGE 2: EVALUATION DASHBOARD ---
 elif page == "Evaluation Dashboard":

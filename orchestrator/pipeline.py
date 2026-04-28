@@ -81,7 +81,7 @@ def run_debate(question, enable_live_memory=None):
 
     # 2. ML Prediction
     ml_prediction_label = "Unknown"
-    shap_fig = None
+    shap_values_out = None
     if ml_model:
         features = extract_features(pro_output, con_output)
         pred = ml_model.predict([features])[0]
@@ -90,9 +90,7 @@ def run_debate(question, enable_live_memory=None):
         if explainer:
             try:
                 shap_values = explainer([features])
-                plt.figure(figsize=(8, 4))
-                shap.plots.waterfall(shap_values[0], show=False)
-                shap_fig = plt.gcf()
+                shap_values_out = shap_values[0]
             except Exception as e:
                 print(f"SHAP error: {e}")
 
@@ -137,6 +135,6 @@ def run_debate(question, enable_live_memory=None):
             "decision_type": decision_type,
             "confidence": max(pro_score, con_score),
             "reason": reason,
-            "shap_fig": shap_fig
+            "shap_values": shap_values_out
         }
     }
