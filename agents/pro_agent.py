@@ -2,9 +2,10 @@ import requests
 import json
 import re
 
-def generate_pro_argument(question):
+def generate_pro_argument(question, context=None):
+    context_str = f"\n\nUse the following historical context if relevant:\n{context}" if context else ""
     prompt = f"""
-Give arguments IN FAVOR of the statement below.
+Give arguments IN FAVOR of the statement below.{context_str}
 
 Question: {question}
 

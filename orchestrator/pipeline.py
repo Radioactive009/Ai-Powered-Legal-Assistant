@@ -57,19 +57,22 @@ def run_debate(question, enable_live_memory=None):
     """
     Hybrid intelligent pipeline combining Rule-based, ML-based, and LLM-based judging.
     """
-    # FAISS Vector DB Integration: Retrieve past similar debates for context
+    # 0. Retrieval (RAG)
+    context_data = ""
     try:
         similar_debates = search_similar(question, top_k=2)
         if similar_debates:
             print(f"Retrieved {len(similar_debates)} similar past debates from FAISS.")
-            # This context can now be utilized by the agents or the judge for a more informed decision
+            context_data = "\n".join([
+                f"Topic: {d['data']['question']}\nPro: {d['data']['pro_text']}\nCon: {d['data']['con_text']}" 
+                for d in similar_debates
+            ])
     except Exception as e:
-        similar_debates = []
         print(f"FAISS search failed: {e}")
 
     with ThreadPoolExecutor() as executor:
-        future_pro = executor.submit(generate_pro_argument, question)
-        future_con = executor.submit(generate_con_argument, question)
+        future_pro = executor.submit(generate_pro_argument, question, context_data)
+        future_con = executor.submit(generate_con_argument, question, context_data)
         
         pro_output = future_pro.result()
         con_output = future_con.result()
