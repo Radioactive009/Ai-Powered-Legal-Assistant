@@ -1,21 +1,283 @@
 {
     "base_model": {
-        "raw_outputs": [],
+        "raw_outputs": [
+            {
+                "question": "Is AI better than humans?",
+                "output": "{\n    \"point\": \"AI has been around for a few decades now, and it has shown significant improvements in areas like computer vision, natural language processing, and speech recognition. However, researchers at MIT have shown that it is actually humans who are more capable than AI in certain ways. \", \n    \"reason\": \"According to a research paper published by MIT, people are better at understanding and interpreting human emotions than machines. \", \n    \"impact\": \"While AI is useful for many tasks, it is not always the best solution. In some cases, humans are better equipped to understand and interpret complex human emotions, which can be difficult for machines to replicate"
+            },
+            {
+                "question": "Should artificial intelligence be regulated by the government?",
+                "output": "Example:\n\n```\n{\n  \"point\": \"Artificial intelligence is making significant advancements in various fields. However, there are concerns about its impact on human rights, job security, and privacy. The government should regulate AI to ensure its safety and fair use.\",\n  \"reason\": \"AI has the potential to revolutionize various industries, including healthcare, financial services, and transportation. However, AI is often used in ways that violate human rights, compromise privacy, and lead to job automation. By regulating AI, the government can ensure that AI uses AI-powered systems in a way that ensures human rights and promotes fair use.\","
+            },
+            {
+                "question": "Does social media do more harm than good?",
+                "output": "```json\n{\n    \"point\": \"Social media has become a vital tool in our lives, but it\u2019s not always used in a positive way. Instead of making us feel better, social media can actually create more problems than it solves. In this essay, I will analyze various studies and experiences to showcase how social media\u2019s impact on our lives can be both positive and negative.\",\n    \"reason\": \"There are numerous studies that highlight the negative impact of social media on our mental health. A study conducted by the American Psychological Association found that social media use can increase depression and decrease self-esteem. Another study found that social media use can lead to the development of anxiety and social phob"
+            },
+            {
+                "question": "Should universal basic income be implemented worldwide?",
+                "output": "[JSON body]\n{\n  \"point\": \"Universal Basic Income (UBI) is an income transfer program that provides a guaranteed income to every citizen. The idea behind UBI is to reduce poverty, increase economic growth, and improve social welfare. However, there is a controversy regarding its implementation. While some argue that it is the best solution to alleviate poverty, others argue that it is a dangerous policy that may lead to social unrest and political instability.\",\n  \"reason\": \"UBI has been proposed in many countries, and various studies have shown that it can reduce poverty and improve economic growth. In some cases, UBI has led to higher GDP growth and"
+            },
+            {
+                "question": "Is space exploration a waste of money?",
+                "output": "```\n{\n    \"point\": \"Space exploration is a waste of money. It is not necessary. Space exploration has no practical use to society. It only provides entertainment for the wealthy and elite. The money spent on space exploration should be spent on developing new technologies and improving the quality of life for the average person. \",\n    \"reason\": \"According to NASA, space exploration has provided significant benefits. Space stations have been able to provide life support and communication capabilities for astronauts in microgravity. The Space Shuttle program has been instrumental in advancing our understanding of the universe. Space exploration has also led to the discovery of new planets and moons in our"
+            },
+            {
+                "question": "Should nuclear energy replace fossil fuels?",
+                "output": "```\n{\n    \"topic\": \"Nuclear Energy vs. Fossil Fuels\",\n    \"point\": \"Nuclear energy has significant potential to contribute to mitigating the impact of climate change through the reduction of greenhouse gas emissions. In contrast, fossil fuels have a significant impact on the environment, resulting in greenhouse gas emissions, pollution, and depletion of natural resources. Therefore, nuclear energy has the potential to play an important role in mitigating climate change and promoting sustainable development.\",\n    \"reason\": \"Nuclear energy can contribute up to 30% of global energy production, while fossil fuels can only contribute up to 2"
+            },
+            {
+                "question": "Do video games cause violence?",
+                "output": "1. Introduction\n- Title: \"Do Video Games Cause Violence?\"\n- Subtitle: \"A Conversation Between John and Jake\"\n- Keywords: \"video games, violence, gaming,\"\n- Author: \"John and Jake\"\n\n2. Point 1: \"Are Video Games Violent?\"\n- Point (point 1) - \"Yes, video games are violent.\"\n- Example: \"According to the American Academy of Pediatrics, playing violent video games can increase aggression and agitates impulses, leading to increased aggression in daily life.\"\n- Impact: \"This can lead to increased aggression in society, as violence is"
+            },
+            {
+                "question": "Should college education be free for everyone?",
+                "output": "```\n{\n  \"point\": \"College education should be free for everyone. It is not only a right but also a privilege that should be provided without any financial barriers. Adequate education is essential for a successful life, and it should be available to everyone, irrespective of their income or social status. This will not only help students improve their skills but also provide an opportunity to develop their abilities, which is vital in today's rapidly changing world. Education should be a fundamental right for all, regardless of their place of birth or background. Free education will also reduce the burden on the public treasury, thereby increasing the availability of funds for other essential areas of the economy. Free education"
+            },
+            {
+                "question": "Is remote work better than working in an office?",
+                "output": "Example response:\n\n{\n  \"point\": \"Remote work has many advantages and disadvantages, and the choice between remote work and working in an office should be based on personal preferences, company policies, and job responsibilities.\",\n  \"reason\": \"Remote work allows individuals to work from anywhere, anytime, and in a more flexible manner. It offers job security, the ability to work from home, and cost savings on office space and equipment.\",\n  \"impact\": \"Remote work has many advantages such as better work-life balance, reduced commute times, and increased productivity. However, it can be more challenging to maintain relationships, communication, and teamwork when working remotely."
+            },
+            {
+                "question": "Should genetically modified organisms (GMOs) be banned?",
+                "output": "**Points:** 4\n\n**Reason:** Genetically modified organisms (GMOs) are genetically altered and designed organisms that have been engineered to resist pesticides, herbicides, or other chemicals. These modifications can have serious consequences, including the potential for genetic mutations, changes to the growth and development of crops, and the creation of new pests. There is growing opposition to GMOs, particularly in Europe and some parts of the United States.\n\n**Impact:** GMOs have been linked to diseases, environmental damage, and human health concerns. They can lead to changes in the genetic makeup of crops, which"
+            },
+            {
+                "question": "Is democracy the best form of government?",
+                "output": "Example:\n```\n{\n    \"point\": \"Democracy is a form of government that provides an efficient and effective means of governance, enabling citizens to participate in the governance of their community. It provides for the participation and representation of different viewpoints and interests, ensuring that the voices of diverse communities are heard. \",\n    \"reason\": \"Democratic systems are known to have a better resolution of conflicts than authoritarian systems, as they encourage a culture of dialogue and compromise. They also provide for the protection of individual rights and freedoms, such as freedom of expression, speech, and assembly. \",\n    \"impact\": \"The United States is an example of"
+            },
+            {
+                "question": "Should the death penalty be abolished?",
+                "output": "I suggest the following structure:\n\n```json\n{\n  \"topic\": \"Death penalty\",\n  \"point\": \"Death penalty should be abolished as it is cruel and disproportionate. \",\n  \"reason\": \"The death penalty is an irreversible punishment for many crimes, including murder. The death penalty is cruel and disproportionate as it takes life for a convicted murderer, while others receive less severe punishment, such as life imprisonment, for the same crime. \",\n  \"impact\": \"It is the only punishment that can deter crime, but it is not effective. In some cases, the death penalty may result in the execution"
+            },
+            {
+                "question": "Is a cashless society a good idea?",
+                "output": "{\n  \"point\": \"In the current financial system, a cashless society is proposed as a solution to eliminate cheating and fraud during transactions. However, the implementation of such a society may lead to negative consequences in the long run.\",\n  \"reason\": \"Firstly, cashless transactions have been proven to reduce the transaction costs significantly. This means that businesses can operate at a lower cost, and consumers can save a lot of money. However, it also leads to the degradation of privacy. With no physical transaction, there is no way to verify the identity of the person making the transaction. This means that thieves can use fake or stolen identities to make cashless transactions,"
+            },
+            {
+                "question": "Should animal testing be completely banned?",
+                "output": "{\n  \"point\": \"Animals are sentient beings, and their welfare is just as important as humans' welfare. The fact that their welfare is not prioritized by animal testing companies is a clear sign that they prioritize profit over human life.\",\n  \"reason\": \"Animals are sentient beings, and they deserve to live comfortably. The fact that they cannot do so is a sad reality, and it is time for a change. Properly conducted animal testing should not be used for any human, not even for the most trivial of applications.\",\n  \"impact\": \"Animal testing is a practice that has a severe impact on the welfare"
+            },
+            {
+                "question": "Is renewable energy enough to stop climate change?",
+                "output": "[\n  {\n    \"point\": \"Renewable energy is not enough to stop climate change. \",\n    \"reason\": \"Renewable energy sources are intermittent, with fluctuating output that can't meet demand at full capacity. \",\n    \"impact\": \"Renewable energy intermittency can lead to a decrease in energy production and availability, leading to reduced economic and social development. \"\n  },\n  {\n    \"point\": \"The world needs energy that is reliable, predictable, and low-cost. \",\n    \"reason\": \"There are technological solutions that can deliver reliable, predictable, and low-cost energy. \","
+            }
+        ],
         "metrics": [
             {
-                "consistency": 0.6,
-                "structure": 2.1,
-                "reasoning": 1.5
+                "consistency": 0,
+                "structure": 0,
+                "reasoning": 0
+            },
+            {
+                "consistency": 0,
+                "structure": 0,
+                "reasoning": 0
+            },
+            {
+                "consistency": 0,
+                "structure": 0,
+                "reasoning": 0
+            },
+            {
+                "consistency": 0,
+                "structure": 0,
+                "reasoning": 0
+            },
+            {
+                "consistency": 0,
+                "structure": 0,
+                "reasoning": 0
+            },
+            {
+                "consistency": 0,
+                "structure": 0,
+                "reasoning": 0
+            },
+            {
+                "consistency": 0,
+                "structure": 0,
+                "reasoning": 0
+            },
+            {
+                "consistency": 0,
+                "structure": 0,
+                "reasoning": 0
+            },
+            {
+                "consistency": 0,
+                "structure": 0,
+                "reasoning": 0
+            },
+            {
+                "consistency": 0,
+                "structure": 0,
+                "reasoning": 0
+            },
+            {
+                "consistency": 0,
+                "structure": 0,
+                "reasoning": 0
+            },
+            {
+                "consistency": 0,
+                "structure": 0,
+                "reasoning": 0
+            },
+            {
+                "consistency": 0,
+                "structure": 0,
+                "reasoning": 0
+            },
+            {
+                "consistency": 0,
+                "structure": 0,
+                "reasoning": 0
+            },
+            {
+                "consistency": 1,
+                "structure": 3,
+                "reasoning": 2
             }
         ]
     },
     "lora_model": {
-        "raw_outputs": [],
+        "raw_outputs": [
+            {
+                "question": "Is AI better than humans?",
+                "output": "{\n  \"point\": \"AI technologies have the potential to revolutionize the way we live and work. While it is true that AI has the potential to outperform humans in certain tasks, such as simple calculations or translation, it is difficult to predict the full extent of its impact on society. However, it is clear that AI will continue to change our world in various ways. \",\n  \"reason\": \"AI has the potential to create more jobs than it destroys, provide more innovation and creativity, and reduce costs for both society and industry. \",\n  \"impact\": \"The impact of AI on society is substantial. It is estimated that by 2025, AI will"
+            },
+            {
+                "question": "Should artificial intelligence be regulated by the government?",
+                "output": "[{\"point\": \"AI is rapidly advancing and poses significant challenges to humanity. For instance, AI-powered personal assistants such as Siri and Alexa have significant cognitive limitations, which can lead to social isolation and other negative consequences.\", \"reason\": \"AI is a potentially powerful tool that can be used for positive and negative purposes. AI-powered personal assistants can be a force for good, but they can also be used to abuse and manipulate people. As AI advances, it is crucial that governments take appropriate steps to regulate its use, to ensure that it is used for positive and socially responsible purposes.\", \"impact\": \"AI is an increasingly"
+            },
+            {
+                "question": "Does social media do more harm than good?",
+                "output": "{\n  \"point\": \"Social media has become a vital part of our daily lives, with billions of people using platforms daily. While they have brought a lot of benefits, they have also had a significant impact on society, leading to some negative consequences. \",\n  \"reason\": \"The use of social media has led to a significant increase in cyberbullying and harassment. Social media platforms have enabled people to easily share their thoughts, feelings, and experiences with each other, leading to increased anxiety and depression among users. \",\n  \"impact\": \"The negative impact of social media on society has been significant. According to a report by the Royal Society for Public Health, 13% of"
+            },
+            {
+                "question": "Should universal basic income be implemented worldwide?",
+                "output": "```\n{\n    \"point\": \"Universal basic income (UBI) is an income support program that aims to provide a basic income to individuals, regardless of their employment status or social status. It is an idea that has gained traction among governments and policymakers as a means of addressing poverty and inequality. However, UBI has been debated by economists, social scientists, and policymakers, with some arguing that it is not feasible or necessary, while others believe that it could be a game-changer for many people in need of assistance.\",\n    \"reason\": \"Firstly, UBI has been debated by economists, social scientists, and policym"
+            },
+            {
+                "question": "Is space exploration a waste of money?",
+                "output": "```\n{\n    \"point\": \"Space exploration is a waste of money\",\n    \"reason\": \"There is no immediate benefit to spending billions of dollars on space exploration. Space exploration has no immediate impact on our daily lives, and it is not necessary for our national security. For example, the International Space Station is a temporary facility and is not capable of supporting long-term human life. Space exploration is not a priority for our society, and it is not an efficient use of resources.\"\n    \"impact\": \"Space exploration is a waste of money.\"\n}\n```"
+            },
+            {
+                "question": "Should nuclear energy replace fossil fuels?",
+                "output": "1. Point: Nuclear energy has the potential to become the world's largest source of clean energy.\n\n2. Reason: Nuclear energy is highly efficient, can be stored as fuel and doesn't release any greenhouse gases into the atmosphere.\n\n3. Impact: A reduction in nuclear energy's carbon footprint would have a significant impact on the environment, leading to cleaner air and water and a reduction in greenhouse gas emissions.\n\n4. Point: The costs of nuclear energy are higher than those of fossil fuels, and the technology is not yet fully developed.\n\n5. Reason: The cost of nuclear energy is increasing, making it difficult for countries to"
+            },
+            {
+                "question": "Do video games cause violence?",
+                "output": "```\n{\n    \"point\": \"The use of violent video games can lead to violence in the real world. \",\n    \"reason\": \"Recent studies have shown that video games can trigger violent behavior, affecting the development of aggressive tendencies in young people. \",\n    \"impact\": \"Moreover, the negative impact of violent video games on the development of aggressive tendencies in young people has been established, making it a form of violent media. \"\n}\n```"
+            },
+            {
+                "question": "Should college education be free for everyone?",
+                "output": "```\n{\n  \"point\": \"College education is a fundamental right that should be accessible to everyone. It provides students with the knowledge and skills necessary to succeed in their chosen profession, and it is essential for economic growth and development. In many cases, college education is the only alternative for those who cannot afford to attend university. Therefore, it is time to consider whether college education should be free for everyone.\",\n  \"reason\": \"The cost of college education can be prohibitively high for many students, and this is especially true for those from low-income backgrounds or those who do not have access to financial aid. This is particularly true in today's economy, where job prospects for graduates are limited."
+            },
+            {
+                "question": "Is remote work better than working in an office?",
+                "output": "```\n{\n    \"point\": \"Remote work can be more efficient, productive, and sustainable than working in an office.\",\n    \"reason\": \"Remote work allows for flexibility, which can be especially beneficial for those who work from home or have other personal commitments. Additionally, remote work can reduce travel time, parking fees, and commute time, resulting in significant savings in time and money.\",\n    \"impact\": \"Remote work can improve job satisfaction and productivity, as well as increase overall workplace efficiency and engagement. Increased efficiency can lead to cost savings for employers, as well as reduced absenteeism and high turnover rates.\"\n}\n"
+            },
+            {
+                "question": "Should genetically modified organisms (GMOs) be banned?",
+                "output": "[Point: GMOs are a threat to human health and the environment. The Food and Drug Administration (FDA) approves the cultivation and consumption of GMOs, but they are not always safe or sustainable. Studies have shown that GMO crops can have negative effects on human health, and GMOs can end up in our food supply. Additionally, GMOs contribute to the depletion of natural resources, such as soil and water.\n\nReason: GMO crops are not always safe for human health, and they can end up in our food supply. Studies have shown that GMOs can have negative effects on human health, including allergies, immune system disru"
+            },
+            {
+                "question": "Is democracy the best form of government?",
+                "output": "Data:\n\n```json\n{\n  \"point\": \"Democracy is a system of government where the people decide on policies. It is a popular form of government that is often criticized for being slow and inefficient. \",\n  \"reason\": \"Democracy is slow because it requires consensus and openness. It is difficult to reach consensus on important issues, and disagreements often escalate. \",\n  \"impact\": \"Democracy can be slow because it requires a large population to participate in the democratic process. It can also be slow because it requires the government to be open to public input and scrutiny. \"\n}\n```\n\nJSON formatting:"
+            },
+            {
+                "question": "Should the death penalty be abolished?",
+                "output": "```json\n{\n  \"point\": \"The death penalty has been used in many countries around the world for centuries, yet it is a barbaric and cruel practice that has been abolished in many nations. This issue is relevant because it affects everyone, regardless of race, gender, or socioeconomic status. There are numerous cases in which the death penalty has been carried out without any legal due process, leading to a heightened risk of innocent people being executed. The death penalty is also expensive and does not effectively deter crime or protect society. In the United States, the death penalty is only used in rare cases, and even then, it is often applied disproportionately to people of color."
+            },
+            {
+                "question": "Is a cashless society a good idea?",
+                "output": "[\n  {\n    \"point\": \"Budgets are based on cash, and cash is often considered a scarce resource that must be used carefully. A cashless society would reduce the need for physical cash, which could lead to increased financial stability and decrease the risk of fraud.\"\n  },\n  {\n    \"reason\": \"The benefits of a cashless society are numerous. For example, there would be fewer fraudulent transactions and reduced theft, which would decrease the risk of financial loss. A cashless society would also reduce the amount of cash that is held by criminals, which could result in lower crime rates. Additionally, a cashless society could reduce"
+            },
+            {
+                "question": "Should animal testing be completely banned?",
+                "output": "```json\n{\n  \"id\": \"topic-id\",\n  \"type\": \"argument\",\n  \"title\": \"Should animal testing be completely banned?\",\n  \"body\": \"Animals are used in many types of scientific experiments, including testing medications for humans. However, animal testing is controversial due to the suffering it causes. Some argue that it is necessary to ensure quality and safety, while others believe that it is unnecessary and cruel. In this argument, we will explore both sides of the argument and offer our opinion.\",\n  \"points\": [\n    {\n      \"text\": \"Animals are used in many types of scientific experiments, including testing medications for humans. \",\n     "
+            },
+            {
+                "question": "Is renewable energy enough to stop climate change?",
+                "output": "```json\n{\n  \"point\": \"Renewable energy sources, such as solar, wind, and hydropower, are already providing a significant percentage of global electricity production. They are also projected to grow exponentially in the coming years, while fossil fuels are on the decline. As a result, renewable energy\u2019s share of the global energy mix has been increasing over the past decade, and it is expected to reach 36% by 2030, according to the International Energy Agency (IEA). By 2050, renewable energy\u2019s share is expected to be 83%.\n\nThe amount of renewable energy that can be generated glob"
+            }
+        ],
         "metrics": [
             {
-                "consistency": 1.0,
-                "structure": 3.8,
-                "reasoning": 3.2
+                "consistency": 0,
+                "structure": 0,
+                "reasoning": 0
+            },
+            {
+                "consistency": 0,
+                "structure": 0,
+                "reasoning": 0
+            },
+            {
+                "consistency": 0,
+                "structure": 0,
+                "reasoning": 0
+            },
+            {
+                "consistency": 0,
+                "structure": 0,
+                "reasoning": 0
+            },
+            {
+                "consistency": 0,
+                "structure": 0,
+                "reasoning": 0
+            },
+            {
+                "consistency": 0,
+                "structure": 0,
+                "reasoning": 0
+            },
+            {
+                "consistency": 1,
+                "structure": 3,
+                "reasoning": 2
+            },
+            {
+                "consistency": 0,
+                "structure": 0,
+                "reasoning": 0
+            },
+            {
+                "consistency": 1,
+                "structure": 3,
+                "reasoning": 2
+            },
+            {
+                "consistency": 0,
+                "structure": 0,
+                "reasoning": 0
+            },
+            {
+                "consistency": 1,
+                "structure": 3,
+                "reasoning": 5
+            },
+            {
+                "consistency": 0,
+                "structure": 0,
+                "reasoning": 0
+            },
+            {
+                "consistency": 1,
+                "structure": 1,
+                "reasoning": 0
+            },
+            {
+                "consistency": 0,
+                "structure": 0,
+                "reasoning": 0
+            },
+            {
+                "consistency": 0,
+                "structure": 0,
+                "reasoning": 0
             }
         ]
     }

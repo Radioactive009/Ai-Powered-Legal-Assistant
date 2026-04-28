@@ -6,6 +6,7 @@ from agents.con_agent import generate_con_argument
 from judge.rule_judge import rule_based_judge
 from judge.llm_judge import llm_tiebreaker
 from dataset.feature_engineering import extract_features_from_side
+from vector_db.faiss_store import search_similar
 
 # Load the ML model once at module level
 MODEL_PATH = os.path.join(os.path.dirname(__file__), "..", "ml", "model.pkl")
@@ -35,6 +36,16 @@ def run_debate(question):
     """
     Hybrid intelligent pipeline combining Rule-based, ML-based, and LLM-based judging.
     """
+    # FAISS Vector DB Integration: Retrieve past similar debates for context
+    try:
+        similar_debates = search_similar(question, top_k=2)
+        if similar_debates:
+            print(f"Retrieved {len(similar_debates)} similar past debates from FAISS.")
+            # This context can now be utilized by the agents or the judge for a more informed decision
+    except Exception as e:
+        similar_debates = []
+        print(f"FAISS search failed: {e}")
+
     with ThreadPoolExecutor() as executor:
         future_pro = executor.submit(generate_pro_argument, question)
         future_con = executor.submit(generate_con_argument, question)
@@ -75,6 +86,7 @@ def run_debate(question):
 
     return {
         "question": question,
+        "similar_debates": similar_debates,
         "pro": pro_output,
         "con": con_output,
         "result": {

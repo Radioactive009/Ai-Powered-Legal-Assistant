@@ -88,6 +88,19 @@ if page == "Debate Arena":
                 
                 status.update(label="✅ Analysis Complete!", state="complete", expanded=False)
 
+            # --- DISPLAY SIMILAR PAST DEBATES ---
+            similar_debates = output.get("similar_debates", [])
+            if similar_debates:
+                st.subheader("📚 Memory: Similar Past Debates")
+                st.caption("Context retrieved from FAISS Vector DB")
+                with st.expander("View Retrieved Context", expanded=False):
+                    for sd in similar_debates:
+                        sd_data = sd["data"]
+                        st.markdown(f"**Question:** {sd_data.get('question')} *(Distance: {sd['distance']:.2f})*")
+                        st.write(f"- **Pro:** {sd_data.get('pro_text')[:100]}...")
+                        st.write(f"- **Con:** {sd_data.get('con_text')[:100]}...")
+                st.divider()
+
             # --- DISPLAY GRAPHS ---
             st.subheader("📊 Live Comparison Analysis")
             c1, c2, c3 = st.columns(3)
