@@ -233,7 +233,7 @@ elif page == "System Limitations":
 
 # --- PAGE 4: REAL-WORLD APPLICATION ---
 elif page == "Real-World Application":
-    st.title("🌍 Real-World Application")
+    st.title("Real-World Application")
     st.caption("Policy Decision Support & Strategic Analysis")
     st.divider()
     
@@ -242,5 +242,35 @@ elif page == "Real-World Application":
         with open(app_path, "r", encoding="utf-8") as f:
             app_text = f.read()
         st.markdown(app_text)
+        
+        # Visualize the workflow using a Mermaid Diagram via HTML component
+        st.subheader("Workflow Visualization")
+        mermaid_code = """
+        graph TD
+            A[Stakeholder: Policy Question] -->|Input| B(Autonomous Debate Engine)
+            B -->|Generates| C[Pro Arguments]
+            B -->|Generates| D[Con Arguments]
+            C --> E{Hybrid Judge}
+            D --> E{Hybrid Judge}
+            E -->|Rules| F[Structural Evaluation]
+            E -->|ML Model| G[Pattern Recognition]
+            E -->|LLM| H[Semantic Tiebreaker]
+            F --> I((Final Policy Decision))
+            G --> I
+            H --> I
+        """
+        import streamlit.components.v1 as components
+        components.html(
+            f"""
+            <div class="mermaid" style="display: flex; justify-content: center; background-color: #f8f9fa; padding: 20px; border-radius: 10px;">
+                {mermaid_code}
+            </div>
+            <script type="module">
+                import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+                mermaid.initialize({{ startOnLoad: true, theme: 'base' }});
+            </script>
+            """,
+            height=450
+        )
     else:
         st.error("real_world_application.md file not found.")
