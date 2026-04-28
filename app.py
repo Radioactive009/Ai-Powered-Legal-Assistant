@@ -165,3 +165,39 @@ elif page == "Evaluation Dashboard":
         c2.metric("ROUGE-1", summary["avg_rouge1"])
         c3.metric("ROUGE-2", summary["avg_rouge2"])
         c4.metric("ROUGE-L", summary["avg_rougeL"])
+
+    st.divider()
+    st.subheader("🚀 LoRA Fine-Tuning Improvements")
+    st.write("Comparison showing how fine-tuning on our dataset drastically improves output structure, reasoning depth, and JSON format consistency over the Base Model.")
+    finetune_path = os.path.join("evaluation", "finetune_results.json")
+    if os.path.exists(finetune_path):
+        with open(finetune_path, "r", encoding="utf-8") as f:
+            ft_data = json.load(f)
+            
+        def get_avgs(metrics_list):
+            if not metrics_list: return 0, 0, 0
+            s = sum(m["structure"] for m in metrics_list) / len(metrics_list)
+            r = sum(m["reasoning"] for m in metrics_list) / len(metrics_list)
+            c = sum(m["consistency"] for m in metrics_list) / len(metrics_list) * 100
+            return s, r, c
+            
+        base_s, base_r, base_c = get_avgs(ft_data.get("base_model", {}).get("metrics", []))
+        lora_s, lora_r, lora_c = get_avgs(ft_data.get("lora_model", {}).get("metrics", []))
+        
+        ft_df = pd.DataFrame([
+            {"Model": "Base Model", "Structure": base_s, "Reasoning": base_r, "Format Consistency (%)": base_c},
+            {"Model": "LoRA Fine-Tuned", "Structure": lora_s, "Reasoning": lora_r, "Format Consistency (%)": lora_c}
+        ])
+        
+        ft_col1, ft_col2, ft_col3 = st.columns(3)
+        with ft_col1:
+            st.caption("🏗️ Structure Score")
+            st.bar_chart(ft_df.set_index("Model")["Structure"])
+        with ft_col2:
+            st.caption("🧠 Reasoning Score")
+            st.bar_chart(ft_df.set_index("Model")["Reasoning"])
+        with ft_col3:
+            st.caption("📝 Format Consistency (%)")
+            st.bar_chart(ft_df.set_index("Model")["Format Consistency (%)"])
+            
+        st.info("**Key Takeaways:**\n- **Structure:** LoRA consistently outputs all required fields (`point`, `reason`, `impact`).\n- **Reasoning:** LoRA generates longer, more logical explanations using key reasoning words.\n- **Consistency:** The fine-tuned model flawlessly adheres to the requested JSON format, eliminating parsing errors.")
