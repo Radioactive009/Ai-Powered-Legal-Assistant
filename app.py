@@ -290,7 +290,7 @@ elif page == "Evaluation Dashboard":
         import matplotlib.pyplot as plt
         cm = confusion_matrix(y_true, y_pred)
         
-        fig, ax = plt.subplots(figsize=(6, 4))
+        fig, ax = plt.subplots(figsize=(4, 3))
         sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', xticklabels=['Predicted Con', 'Predicted Pro'], yticklabels=['Actual Con', 'Actual Pro'])
         plt.title('ML Model Confusion Matrix')
         st.pyplot(fig)
