@@ -361,3 +361,33 @@ elif page == "Real-World Application":
         )
     else:
         st.error("real_world_application.md file not found.")
+
+# --- PAGE 5: PAST DEBATES (RAG SEARCH) ---
+elif page == "Past Debates (RAG Search)":
+    st.title("📚 Past Debates (RAG Search)")
+    st.caption("Semantically search the FAISS Vector Database for historical arguments.")
+    st.divider()
+    
+    search_query = st.text_input("🔍 Search Past Debates...", placeholder="e.g., Is AI dangerous?")
+    
+    if st.button("Search Database"):
+        if search_query:
+            with st.spinner("Searching Vector Database..."):
+                results = search_similar(search_query, top_k=5)
+                
+            if results:
+                st.success(f"Found {len(results)} highly relevant debates.")
+                for i, r in enumerate(results):
+                    # We only show results that are reasonably close (L2 distance threshold)
+                    # Lower distance = more similar in FAISS L2
+                    relevance = max(0, 100 - (r['distance'] * 50)) # Arbitrary conversion to % for UI purposes
+                    
+                    with st.expander(f"Debate: {r['data'].get('question', 'Unknown')} (Relevance: {relevance:.1f}%)"):
+                        st.markdown("**🔴 Pro Argument:**")
+                        st.info(r['data'].get('pro_text', 'N/A'))
+                        st.markdown("**🔵 Con Argument:**")
+                        st.info(r['data'].get('con_text', 'N/A'))
+            else:
+                st.warning("No highly similar debates found in the memory bank.")
+        else:
+            st.error("Please enter a search query.")
