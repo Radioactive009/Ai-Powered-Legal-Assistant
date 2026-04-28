@@ -168,7 +168,8 @@ elif page == "Evaluation Dashboard":
 
     st.divider()
     st.subheader("🚀 LoRA Fine-Tuning Improvements")
-    st.write("Comparison showing how fine-tuning on our dataset drastically improves output structure, reasoning depth, and JSON format consistency over the Base Model.")
+    st.write("Comparison showing how fine-tuning on our dataset significantly improves output structure, reasoning depth, and JSON format consistency over the Base Model.")
+    st.caption("Results averaged over 10–15 evaluation samples.")
     finetune_path = os.path.join("evaluation", "finetune_results.json")
     if os.path.exists(finetune_path):
         with open(finetune_path, "r", encoding="utf-8") as f:
@@ -200,4 +201,4 @@ elif page == "Evaluation Dashboard":
             st.caption("📝 Format Consistency (%)")
             st.bar_chart(ft_df.set_index("Model")["Format Consistency (%)"])
             
-        st.info("**Key Takeaways:**\n- **Structure:** LoRA consistently outputs all required fields (`point`, `reason`, `impact`).\n- **Reasoning:** LoRA generates longer, more logical explanations using key reasoning words.\n- **Consistency:** The fine-tuned model flawlessly adheres to the requested JSON format, eliminating parsing errors.")
+        st.info("**Key Takeaways:**\n- **Structure:** LoRA consistently outputs all required fields (`point`, `reason`, `impact`).\n- **Reasoning:** LoRA generates longer, more logical explanations using key reasoning words.\n- **Consistency:** The fine-tuned model flawlessly adheres to the requested JSON format, eliminating parsing errors.\n- **Limitation:** Improvements are task-specific and depend on dataset quality.")
