@@ -1,5 +1,9 @@
 import pickle
 import os
+import json
+import pandas as pd
+import shap
+import matplotlib.pyplot as plt
 from concurrent.futures import ThreadPoolExecutor
 from agents.pro_agent import generate_pro_argument
 from agents.con_agent import generate_con_argument
@@ -15,9 +19,23 @@ MODEL_PATH = os.path.join(os.path.dirname(__file__), "..", "ml", "model.pkl")
 try:
     with open(MODEL_PATH, "rb") as f:
         ml_model = pickle.load(f)
+        
+    FEATURE_NAMES = ['Pro Length', 'Con Length', 'Pro Avg Len', 'Con Avg Len', 
+                     'Pro Reason Len', 'Con Reason Len', 'Pro Impact Len', 'Con Impact Len', 
+                     'Pro Keywords', 'Con Keywords']
+                     
+    features_path = os.path.join(os.path.dirname(__file__), "..", "dataset", "features.json")
+    with open(features_path, "r", encoding="utf-8") as f:
+        features_data = json.load(f)
+        
+    df_bg = pd.DataFrame(features_data)
+    X_background = df_bg.drop(columns=["label"]).values
+    
+    explainer = shap.Explainer(ml_model, X_background, feature_names=FEATURE_NAMES)
 except Exception as e:
-    print(f"Warning: Could not load ML model: {e}")
+    print(f"Warning: Could not load ML model or SHAP explainer: {e}")
     ml_model = None
+    explainer = None
 
 def extract_features(pro_args, con_args):
     """
@@ -63,10 +81,20 @@ def run_debate(question, enable_live_memory=None):
 
     # 2. ML Prediction
     ml_prediction_label = "Unknown"
+    shap_fig = None
     if ml_model:
         features = extract_features(pro_output, con_output)
         pred = ml_model.predict([features])[0]
         ml_prediction_label = "Pro" if pred == 1 else "Con"
+        
+        if explainer:
+            try:
+                shap_values = explainer([features])
+                plt.figure(figsize=(8, 4))
+                shap.plots.waterfall(shap_values[0], show=False)
+                shap_fig = plt.gcf()
+            except Exception as e:
+                print(f"SHAP error: {e}")
 
     # 3. Decision Logic (Hybrid Integration)
     if rule_winner == ml_prediction_label:
@@ -108,6 +136,7 @@ def run_debate(question, enable_live_memory=None):
             "ml_prediction": ml_prediction_label,
             "decision_type": decision_type,
             "confidence": max(pro_score, con_score),
-            "reason": reason
+            "reason": reason,
+            "shap_fig": shap_fig
         }
     }
