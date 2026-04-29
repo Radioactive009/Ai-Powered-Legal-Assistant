@@ -231,7 +231,10 @@ def create_premium_presentation():
     evals = [("LoRA Fine-Tuning", "1,600+ Samples", C['purple']), ("BLEU Score", "0.74 Accuracy", C['cyan']), ("ROUGE-L", "0.81 Precision", C['gold'])]
     for i, (name, val, col) in enumerate(evals):
         y = 2.0 + i * 1.5
-        s9.shapes.add_shape(MSO_SHAPE.RECTANGLE, Inches(0.5), Inches(y), Inches(0.1), Inches(1.2)).fill.solid().fore_color.rgb = col
+        line_shape = s9.shapes.add_shape(MSO_SHAPE.RECTANGLE, Inches(0.5), Inches(y), Inches(0.1), Inches(1.2))
+        line_shape.fill.solid()
+        line_shape.fill.fore_color.rgb = col
+        line_shape.line.fill.background()
         add_text(s9, name, 0.8, y + 0.1, 5, 0.4, 18, col, bold=True)
         add_text(s9, val, 0.8, y + 0.5, 5, 0.4, 14, C['white'])
 
@@ -240,14 +243,18 @@ def create_premium_presentation():
     set_bg(s10, C['dark'])
     
     # Split layout
-    s10.shapes.add_shape(MSO_SHAPE.RECTANGLE, Inches(8.5), 0, Inches(4.833), Inches(7.5)).fill.solid().fore_color.rgb = C['navyMid']
+    r_panel = s10.shapes.add_shape(MSO_SHAPE.RECTANGLE, Inches(8.5), 0, Inches(4.833), Inches(7.5))
+    r_panel.fill.solid()
+    r_panel.fill.fore_color.rgb = C['navyMid']
+    r_panel.line.fill.background()
     add_text(s10, "Real-World\nApplications", 0.5, 1.0, 7.5, 2.0, 54, C['cyan'], bold=True)
     
     apps = ["⚖ Legal Research", "🎓 Academic Training", "💼 Executive Decisions"]
     for i, txt in enumerate(apps):
         y = 3.5 + i * 0.8
         chip = s10.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, Inches(0.5), Inches(y), Inches(5.0), Inches(0.6))
-        chip.fill.solid().fore_color.rgb = C['darkCard']
+        chip.fill.solid()
+        chip.fill.fore_color.rgb = C['darkCard']
         chip.line.color.rgb = C['cyan']
         add_text(s10, txt, 0.7, y + 0.1, 4.5, 0.4, 16, C['white'], bold=True)
 
