@@ -35,7 +35,7 @@ An advanced, hybrid AI framework that utilizes autonomous agents to dialecticall
 3. **Agent Generation**: Pro and Con agents generate arguments, explicitly outlining the *Point*, *Reason*, and *Impact*.
 4. **Evaluation**: The Hybrid Judge mathematically and semantically evaluates the arguments.
 5. **Memory Storage**: Non-duplicate debates are permanently stored into the live FAISS memory.
-6. **Decision**: The optimal policy decision and metrics are presented on the frontend.
+6. **Decision**: The optimal policy decision and metrics are presented on the frontend. 
 
 ## 🌍 Real-World Application
 
