@@ -2,7 +2,7 @@
 
 An advanced, hybrid AI framework that utilizes autonomous agents to dialectically debate complex legal and policy questions. The system leverages a multi-tiered evaluation pipeline combining deterministic rules, machine learning, and Large Language Models (LLMs) to intelligently analyze and select the most logically sound arguments.
 
-## 🚀 Key Features
+## 🚀 Key Features 
 
 * **🤖 Autonomous Debate Generation**: Pro and Con agents automatically generate structured, multi-dimensional arguments for any given prompt.
 * **⚖️ Hybrid Judge System**: A robust 3-tier evaluation mechanism:
