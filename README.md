@@ -7,7 +7,7 @@ An advanced, hybrid AI framework that utilizes autonomous agents to dialecticall
 * **🤖 Autonomous Debate Generation**: Pro and Con agents automatically generate structured, multi-dimensional arguments for any given prompt.
 * **⚖️ Hybrid Judge System**: A robust 3-tier evaluation mechanism:
   * **Rule-Based Scoring**: Evaluates structural complexity, length, and keyword reasoning.
-  * **Machine Learning Prediction**: Pattern recognition utilizing extracted features to predict the strongest argument.
+  * **Machine Learning Prediction**: Pattern recognition utilizing extracted features to predict the strongest argument. 
   * **LLM Tiebreaker**: Resolves mathematical ties via deep semantic analysis.
 * **🧠 Dynamic FAISS Vector Memory**: The system learns over time. Debates are autonomously embedded (using `sentence-transformers`) and stored in a live FAISS index, allowing the system to retrieve past context and avoid duplicates.
 * **📊 Interactive Streamlit Dashboard**: A clean frontend featuring a live Debate Arena, real-time comparison metrics (Raw vs. Prompt vs. Hybrid), and academic evaluation dashboards.
